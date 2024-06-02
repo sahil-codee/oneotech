@@ -1,0 +1,59 @@
+body {
+    background-color: #bc3c3c;
+}
+
+
+.coming-soon-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000; /* Change text color to black */
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .countdown-item {
+    margin: 0 10px;
+  }
+  
+  .countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .countdown-item span:last-child {
+    font-size: 1rem;
+  }
+  
