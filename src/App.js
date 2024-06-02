@@ -21,8 +21,11 @@ export default function App() {
 
   return (
     <>
-    
+
       {/* <ComingSoon /> */}
+
+
+      
       <GlobalStyles />
       <Router basename={baseUrl}>
         <Routes>
