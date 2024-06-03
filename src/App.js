@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GlobalStyles from "styles/GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
@@ -8,12 +8,20 @@ import Products from "./pages/Products.js";
 // import Pricing from "./pages/Pricing.js";
 import ContactUs from "./pages/ContactUs";
 import { Services } from "./pages/Services.js";
-
-
-// import ComingSoon from "./ComingSoon.js";
-
+import Chatbot from "react-chatbot-kit";
+import config from "./chatBot/chatbotConfig.js";
+import ActionProvider from "./chatBot/ActionProvider.js";
+import MessageParser from "./chatBot/MessageParser.js";
+import "react-chatbot-kit/build/main.css";
+import "./chatBot/ChatBot.css"; // Import the CSS file
+import chatIcon from './images/chatIcon.png'
 export default function App() {
   // Determine the base URL dynamically based on environment
+  const [showChatbot, setShowChatbot] = useState(false);
+
+  const handleToggle = () => {
+    setShowChatbot(!showChatbot);
+  };
   const baseUrl =
     process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "/";
 
@@ -21,10 +29,6 @@ export default function App() {
 
   return (
     <>
-      {/* <ComingSoon /> */}
-
-
-
       <GlobalStyles />
       <Router basename={baseUrl}>
         <Routes>
@@ -37,6 +41,23 @@ export default function App() {
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </Router>
+      <div className="App">
+        {showChatbot && (
+          <div className="chatbot-container">
+            <div className="chatbot-header">OnotechBot</div>
+            <div className="chatbot-main">
+              <Chatbot
+                config={config}
+                actionProvider={ActionProvider}
+                messageParser={MessageParser}
+              />
+            </div>
+          </div>
+        )}
+        <button className="chatbot-toggle" onClick={handleToggle}>
+          {showChatbot ? "X" : <img src={chatIcon} alt="chat Icon"/>}
+        </button>
+      </div>
     </>
   );
 }
