@@ -25,6 +25,7 @@ export const Services = () => {
         description="Our expert team is available to provide consultation and support, helping you choose the right products and solutions for your specific requirements."
         buttonRounded={false}
         primaryButtonText="Learn More"
+
         imageSrc={Services1}
       />
       <MainFeature1
@@ -50,6 +51,7 @@ export const Services = () => {
         buttonRounded={false}
         primaryButtonText="Learn More"
         description="Quality is our top priority. All our products under go rigorous quality checks and are sourced from reliable manufacturers to ensure they meet the highest industry standards."
+        primaryButtonUrl="/products"
         imageSrc={Services5}
         textOnLeft={false}
       />

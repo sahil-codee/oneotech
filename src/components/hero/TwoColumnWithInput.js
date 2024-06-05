@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 
 import Header from "../headers/light.js";
-
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.png";
 // import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
@@ -35,6 +35,11 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
+const PrimaryButton = styled(PrimaryButtonBase)((props) => [
+  tw`mt-0 md:mt-0 text-sm inline-block mx-auto md:mx-0 w-56 flex justify-center`,
+  props.buttonRounded && tw`rounded-full`,
+]);
+
 // const CustomersLogoStrip = styled.div`
 //   ${tw`mt-12 lg:mt-20`}
 //   p {
@@ -44,8 +49,12 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 //     ${tw`mt-4 w-full lg:pr-16 xl:pr-32 opacity-50`}
 //   }
 // `;
-
-export default ({ roundedHeaderButton }) => {
+export default ({
+  roundedHeaderButton,
+  primaryButtonText = "Contact Us",
+  primaryButtonUrl = "/contactus",
+  buttonRounded = true,
+}) => {
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
@@ -53,7 +62,8 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Welcome To, <span tw="text-primary-500">ONEOTECH ENTERPRISES</span>
+              Welcome To,{" "}
+              <span tw="text-primary-500">ONEOTECH ENTERPRISES</span>
             </Heading>
             <Paragraph>
               At ONEOTECH Enterprises, we pride ourselves on being a leading
@@ -62,10 +72,13 @@ export default ({ roundedHeaderButton }) => {
               excellence and customer satisfaction, we are your trusted partner
               in the trading industry.
             </Paragraph>
-            <Actions>
-              <input type="text" placeholder="Your E-mail Address" />
-              <button>Get Started</button>
-            </Actions>
+            <PrimaryButton
+              buttonRounded={buttonRounded}
+              as="a"
+              href={primaryButtonUrl}
+            >
+              {primaryButtonText}
+            </PrimaryButton>
             {/* <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
               <img src={CustomersLogoStripImage} alt="Our Customers" />

@@ -53,7 +53,7 @@ export default ({
   ),
   description = "",
   primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "/contactus",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,

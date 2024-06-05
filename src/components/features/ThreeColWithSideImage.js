@@ -61,7 +61,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 const PrimaryButton = styled(PrimaryButtonBase)((props) => [
-  tw`mt-8 text-sm inline-block ml-0`, // No centering, align to the left
+  tw`mt-2 text-sm inline-block ml-0 w-64 flex justify-center`, // No centering, align to the left
   props.buttonRounded && tw`rounded-full`,
 ]);
 
@@ -155,7 +155,7 @@ export default ({
           {"Contact Us"}
         </PrimaryButton>
       </ThreeColumnContainer>
-      
+
       <DecoratorBlob />
     </Container>
   );

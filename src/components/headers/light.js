@@ -3,15 +3,11 @@ import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
+import { Link, NavLink as RouterNavLink } from "react-router-dom"; // Updated
 import logo from "../../images/ONEOTECH.png";
-// import logo from "../../images/logo.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-// import { Subheading } from "../misc/Headings.js";
-// import { Services } from "../../pages/Services.js";
-
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -26,8 +22,11 @@ export const NavLink = tw.a`
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
-
-export const PrimaryLink = tw(NavLink)`
+export const ContactUsLink = styled(NavLink)`
+  // New styled component
+  ${tw`bg-primary-500 text-gray-100 px-8 py-3 rounded hocus:bg-primary-700 hocus:text-white w-80`}
+`;
+export const PrimaryLink = tw(ContactUsLink)`
   lg:mx-0
   px-8 py-3 rounded bg-primary-500 text-gray-100
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
@@ -35,7 +34,7 @@ export const PrimaryLink = tw(NavLink)`
   hover:text-gray-200 
 `;
 
-export const LogoLink = styled(NavLink)`
+export const LogoLink = styled(RouterNavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
 
   img {
@@ -43,7 +42,7 @@ export const LogoLink = styled(NavLink)`
   }
 
   .logo-text {
-    ${tw`flex flex-col leading-none`}
+    ${tw`flex flex-col leading-none cursor-pointer`}
   }
 
   .slogan {
@@ -92,16 +91,7 @@ export default ({
       <NavLink href="/about">About</NavLink>
       <NavLink href="/products">Products</NavLink>
       <NavLink href="/services">Services</NavLink>
-      {/* <NavLink href="/pricing">Pricing</NavLink> */}
-      <PrimaryLink>
-        <NavLink href="/contactus">Contact Us</NavLink>
-      </PrimaryLink>
-      {/* <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
-        Sign Up
-      </PrimaryLink> */}
+      <PrimaryLink href="/contactus">Contact Us</PrimaryLink>
     </NavLinks>,
   ];
 

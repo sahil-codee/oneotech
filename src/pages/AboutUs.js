@@ -27,7 +27,8 @@ export default () => {
         heading="Welcome to OneOTech Enterprises"
         description="At OneOTech Enterprises, we specialize in providing top-quality industrial and consumer products to meet the diverse needs of our global clientele. With years of experience in the trading industry, we have built a reputation for reliability, excellence, and customer satisfaction."
         buttonRounded={false}
-        primaryButtonText="See Portfolio"
+        primaryButtonText="See Products"
+        primaryButtonUrl="/products"
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
       />
       <MainFeature1
