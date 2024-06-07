@@ -1,15 +1,15 @@
 .chatbot-container {
   position: fixed;
   bottom: 100px;
-  right: 100px; /* Move it a bit to the left */
+  right: 100px;
   z-index: 1000;
-  width: 280px; /* Match the width of react-chatbot-kit */
-  height: 400px; /* Reduced height */
+  width: 280px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
-  border: 1px solid rgba(204, 204, 204, 0.8); /* Transparent border */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(204, 204, 204, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -28,8 +28,8 @@
   bottom: 20px;
   right: 40px;
   z-index: 1001;
-  background-color: #376b7e;
-  color: white;
+  background-color: transparent; /* Removed background color */
+  color: rgb(31, 25, 25);
   border: none;
   border-radius: 50%;
   width: 70px;
@@ -43,7 +43,7 @@
 }
 
 .chatbot-toggle:hover {
-  background-color: #294a50;
+  background-color: transparent; /* Removed hover background color */
 }
 
 .chatbot-header {
@@ -59,10 +59,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure it takes the full height of the container */
+  height: 100%;
 }
 
-/* Ensure the chat messages area and input box are responsive */
 .chatbot-kit-chat-container {
   display: flex;
   color: aqua;
@@ -76,10 +75,10 @@
 }
 
 .react-chatbot-kit-chat-inner-container {
-    height: 400px;
+  height: 400px;
 }
 
 .react-chatbot-kit-chat-message-container {
-    height: 366px;
-    padding-bottom: 40px;
+  height: 366px;
+  padding-bottom: 40px;
 }

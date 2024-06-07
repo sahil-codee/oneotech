@@ -14,7 +14,8 @@ import ActionProvider from "./chatBot/ActionProvider.js";
 import MessageParser from "./chatBot/MessageParser.js";
 import "react-chatbot-kit/build/main.css";
 import "./chatBot/ChatBot.css"; // Import the CSS file
-import chatIcon from './images/chatIcon.png'
+import chatIcon from "./images/chatIcon.png";
+import closeIcon from "./images/closeIcon.png";
 export default function App() {
   // Determine the base URL dynamically based on environment
   const [showChatbot, setShowChatbot] = useState(false);
@@ -55,7 +56,11 @@ export default function App() {
           </div>
         )}
         <button className="chatbot-toggle" onClick={handleToggle}>
-          {showChatbot ? "X" : <img src={chatIcon} alt="chat Icon"/>}
+          {showChatbot ? (
+            <img src={closeIcon} alt="Close Icon" />
+          ) : (
+            <img src={chatIcon} alt="Chat Icon" />
+          )}
         </button>
       </div>
     </>
