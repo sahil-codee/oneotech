@@ -14,19 +14,45 @@ import { countries } from "countries-list"; // You can use any country list pack
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 6%;
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 const Image = styled.img`
-  max-width: 450px;
-  margin-right: 20px;
-  height: 450px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 450px;
+    margin-right: 20px;
+    height: 450px;
+    margin-bottom: 0;
+  }
 `;
 
 const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
+  @media (min-width: 768px) {
+    width: auto;
+  }
 `;
 
 const TableRow = styled.tr`
@@ -62,7 +88,7 @@ const Popup = styled.div`
 `;
 
 const PopupContent = styled.div`
-  ${tw`bg-white p-8 rounded-lg shadow-lg relative`}
+  ${tw`bg-white p-8 rounded-lg shadow-lg relative w-full max-w-md`}
 `;
 
 const CloseButton = styled.button`
