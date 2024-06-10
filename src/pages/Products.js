@@ -27,7 +27,7 @@ const PostContainer = styled.div`
         ${tw`sm:flex-row! h-full sm:pr-4`}
       }
       ${ImageContainer} {
-        ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg`}
+        ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg pt-2`}
       }
       ${Info} {
         ${tw`sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0`}
@@ -52,7 +52,7 @@ const Image = styled.div`
     css`
       background-image: url(${props.imageSrc});
     `}
-  ${tw`absolute inset-0 bg-cover bg-center`}
+  ${tw`absolute inset-0 bg-cover bg-center pt-12`}
 `;
 
 const Info = tw.div`p-8 border-2 border-t-0 rounded-lg rounded-t-none`;
@@ -162,18 +162,30 @@ export default () => {
           <Posts>
             {filteredPosts.slice(0, visible).map((post, index) => (
               <PostContainer key={index} featured={post.featured}>
-                <Post className="group" as="a" href={post.url}>
-                  <ImageContainer>
-                    <Image imageSrc={post.imageSrc} />
-                  </ImageContainer>
-                  <Info>
-                    <Category>{post.category}</Category>
-                    <CreationDate>{post.date}</CreationDate>
-                    <Title>{post.title}</Title>
-                    {post.description && (
-                      <Description>{post.description}</Description>
-                    )}
-                  </Info>
+                <Post className="group">
+                  <a
+                    href={`/products/${encodeURIComponent(
+                      post.category
+                    )}/${encodeURIComponent(post.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ImageContainer>
+                      <Image imageSrc={post.imageSrc} />
+                    </ImageContainer>
+                    <Info>
+                      <Category>{post.category}</Category>
+                      <CreationDate>{post.date}</CreationDate>
+                      <Title>{post.title}</Title>
+                      {post.description && (
+                        <Description>
+                          {post.description && (
+                            <Description>{post.description}</Description>
+                          )}
+                        </Description>
+                      )}
+                    </Info>
+                  </a>
                 </Post>
               </PostContainer>
             ))}

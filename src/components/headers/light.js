@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
-import { Link, NavLink as RouterNavLink } from "react-router-dom"; // Updated
+import { NavLink as RouterNavLink } from "react-router-dom"; // Updated
 import logo from "../../images/ONEOTECH.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import ThemeToggle from "themeContext/ThemeToggle.js";
+import { ThemeContext } from "themeContext/ThemeContext.js";
+
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -17,6 +20,7 @@ export const NavLinks = tw.div`inline-block`;
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
+
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
@@ -73,6 +77,7 @@ export default ({
   collapseBreakpointClass = "lg",
 }) => {
   /*
+  
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
    * Each "NavLinks" component can contain any amount of "NavLink" component, also exported from this file.
@@ -85,12 +90,15 @@ export default ({
    * changing the defaultLinks variable below below.
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
+
+  // const { theme } = React.useContext(ThemeContext);
+
+
   const defaultLinks = [
     <NavLinks key={1}>
-
       <NavLink href="/about">About Us</NavLink>
-      <NavLink href="/products">Products</NavLink>
-      <NavLink href="/services">Services</NavLink>
+      <NavLink href="/products">Our Products</NavLink>
+      <NavLink href="/services">Our Services</NavLink>
       <PrimaryLink href="/contactus">Contact Us</PrimaryLink>
     </NavLinks>,
   ];
@@ -117,8 +125,8 @@ export default ({
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {links}
+        
       </DesktopNavLinks>
-
       <MobileNavLinksContainer
         css={collapseBreakpointCss.mobileNavLinksContainer}
       >

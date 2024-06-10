@@ -1,3 +1,5 @@
+// App.js
+
 import React, { useState } from "react";
 import GlobalStyles from "styles/GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -5,7 +7,6 @@ import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 import { Home } from "./pages/Home.js";
 import About from "./pages/AboutUs.js";
 import Products from "./pages/Products.js";
-// import Pricing from "./pages/Pricing.js";
 import ContactUs from "./pages/ContactUs";
 import { Services } from "./pages/Services.js";
 import Chatbot from "react-chatbot-kit";
@@ -16,8 +17,9 @@ import "react-chatbot-kit/build/main.css";
 import "./chatBot/ChatBot.css"; // Import the CSS file
 import chatIcon from "./images/chatIcon.png";
 import closeIcon from "./images/closeIcon.png";
+import ProductDetailsPage from "pages/ProductDetailPage.js";
+
 export default function App() {
-  // Determine the base URL dynamically based on environment
   const [showChatbot, setShowChatbot] = useState(false);
 
   const handleToggle = () => {
@@ -37,7 +39,9 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          {/* <Route path="/pricing" element={<Pricing />} /> */}
+          <Route path="/products/:category/:productName" element={<ProductDetailsPage />} />
+
+          {/* Add route for product details */}
           <Route path="/services" element={<Services />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
