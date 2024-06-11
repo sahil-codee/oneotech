@@ -245,9 +245,7 @@ const ProductDetailsPage = () => {
             Yes, I'm Interested
           </InterestButton>
         </div>
-      </Container>
-      <Footer />
-      {isPopupOpen && (
+        {isPopupOpen && (
         <Popup>
           <PopupContent>
             <CloseButton onClick={handleClosePopup}>×</CloseButton>
@@ -275,6 +273,8 @@ const ProductDetailsPage = () => {
           </PopupContent>
         </Popup>
       )}
+      </Container>
+      <Footer />
     </AnimationRevealPage>
   );
 };
