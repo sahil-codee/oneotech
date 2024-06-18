@@ -1,4 +1,9 @@
 import React from "react";
+import tw from "twin.macro"; // Import twin.macro for Tailwind CSS styling
+
+const Button = tw.button`
+   bg-blue-500 hover:bg-blue-700 flex justify-center self-center w-full mb-2 text-white font-bold py-1 px-3 rounded-sm text-sm
+`;
 
 const Options = (props) => {
   const options = [
@@ -11,11 +16,11 @@ const Options = (props) => {
   ];
 
   return (
-    <div>
+    <div className="flex justify-center">
       {options.map((option) => (
-        <button key={option.id} onClick={option.handler}>
+        <Button key={option.id} onClick={option.handler} tw="mr-2 mb-2">
           {option.text}
-        </button>
+        </Button>
       ))}
     </div>
   );

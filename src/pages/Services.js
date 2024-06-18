@@ -8,7 +8,7 @@ import Footer from "components/footers/MiniCenteredFooter.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 import Services1 from "../images/services1.jpg";
 import Services2 from "../images/services2.jpg";
-import Services3 from "../images/services3.jpg";
+import Services3 from "../images/services3.webp";
 import Services4 from "../images/services4.jpg";
 import Services5 from "../images/services5.jpg";
 

@@ -9,9 +9,11 @@ import FeatureWithSteps from "components/features/TwoColWithSteps.js";
 import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter.js";
-import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
+import macHeroScreenshotImageSrc from "images/hero-screenshot-2.webp";
+import LazyLoad from "react-lazyload";
 // import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import Service3 from "../images/services3.jpg";
+import Service3 from "../images/services3.webp";
+
 
 // const PrimaryButton = styled(PrimaryButtonBase)((props) => [
 //   tw`mt-8 text-sm inline-block md:ml-0 ml-0`,
@@ -212,3 +214,5 @@ export default () => {
     </AnimationRevealPage>
   );
 };
+
+
