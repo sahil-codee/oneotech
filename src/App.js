@@ -1,7 +1,7 @@
 // App.js
 
 import React, { useState } from "react";
-import GlobalStyles from "styles/GlobalStyles";
+import GlobalStyles from "./styles/GlobalStyles.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 import { Home } from "./pages/Home.js";
@@ -39,7 +39,10 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:category/:productName" element={<ProductDetailsPage />} />
+          <Route
+            path="/products/:category/:productName"
+            element={<ProductDetailsPage />}
+          />
 
           {/* Add route for product details */}
           <Route path="/services" element={<Services />} />

@@ -14,29 +14,35 @@ import cableTie from "../images/cableties.jpg";
 import mounts from "../images/mounts.jpg";
 import tea from "../images/tea.jpg";
 import teaCups from "../images/cups.jpg";
+
 const HeadingRow = tw.div`flex`;
+
 const Heading = tw(SectionHeading)`text-gray-900`;
+
 const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`;
+
+
 const PostContainer = styled.div`
   ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
   ${(props) =>
     props.featured &&
     css`
       ${tw`w-full!`}
-      ${Post} {
+      .post {
         ${tw`sm:flex-row! h-full sm:pr-4`}
       }
-      ${ImageContainer} {
+      .imageContainer {
         ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg pt-2`}
       }
-      ${Info} {
+      .info {
         ${tw`sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0`}
       }
-      ${Description} {
+      .description {
         ${tw`text-sm mt-3 leading-loose text-gray-600 font-medium`}
       }
     `}
 `;
+
 const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg`;
 
 const ImageContainer = styled.div`
