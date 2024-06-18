@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 import moonStars from "../images/night.svg";
 import { ThemeContext } from "./ThemeContext.js";
 
@@ -41,10 +41,10 @@ const ThemeToggle = () => {
     <ToggleWrapper onClick={toggleTheme} css={tw`cursor-pointer`}>
       <IconWrapper>
         <Icon position="left" theme={theme === "light" ? "light" : "dark"}>
-          <img src={moonStars} />
+          <img src={moonStars} alt="moon with stars icon" />
         </Icon>
         <Icon position="right" theme={theme === "light" ? "dark" : "light"}>
-          <FontAwesomeIcon icon={faSun} />
+          <FontAwesomeIcon icon={faSun} alt="sun icon" />
         </Icon>
       </IconWrapper>
     </ToggleWrapper>

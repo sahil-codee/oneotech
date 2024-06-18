@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -8,8 +8,6 @@ import { NavLink as RouterNavLink } from "react-router-dom"; // Updated
 import logo from "../../images/ONEOTECH.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-import ThemeToggle from "themeContext/ThemeToggle.js";
-import { ThemeContext } from "themeContext/ThemeContext.js";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -93,7 +91,6 @@ export default ({
 
   // const { theme } = React.useContext(ThemeContext);
 
-
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/about">About Us</NavLink>
@@ -125,7 +122,6 @@ export default ({
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {links}
-        
       </DesktopNavLinks>
       <MobileNavLinksContainer
         css={collapseBreakpointCss.mobileNavLinksContainer}
