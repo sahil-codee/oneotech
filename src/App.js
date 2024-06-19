@@ -28,7 +28,7 @@ export default function App() {
   const baseUrl =
     process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "/";
 
-  console.log("PUBLIC_URL:", process.env.PUBLIC_URL);
+  // console.log("PUBLIC_URL:", process.env.PUBLIC_URL);
 
   return (
     <>
