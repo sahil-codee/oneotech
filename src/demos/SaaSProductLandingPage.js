@@ -10,7 +10,7 @@ import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.webp";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 // import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import Service3 from "../images/services3.webp";
 
