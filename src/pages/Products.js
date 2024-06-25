@@ -12,6 +12,7 @@ import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import cableTie from "../images/cableties.jpg";
 
 import mounts from "../images/mounts.jpg";
+import dinRail from "../images/dinrails.png";
 import tea from "../images/tea.jpg";
 import teaCups from "../images/cups.jpg";
 
@@ -20,7 +21,6 @@ const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
 
 const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`;
-
 
 const PostContainer = styled.div`
   ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
@@ -215,7 +215,7 @@ const getPlaceholderPosts = () => [
     imageSrc: cableTie,
     category: "Industrial",
     // date: "April 21, 2020",
-    title: "Cable Ties",
+    title: "Nylon Cable Ties",
     description: "High-quality cable ties for industrial applications.",
     url: "https://example.com",
     featured: false,
@@ -224,8 +224,16 @@ const getPlaceholderPosts = () => [
     imageSrc: mounts,
     category: "Industrial",
     // date: "April 22, 2020",
-    title: "Mounts",
+    title: "Cable Tie Mounts",
     description: "Durable mounts for industrial equipment.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: dinRail,
+    category: "Industrial",
+    title: "Din Rail(MCB Channel)",
+    description: "Durable Din Rails for various industrial equipment.",
     url: "https://example.com",
     featured: false,
   },
