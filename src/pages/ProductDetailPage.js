@@ -4,7 +4,7 @@ import styled from "styled-components";
 import cableTie from "../images/cableties.jpg";
 import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
-import laserCutting from "../images/laserCutting.webp";
+import laserMarking from "../images/laser.webp";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
@@ -163,57 +163,20 @@ const ProductDetailsPage = () => {
           "We specialize in manufacturing durable Din Rails for various industrial equipment. Our Din Rails are designed to withstand heavy loads and provide reliable support for your equipment.",
       },
     },
-    "Industrial/Din Rail(MCB Channel)": {
-      image: dinRail,
+    "Industrial/Laser Marking Machine": {
+      image: laserMarking,
       details: {
-        Size: "35 x 7.5 / 35 x 15 / 32 x 15/ 15 x 5",
-        Length: "1mtr / 2mtr",
-        Brand: "ONEOTECH",
-        "Usage/Application": "Equipment Mounting",
-        "Packaging Size": "25 / 50 / 100 / 200",
-        Thickness: "0.9mm / 1mm / 1.5mm",
-        Material: "CRC",
-        Plating: "Zinc",
-        Description:
-          "We specialize in manufacturing durable Din Rails for various industrial equipment. Our Din Rails are designed to withstand heavy loads and provide reliable support for your equipment.",
-      },
-    },
-    "Industrial/Laser Cutting Machine": {
-      image: laserCutting,
-      details: {
-        modelNameNumber: "CI-1610D",
-        brand: "Copia",
-        laserType: "CO2 Laser Glass Tube",
-        coolingMode: "Chiller (Water)",
-        laserPower: "150W",
-        cuttingSpeed: "0-36 m/min",
-        engravingSpeed: "0-64 m/min",
-        workingVoltage: "AC 220V +/- 10% 50Hz (60Hz)",
-        operatingTemperature: "0 to 45 DegreeC",
-        repeatAccuracy: "+/- 0.05 mm",
-        movingSystem: "CNC Controlled System",
-        powerConsumption: "1250W",
-        controllingSoftware: "RD Controller",
-        supportedFormats: [
-          "BMP",
-          "JPG",
-          "PNG",
-          "TIF",
-          "PCX",
-          "TAG",
-          "DXF",
-          "GIF",
-          "PLT",
-          "AI",
-          "etc",
-        ],
-        supportedSoftware: ["Auto CAD", "Coral Draw", "Photoshop"],
-        humidity: "5% - 95%",
+        minimumOrderQuantity: "1 Piece",
+        usageApplication: "All plastics, Glass etc",
+        offeringLaser: "Cables",
+        power: "3W",
+        voltage: "220V",
         countryOfOrigin: "Made in India",
         description:
-          "Being a customer-oriented enterprise, we are engaged in providing a wide array of 150W CO2 Laser Cutting Machine.",
+          "High-quality laser marking machine suitable for all plastics and glass.",
       },
     },
+
     "Consumer/Tea": {
       image: tea,
       details: {

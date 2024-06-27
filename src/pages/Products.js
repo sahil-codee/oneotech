@@ -15,7 +15,7 @@ import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
 import tea from "../images/tea.jpg";
 import teaCups from "../images/cups.jpg";
-import laserCutting from "../images/laserCutting.webp";
+import laserMarking from "../images/laser.webp";
 const HeadingRow = tw.div`flex`;
 
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -238,15 +238,16 @@ const getPlaceholderPosts = () => [
     featured: false,
   },
   {
-    imageSrc: laserCutting,
-    alt: "laserCutting",
+    imageSrc: laserMarking,
+    alt: "laserMarking",
     category: "Industrial",
-    title: "Laser Cutting Machine",
+    title: "Laser Marking Machine",
     description:
-      "150W CO2 Laser Cutting Machine with high precision and efficiency.",
+      "High-quality laser marking machine suitable for all plastics and glass.",
     url: "https://example.com",
     featured: false,
   },
+
   {
     imageSrc: tea,
     category: "Consumer",
