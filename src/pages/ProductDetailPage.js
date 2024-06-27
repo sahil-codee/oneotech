@@ -189,19 +189,6 @@ const ProductDetailsPage = () => {
           "Premium quality tea leaves for a refreshing experience. Our Jasmine Green Tea is sourced from the finest tea gardens in China, ensuring a rich and aromatic flavor.",
       },
     },
-    // "Consumer/Tea Cups": {
-    //   image: teaCups,
-    //   details: {
-    //     Material: "Porcelain",
-    //     Capacity: "250 ml",
-    //     Color: "White",
-    //     Set: "6 cups",
-    //     Brand: "Elegant Tea Ware",
-    //     Description:
-    //       "Elegant tea cups for enjoying your favorite brew. These porcelain cups are perfect for both everyday use and special occasions, offering a timeless and sophisticated design.",
-    //   },
-    // },
-    // Add more products as needed
   };
 
   const product = products[`${category}/${productName}`];

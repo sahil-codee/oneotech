@@ -257,13 +257,4 @@ const getPlaceholderPosts = () => [
     url: "https://example.com",
     featured: false,
   },
-  {
-    imageSrc: teaCups,
-    category: "Consumer",
-    // date: "April 24, 2020",
-    title: "Tea Cups",
-    description: "Elegant tea cups for enjoying your favorite brew.",
-    url: "https://example.com",
-    featured: false,
-  },
 ];
