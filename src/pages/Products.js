@@ -15,7 +15,7 @@ import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
 import tea from "../images/tea.jpg";
 import teaCups from "../images/cups.jpg";
-
+import laserCutting from "../images/laserCutting.webp";
 const HeadingRow = tw.div`flex`;
 
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -234,6 +234,16 @@ const getPlaceholderPosts = () => [
     category: "Industrial",
     title: "Din Rail(MCB Channel)",
     description: "Durable Din Rails for various industrial equipment.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: laserCutting,
+    alt: "laserCutting",
+    category: "Industrial",
+    title: "Laser Cutting Machine",
+    description:
+      "150W CO2 Laser Cutting Machine with high precision and efficiency.",
     url: "https://example.com",
     featured: false,
   },
