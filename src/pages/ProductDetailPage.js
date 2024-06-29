@@ -245,7 +245,7 @@ const ProductDetailsPage = () => {
     <AnimationRevealPage>
       <Header />
       <Container>
-        <Image src={image} alt={productName} />
+        <Image src={image} alt={`${productName} image`} />{" "}
         <div>
           <ProductName>{productName}</ProductName>
           <Table>
