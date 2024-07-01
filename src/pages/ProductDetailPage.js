@@ -8,8 +8,7 @@ import laserMarking from "../images/laser.webp";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
-import tea from "../images/tea.jpg";
-import teaCups from "../images/cups.jpg";
+import tea from "../images/teaBag.jpeg";
 import tw from "twin.macro";
 import emailjs from "emailjs-com";
 import { countries } from "countries-list"; // You can use any country list package or API
@@ -177,16 +176,17 @@ const ProductDetailsPage = () => {
       },
     },
 
-    "Consumer/Tea": {
+    "Consumer/Platinum CTC Tea": {
       image: tea,
       details: {
-        Brand: "Premium Tea Co.",
-        Type: "Green Tea",
-        Weight: "500 g",
-        Origin: "China",
-        Flavor: "Jasmine",
+        Brand: "FNG",
+        Type: "Platinum CTC Tea",
+        MRP: "Rs 520 / per kg",
+        Weight: "1kg",
+        Origin: "Assam",
+        Flavor: "Black Tea",
         Description:
-          "Premium quality tea leaves for a refreshing experience. Our Jasmine Green Tea is sourced from the finest tea gardens in China, ensuring a rich and aromatic flavor.",
+          "Premium quality Platinum CTC Tea leaves for a refreshing experience. Our tea is sourced from the finest tea gardens in Assam, ensuring a rich and robust flavor.",
       },
     },
   };

@@ -13,8 +13,7 @@ import cableTie from "../images/cableties.jpg";
 
 import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
-import tea from "../images/tea.jpg";
-import teaCups from "../images/cups.jpg";
+import tea from "../images/teaBag.jpeg";
 import laserMarking from "../images/laser.webp";
 const HeadingRow = tw.div`flex`;
 
@@ -252,7 +251,7 @@ const getPlaceholderPosts = () => [
     imageSrc: tea,
     category: "Consumer",
     // date: "April 23, 2020",
-    title: "Tea",
+    title: "Platinum CTC Tea",
     description: "Premium quality tea leaves for a refreshing experience.",
     url: "https://example.com",
     featured: false,
