@@ -1,131 +1,141 @@
 import React from "react";
-import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import tw from "twin.macro";
 import {
   SectionHeading,
   Subheading as SubheadingBase,
 } from "components/misc/Headings.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
-import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+import { SectionDescription } from "components/misc/Typography.js";
+
+import defaultCardImage from "images/shield-icon.svg";
+
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import CustomSolutionsIcon from "images/shield-icon.svg";
+import BulkOrdersIcon from "images/shield-icon.svg";
+import ConsultancyIcon from "images/shield-icon.svg";
+import ProductSelectionIcon from "images/shield-icon.svg";
+import TimelyDeliveryIcon from "images/shield-icon.svg";
+import AfterSalesIcon from "images/shield-icon.svg";
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
-const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
-const TextColumn = styled(Column)((props) => [
-  tw`md:w-6/12 mt-16 md:mt-0`,
-  props.textOnLeft
-    ? tw`md:mr-12 lg:mr-16 md:order-first`
-    : tw`md:ml-12 lg:ml-16 md:order-last`,
-]);
+
+const ThreeColumnContainer = styled.div`
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24`}
+`;
+const Subheading = tw(SubheadingBase)`mb-4`;
+const Heading = tw(SectionHeading)`w-full`;
+const Description = tw(SectionDescription)`w-full text-center`;
+
+const VerticalSpacer = tw.div`mt-10 w-full`;
+
+const Column = styled.div`
+  ${tw`md:w-1/2 lg:w-1/3 max-w-sm`}
+`;
+
+const Card = styled.div`
+  ${tw`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8`}
+  .imageContainer {
+    ${tw`border text-center rounded-full p-5 flex-shrink-0`}
+    img {
+      ${tw`w-12 h-12`}
+    }
+  }
+
+  .textContainer {
+    ${tw`sm:ml-4 mt-4 sm:mt-2`}
+  }
+
+  .title {
+    ${tw`mt-4 tracking-wide font-bold text-2xl leading-none`}
+  }
+
+  .description {
+    ${tw`mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose`}
+  }
+`;
+
+const DecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
+`;
 const PrimaryButton = styled(PrimaryButtonBase)((props) => [
-  tw`mt-8 text-sm inline-block md:ml-0 ml-0`,
+  tw`mt-2 text-sm inline-block ml-0 w-64 flex justify-center`, // No centering, align to the left
   props.buttonRounded && tw`rounded-full`,
 ]);
 
-const Image = styled.img((props) => [
-  props.imageRounded && tw`rounded`,
-  props.imageBorder && tw`border`,
-  props.imageShadow && tw`shadow`,
-]);
+const services = [
+  {
+    imageSrc: CustomSolutionsIcon,
+    title: "Custom Solutions",
+    description: "Tailored solutions to meet your specific needs.",
+  },
+  {
+    imageSrc: BulkOrdersIcon,
+    title: "Bulk Orders",
+    description: "Efficient handling of bulk orders.",
+  },
+  {
+    imageSrc: ConsultancyIcon,
+    title: "Consultancy",
+    description: "Expert consultancy services for your business.",
+  },
+  {
+    imageSrc: ProductSelectionIcon,
+    title: "Product Selection",
+    description: "Choose the right product with the help of our experts.",
+  },
+  {
+    imageSrc: TimelyDeliveryIcon,
+    title: "Timely Delivery",
+    description: "Ensuring timely and efficient delivery.",
+  },
+  {
+    imageSrc: AfterSalesIcon,
+    title: "After-Sales Support",
+    description: "Comprehensive after-sales support and service.",
+  },
+];
 
-const DecoratorBlob = styled(SvgDotPattern)(() => [
-  tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`,
-]);
-
-const TextContent = tw.div`lg:py-8 text-center md:text-left`;
-
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
-const Heading = tw(
-  SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-
-const Steps = tw.ul`mt-12`;
-const Step = tw.li`mt-8 flex flex-col md:flex-row items-center md:items-start`;
-const StepNumber = tw.div`font-semibold text-4xl leading-none text-gray-400`;
-const StepText = tw.div`mt-3 md:mt-0 md:ml-6`;
-const StepHeading = tw.h6`leading-none text-xl font-semibold`;
-const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
-
-export default ({
-  subheading = "Our Expertise",
-  heading = (
-    <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
-    </>
-  ),
-  imageSrc = TeamIllustrationSrc,
-  imageRounded = true,
-  imageBorder = false,
-  imageShadow = false,
-  imageDecoratorBlob = false,
-  textOnLeft = true,
-  steps = null,
-  decoratorBlobCss = null,
+const Services = ({
   primaryButtonText = "Learn More",
-  primaryButtonUrl = "/services",
+  primaryButtonUrl = "/contactus",
   buttonRounded = true,
+  cards = services,
+  heading = "Our Services",
+  subheading = "Services",
+  description = "We provide a range of services to cater to your specific needs and ensure a seamless experience.",
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-
-  const defaultSteps = [
-    {
-      heading: "Consultation and Support",
-      description: "Expert guidance tailored to your specific needs.",
-    },
-    {
-      heading: "Logistics and Shipping",
-      description: "Efficient and reliable delivery solutions worldwide.",
-    },
-    {
-      heading: "After-Sales Service",
-      description: "Ongoing support to maintain your satisfaction.",
-    },
-  ];
-
-  if (!steps) steps = defaultSteps;
-
   return (
     <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image
-            src={imageSrc}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
-          {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />}
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Steps>
-              {steps.map((step, index) => (
-                <Step key={index}>
-                  <StepNumber>
-                    {(index + 1).toString().padStart(2, "0")}
-                  </StepNumber>
-                  <StepText>
-                    <StepHeading>{step.heading}</StepHeading>
-                    <StepDescription>{step.description}</StepDescription>
-                  </StepText>
-                </Step>
-              ))}
-            </Steps>
-            <PrimaryButton
-              buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
-            >
-              {primaryButtonText}
-            </PrimaryButton>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
+      <ThreeColumnContainer>
+        {subheading && <Subheading>{subheading}</Subheading>}
+        <Heading>{heading}</Heading>
+        {description && <Description>{description}</Description>}
+        <VerticalSpacer />
+        {cards.map((card, i) => (
+          <Column key={i}>
+            <Card>
+              <span className="imageContainer">
+                <img src={card.imageSrc || defaultCardImage} alt="" />
+              </span>
+              <span className="textContainer">
+                <span className="title">{card.title}</span>
+                <p className="description">{card.description}</p>
+              </span>
+            </Card>
+          </Column>
+        ))}
+        <PrimaryButton
+          buttonRounded={buttonRounded}
+          as="a"
+          href={primaryButtonUrl}
+        >
+          {primaryButtonText}
+        </PrimaryButton>
+      </ThreeColumnContainer>
+      <DecoratorBlob />
     </Container>
   );
 };
+
+export default Services;

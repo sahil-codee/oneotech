@@ -106,7 +106,7 @@ export default ({
 
   const defaultLogoLink = (
     <LogoLink to="/">
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="oneotech enterprises logo" />
       <div className="logo-text">
         ONEOTECH
         <span className="slogan">Expand Horizons Grow Trade</span>

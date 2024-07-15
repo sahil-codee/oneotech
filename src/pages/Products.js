@@ -8,136 +8,67 @@ import Header from "components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
-import cableTie from "../images/cableties.jpg";
 
+import cableTie from "../images/cableties.jpg";
 import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
 import tea from "../images/teaBag.jpeg";
 import laserMarking from "../images/laser.webp";
-const HeadingRow = tw.div`flex`;
 
+const HeadingRow = tw.div`flex justify-center`;
 const Heading = tw(SectionHeading)`text-gray-900`;
+const FilterContainer = tw.div`flex justify-center mt-4`;
+const FilterButton = styled.button`
+  ${tw`p-2 border rounded-md mx-2`}
+  ${({ isSelected }) => isSelected && tw`bg-primary-500 text-white`}
+`;
 
-const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`;
+const Posts = tw.div`mt-6 flex flex-wrap justify-center`;
 
 const PostContainer = styled.div`
-  ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
-  ${(props) =>
-    props.featured &&
-    css`
-      ${tw`w-full!`}
-      .post {
-        ${tw`sm:flex-row! h-full sm:pr-4`}
-      }
-      .imageContainer {
-        ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg pt-2`}
-      }
-      .info {
-        ${tw`sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0`}
-      }
-      .description {
-        ${tw`text-sm mt-3 leading-loose text-gray-600 font-medium`}
-      }
-    `}
+  ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 p-4`}
 `;
 
-const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg`;
+const Post = styled.div`
+  ${tw`cursor-pointer flex flex-col bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105`}
+`;
 
 const ImageContainer = styled.div`
-  ${tw`relative h-64 w-full overflow-hidden rounded-t-lg`}
-  &::before {
-    content: "";
-    ${tw`absolute inset-0 bg-black`}
-    opacity: 0.3; /* Adjust the opacity as needed */
-  }
+  ${tw`relative h-64 w-full overflow-hidden`}
 `;
+
 const Image = styled.div`
   ${(props) =>
     css`
       background-image: url(${props.imageSrc});
     `}
-  ${tw`absolute inset-0 bg-cover bg-center pt-12`}
+  ${tw`absolute inset-0 bg-cover bg-center`}
 `;
 
-const Info = tw.div`p-8 border-2 border-t-0 rounded-lg rounded-t-none`;
-const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8`;
-const CreationDate = tw.div`mt-4 uppercase text-gray-600 italic font-semibold text-xs`;
-const Title = tw.div`mt-1 font-black text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300`;
-const Description = tw.div``;
-
-const ButtonContainer = styled.div`
-  ${tw`relative w-full h-32`}
-`;
-const ImageWithButton = styled.img`
-  ${tw`w-full h-full object-cover`}
-`;
-const PositionedButton = styled(PrimaryButton)`
-  ${tw`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
-`;
+const Info = tw.div`p-6 border-t border-gray-200`;
+const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose mb-2`;
+const Title = tw.div`text-lg font-semibold text-gray-900`;
+const Description = tw.div`text-sm text-gray-600 mt-2`;
 
 const LoadMoreButtonContainer = tw.div`flex justify-center`;
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
-const AskCategoryPopup = ({ onClose, onSelectCategory }) => {
-  const [category, setCategory] = useState("");
-
-  const handleCategorySelection = (category) => {
-    setCategory(category);
-  };
-
-  const handleConfirm = () => {
-    onSelectCategory(category);
-    onClose();
-  };
-
-  return (
-    <div tw="fixed top-0 left-0 w-full h-full z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-      <div tw="bg-white p-8 rounded-lg shadow-lg">
-        <p tw="text-lg mb-4">What category are you interested in?</p>
-        <div tw="flex justify-between space-x-4">
-          <PrimaryButton onClick={() => handleCategorySelection("Industrial")}>
-            Industrial Products
-          </PrimaryButton>
-          <PrimaryButton onClick={() => handleCategorySelection("Consumer")}>
-            Consumer Products
-          </PrimaryButton>
-        </div>
-        <div tw="mt-4 flex justify-end">
-          <PrimaryButton onClick={onClose}>Cancel</PrimaryButton>
-          <PrimaryButton onClick={handleConfirm} tw="ml-2">
-            Confirm
-          </PrimaryButton>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default () => {
-  const [visible, setVisible] = useState(7);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [showCategoryPopup, setShowCategoryPopup] = useState(false);
+  const [visible, setVisible] = useState(6);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const onSelectCategory = (category) => {
     setSelectedCategory(category);
-  };
-
-  const onShowCategoryPopup = () => {
-    setShowCategoryPopup(true);
-  };
-
-  const onCloseCategoryPopup = () => {
-    setShowCategoryPopup(false);
   };
 
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6);
   };
 
-  const filteredPosts = selectedCategory
-    ? getPlaceholderPosts().filter((post) => post.category === selectedCategory)
-    : [];
+  const filteredPosts =
+    selectedCategory === "All"
+      ? getPlaceholderPosts()
+      : getPlaceholderPosts().filter((post) => post.category === selectedCategory);
 
   return (
     <AnimationRevealPage>
@@ -148,25 +79,30 @@ export default () => {
             <Heading>Our Products</Heading>
           </HeadingRow>
 
-          <ButtonContainer>
-            <ImageWithButton
-              src={TeamIllustrationSrc}
-              alt="Team Illustration"
-            />
-            <PositionedButton onClick={onShowCategoryPopup}>
-              Select Category
-            </PositionedButton>
-          </ButtonContainer>
+          <FilterContainer>
+            <FilterButton
+              isSelected={selectedCategory === "All"}
+              onClick={() => onSelectCategory("All")}
+            >
+              All
+            </FilterButton>
+            <FilterButton
+              isSelected={selectedCategory === "Industrial"}
+              onClick={() => onSelectCategory("Industrial")}
+            >
+              Industrial Products
+            </FilterButton>
+            <FilterButton
+              isSelected={selectedCategory === "Consumer"}
+              onClick={() => onSelectCategory("Consumer")}
+            >
+              Consumer Products
+            </FilterButton>
+          </FilterContainer>
 
-          {showCategoryPopup && (
-            <AskCategoryPopup
-              onClose={onCloseCategoryPopup}
-              onSelectCategory={onSelectCategory}
-            />
-          )}
           <Posts>
             {filteredPosts.slice(0, visible).map((post, index) => (
-              <PostContainer key={index} featured={post.featured}>
+              <PostContainer key={index}>
                 <Post className="group">
                   <a
                     href={`/products/${encodeURIComponent(
@@ -180,14 +116,9 @@ export default () => {
                     </ImageContainer>
                     <Info>
                       <Category>{post.category}</Category>
-                      <CreationDate>{post.date}</CreationDate>
                       <Title>{post.title}</Title>
                       {post.description && (
-                        <Description>
-                          {post.description && (
-                            <Description>{post.description}</Description>
-                          )}
-                        </Description>
+                        <Description>{post.description}</Description>
                       )}
                     </Info>
                   </a>
@@ -195,6 +126,7 @@ export default () => {
               </PostContainer>
             ))}
           </Posts>
+
           {visible < filteredPosts.length && (
             <LoadMoreButtonContainer>
               <LoadMoreButton onClick={onLoadMoreClick}>
@@ -213,7 +145,6 @@ const getPlaceholderPosts = () => [
   {
     imageSrc: cableTie,
     category: "Industrial",
-    // date: "April 21, 2020",
     title: "Nylon Cable Ties",
     description: "High-quality cable ties for industrial applications.",
     url: "https://example.com",
@@ -222,7 +153,6 @@ const getPlaceholderPosts = () => [
   {
     imageSrc: mounts,
     category: "Industrial",
-    // date: "April 22, 2020",
     title: "Cable Tie Mounts",
     description: "Durable mounts for industrial equipment.",
     url: "https://example.com",
@@ -231,14 +161,13 @@ const getPlaceholderPosts = () => [
   {
     imageSrc: dinRail,
     category: "Industrial",
-    title: "Din Rail(MCB Channel)",
+    title: "Din Rail (MCB Channel)",
     description: "Durable Din Rails for various industrial equipment.",
     url: "https://example.com",
     featured: false,
   },
   {
     imageSrc: laserMarking,
-    alt: "laserMarking",
     category: "Industrial",
     title: "Laser Marking Machine",
     description:
@@ -246,11 +175,9 @@ const getPlaceholderPosts = () => [
     url: "https://example.com",
     featured: false,
   },
-
   {
     imageSrc: tea,
     category: "Consumer",
-    // date: "April 23, 2020",
     title: "Platinum CTC Tea",
     description: "Premium quality tea leaves for a refreshing experience.",
     url: "https://example.com",

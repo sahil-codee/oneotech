@@ -1,100 +1,130 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-//eslint-disable-next-line
-import { css } from "styled-components/macro";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import Header from "../headers/light.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-import DesignIllustration from "../../images/design-illustration-2.webp";
+import cableTie from "../../images/cableCarousel.png";
+import spices from "../../images/spicesCarousel.png";
+import teaFarm from "../../images/teaCarousel.png";
 
-const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
-const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
-const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
+const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 mt-8`; // Background color with margin
+const CarouselContainer = styled.div`
+  ${tw`relative w-full mt-8`}// Added margin-top
+`;
 
-const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
-const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
+const CarouselWrapper = styled.div`
+  ${tw`max-w-screen-xl mx-auto w-full relative`}
+  .react-multi-carousel-list {
+    ${tw`w-full`}
+  }
+  .react-multi-carousel-item {
+    ${tw`w-full`}
+  }
+`;
 
-// const Actions = styled.div`
-//   ${tw`relative max-w-md text-center mx-auto lg:mx-0`}
-//   input {
-//     ${tw`sm:pr-48 pl-8 py-4 sm:py-5 rounded-full border-2 w-full font-medium focus:outline-none transition duration-300  focus:border-primary-500 hover:border-gray-500`}
-//   }
-//   button {
-//     ${tw`w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none hover:bg-primary-900 transition duration-300`}
-//   }
-// `;
+const Overlay = styled.div`
+  ${tw`absolute inset-0 flex flex-col items-center justify-center text-white text-center`}
+  background: rgba(0, 0, 0, 0.5);
+`;
 
-const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-center`;
+const Heading = tw.h1`font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl`;
+const Paragraph = tw.p`my-2 lg:my-4 text-base xl:text-lg`;
 
-// Random Decorator Blobs (shapes that you see in background)
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
-const PrimaryButton = styled(PrimaryButtonBase)((props) => [
-  tw`mt-0 md:mt-0 text-sm inline-block mx-auto md:mx-0 w-56 flex justify-center`,
-  props.buttonRounded && tw`rounded-full`,
-]);
+const responsive = {
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+};
 
-// const CustomersLogoStrip = styled.div`
-//   ${tw`mt-12 lg:mt-20`}
-//   p {
-//     ${tw`uppercase text-sm lg:text-xs tracking-wider font-bold text-primary-500`}
-//   }
-//   img {
-//     ${tw`mt-4 w-full lg:pr-16 xl:pr-32 opacity-50`}
-//   }
-// `;
-export default ({
-  roundedHeaderButton,
-  primaryButtonText = "Contact Us",
-  primaryButtonUrl = "/contactus",
-  buttonRounded = true,
-}) => {
+const FeaturedProducts = () => (
+  <Container>
+    <CarouselContainer>
+      <CarouselWrapper>
+        <Carousel
+          responsive={responsive}
+          infinite
+          autoPlay
+          autoPlaySpeed={3000}
+          arrows
+        >
+          <div>
+            <img
+              src={teaFarm}
+              alt="Tea Farm"
+              style={{ width: "100%", height: "600px", objectFit: "cover" }}
+            />
+            <Overlay>
+              <Heading>High-Quality Assam & Darjeeling Tea</Heading>
+              <Paragraph>
+                Exporting Premium Assam & Darjeeling Tea Globally
+              </Paragraph>
+              <Paragraph>
+                We specialize in exporting high-quality Assam and Darjeeling
+                tea, ensuring the best quality and taste. As a leading tea
+                exporter in India, our teas are known for their unique flavor
+                and aroma.
+              </Paragraph>
+            </Overlay>
+          </div>
+          <div>
+            <img
+              src={spices}
+              alt="Spices"
+              style={{ width: "100%", height: "600px", objectFit: "cover" }}
+            />
+            <Overlay>
+              <Heading>Explore Our Range of Spices</Heading>
+              <Paragraph>
+                From turmeric to cumin, we offer the finest spices from India.
+                As a top bulk spice exporter in India, we provide both whole and
+                powdered spices.
+              </Paragraph>
+              <Paragraph>
+                We are a renowned spice exporter in Delhi, delivering premium
+                quality spices globally.
+              </Paragraph>
+            </Overlay>
+          </div>
+          <div>
+            <img
+              src={cableTie}
+              alt="Cable Ties"
+              style={{ width: "100%", height: "600px", objectFit: "cover" }}
+            />
+            <Overlay>
+              <Heading>Industrial Products</Heading>
+              <Paragraph>
+                Nylon cable ties, cable tie mounts, and din rails. We are among
+                the leading nylon cable tie exporters in India and best nylon
+                cable tie exporters in Delhi.
+              </Paragraph>
+              <Paragraph>
+                Our products include cable tie mounts and DIN rails, making us a
+                trusted din rail exporter in India.
+              </Paragraph>
+            </Overlay>
+          </div>
+        </Carousel>
+      </CarouselWrapper>
+    </CarouselContainer>
+    <DecoratorBlob1 />
+  </Container>
+);
+
+const HomePage = ({ roundedHeaderButton }) => {
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
-      <Container>
-        <TwoColumn>
-          <LeftColumn>
-            <Heading>
-              Welcome To,{" "}
-              <span tw="text-primary-500">ONEOTECH ENTERPRISES</span>
-            </Heading>
-            <Paragraph>
-              At ONEOTECH Enterprises, we pride ourselves on being a leading
-              global trading company, offering a diverse range of high-quality
-              industrial and consumer products. With our commitment to
-              excellence and customer satisfaction, we are your trusted partner
-              in the trading industry.
-            </Paragraph>
-            <PrimaryButton
-              buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
-            >
-              {primaryButtonText}
-            </PrimaryButton>
-            {/* <CustomersLogoStrip>
-              <p>Our TRUSTED Customers</p>
-              <img src={CustomersLogoStripImage} alt="Our Customers" />
-            </CustomersLogoStrip> */}
-          </LeftColumn>
-          <RightColumn>
-            <IllustrationContainer>
-              <img
-                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                src={DesignIllustration}
-                alt="Design Illustration"
-              />
-            </IllustrationContainer>
-          </RightColumn>
-        </TwoColumn>
-        <DecoratorBlob1 />
-      </Container>
+      <FeaturedProducts />
     </>
   );
 };
+
+export default HomePage;

@@ -34,8 +34,8 @@ export default () => {
       <Content>
         <Row>
           <LogoContainer>
-            <LogoImg src={logo} />
-            <LogoText>ONEOTECH</LogoText>
+            <LogoImg src={logo} alt={"oneotech enterpises logo"} />
+            <LogoText>Oneotech Enterprises</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link href="/">Home</Link>
@@ -56,7 +56,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2024, ONEOTECH All Rights Reserved.
+            &copy; Copyright 2024, Oneotech Enterprises All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

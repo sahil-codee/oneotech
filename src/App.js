@@ -1,6 +1,4 @@
-// App.js
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlobalStyles from "./styles/GlobalStyles.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
@@ -9,31 +7,26 @@ import About from "./pages/AboutUs.js";
 import Products from "./pages/Products.js";
 import ContactUs from "./pages/ContactUs";
 import { Services } from "./pages/Services.js";
-import Chatbot from "react-chatbot-kit";
-import config from "./chatBot/chatbotConfig.js";
-import ActionProvider from "./chatBot/ActionProvider.js";
-import MessageParser from "./chatBot/MessageParser.js";
-import "react-chatbot-kit/build/main.css";
-import "./chatBot/ChatBot.css"; // Import the CSS file
-import chatIcon from "./images/chatIcon.png";
-import closeIcon from "./images/closeIcon.png";
 import ProductDetailsPage from "pages/ProductDetailPage.js";
+import WhatsAppChat from "components/whatsApp/WhatsApp.js";
 
 export default function App() {
-  const [showChatbot, setShowChatbot] = useState(false);
+  const [showWhatsApp, setShowWhatsApp] = useState(false);
 
-  const handleToggle = () => {
-    setShowChatbot(!showChatbot);
-  };
-  const baseUrl =
-    process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "/";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWhatsApp(true);
+    }, 3000); // 3 seconds delay
 
-  // console.log("PUBLIC_URL:", process.env.PUBLIC_URL);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const phoneNumber = "9810294854"; // Replace with your WhatsApp phone number
 
   return (
     <>
       <GlobalStyles />
-      <Router basename={baseUrl}>
+      <Router>
         <Routes>
           <Route path="/" element={<SaaSProductLandingPage />} />
           <Route path="/home" element={<Home />} />
@@ -43,33 +36,11 @@ export default function App() {
             path="/products/:category/:productName"
             element={<ProductDetailsPage />}
           />
-
-          {/* Add route for product details */}
           <Route path="/services" element={<Services />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </Router>
-      <div className="App">
-        {showChatbot && (
-          <div className="chatbot-container">
-            <div className="chatbot-header">OnotechBot</div>
-            <div className="chatbot-main">
-              <Chatbot
-                config={config}
-                actionProvider={ActionProvider}
-                messageParser={MessageParser}
-              />
-            </div>
-          </div>
-        )}
-        <button className="chatbot-toggle" onClick={handleToggle}>
-          {showChatbot ? (
-            <img src={closeIcon} alt="Close Icon" />
-          ) : (
-            <img src={chatIcon} alt="Chat Icon" />
-          )}
-        </button>
-      </div>
+      {showWhatsApp && <WhatsAppChat phoneNumber={phoneNumber} />}
     </>
   );
 }

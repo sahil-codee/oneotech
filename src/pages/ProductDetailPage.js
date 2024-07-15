@@ -1,53 +1,106 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import cableTie from "../images/cableties.jpg";
-import mounts from "../images/mounts.jpg";
-import dinRail from "../images/dinrails.png";
-import laserMarking from "../images/laser.webp";
+import tw from "twin.macro";
+import { countries } from "countries-list"; // You can use any country list package or API
+import cableTie1 from "../images/cableties.jpg";
+// import cableTie2 from "../images/cableties2.jpg";
+// import cableTie3 from "../images/cableties3.jpg";
+// import cableTie4 from "../images/cableties4.jpg";
+// import cableTie5 from "../images/cableties5.jpg";
+import mounts1 from "../images/mounts.jpg";
+// import mounts2 from "../images/mounts2.jpg";
+// import mounts3 from "../images/mounts3.jpg";
+// import mounts4 from "../images/mounts4.jpg";
+// import mounts5 from "../images/mounts5.jpg";
+import dinRail1 from "../images/dinrails.png";
+// import dinRail2 from "../images/dinrails2.png";
+// import dinRail3 from "../images/dinrails3.png";
+// import dinRail4 from "../images/dinrails4.png";
+// import dinRail5 from "../images/dinrails5.png";
+import laserMarking1 from "../images/laser.webp";
+// import laserMarking2 from "../images/laser2.webp";
+// import laserMarking3 from "../images/laser3.webp";
+// import laserMarking4 from "../images/laser4.webp";
+// import laserMarking5 from "../images/laser5.webp";
+import tea1 from "../images/teaBag.jpeg";
+// import tea2 from "../images/teaBag2.jpeg";
+// import tea3 from "../images/teaBag3.jpeg";
+// import tea4 from "../images/teaBag4.jpeg";
+// import tea5 from "../images/teaBag5.jpeg";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
-import tea from "../images/teaBag.jpeg";
-import tw from "twin.macro";
-import emailjs from "emailjs-com";
-import { countries } from "countries-list"; // You can use any country list package or API
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 6%;
-
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
   }
-
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: flex-start;
   }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
+  position: relative;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
+`;
+
+const MainImage = styled.img`
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
-
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.5);
+  }
   @media (min-width: 768px) and (max-width: 1024px) {
     max-width: 300px;
     margin-bottom: 20px;
   }
-
   @media (min-width: 1024px) {
     max-width: 450px;
-    margin-right: 20px;
     height: 450px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 `;
 
+const ThumbnailContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+`;
+
+const Thumbnail = styled.img`
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  &:hover {
+    border: 1px solid #007bff;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (min-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
+`;
 const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
@@ -84,6 +137,12 @@ const InterestButton = styled.button`
   cursor: pointer;
 `;
 
+const BulkOrderText = styled.p`
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+`;
+
 const Popup = styled.div`
   ${tw`fixed top-0 left-0 w-full h-full z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center`}
 `;
@@ -117,11 +176,12 @@ const ProductDetailsPage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mobileNumber, setMobileNumber] = useState("");
   const [countryCode, setCountryCode] = useState("");
+  const [mainImage, setMainImage] = useState("");
 
   // Define product details based on category and productName
   const products = {
     "Industrial/Nylon Cable Ties": {
-      image: cableTie,
+      images: [cableTie1],
       details: {
         Length: "100 / 150 / 200 / 250 / 300mm",
         Brand: "ONEOTECH / Ananta",
@@ -135,7 +195,7 @@ const ProductDetailsPage = () => {
       },
     },
     "Industrial/Cable Tie Mounts": {
-      image: mounts,
+      images: [mounts1, tea1, mounts1],
       details: {
         Sizes: "19 x 19mm / 25 x 25mm / 28 x 28mm",
         Brand: "ONEOTECH",
@@ -148,7 +208,7 @@ const ProductDetailsPage = () => {
       },
     },
     "Industrial/Din Rail(MCB Channel)": {
-      image: dinRail,
+      images: [dinRail1],
       details: {
         Size: "35 x 7.5 / 35 x 15 / 32 x 15/ 15 x 5",
         Length: "1mtr/2mtr",
@@ -163,7 +223,7 @@ const ProductDetailsPage = () => {
       },
     },
     "Industrial/Laser Marking Machine": {
-      image: laserMarking,
+      images: [laserMarking1],
       details: {
         minimumOrderQuantity: "1 Piece",
         usageApplication: "All plastics, Glass etc",
@@ -175,9 +235,8 @@ const ProductDetailsPage = () => {
           "High-quality laser marking machine suitable for all plastics and glass.",
       },
     },
-
     "Consumer/Platinum CTC Tea": {
-      image: tea,
+      images: [tea1],
       details: {
         Brand: "FNG",
         Type: "Platinum CTC Tea",
@@ -197,7 +256,8 @@ const ProductDetailsPage = () => {
     return <div>Product details not available</div>;
   }
 
-  const { image, details } = product;
+  const { images, details } = product;
+  if (!mainImage) setMainImage(images[0]);
 
   const handleInterestClick = () => {
     setIsPopupOpen(true);
@@ -216,36 +276,35 @@ const ProductDetailsPage = () => {
       return;
     }
 
-    const templateParams = {
-      productName: productName,
-      mobileNumber: `+${countryCode}${mobileNumber}`,
-    };
+    const fullMobileNumber = `+${countryCode}${mobileNumber}`;
+    const message = `Interested in ${productName}`;
 
-    emailjs
-      .send(
-        "your_service_id", // replace with your emailjs service ID
-        "your_template_id", // replace with your emailjs template ID
-        templateParams,
-        "your_user_id" // replace with your emailjs user ID
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Mobile number sent successfully!");
-          handleClosePopup();
-        },
-        (error) => {
-          console.error("FAILED...", error);
-          alert("Failed to send mobile number. Please try again.");
-        }
-      );
+    // Send the message through WhatsApp
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${9810294854}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+
+    handleClosePopup();
   };
 
   return (
     <AnimationRevealPage>
       <Header />
       <Container>
-        <Image src={image} alt={`${productName} image`} />{" "}
+        <ImageContainer>
+          <MainImage src={mainImage} alt={`${productName} main image`} />
+          <ThumbnailContainer>
+            {images.map((img, index) => (
+              <Thumbnail
+                key={index}
+                src={img}
+                alt={`${productName} thumbnail ${index + 1}`}
+                onClick={() => setMainImage(img)}
+              />
+            ))}
+          </ThumbnailContainer>
+        </ImageContainer>
         <div>
           <ProductName>{productName}</ProductName>
           <Table>
@@ -258,6 +317,7 @@ const ProductDetailsPage = () => {
               ))}
             </tbody>
           </Table>
+          <BulkOrderText>Reach out to us for bulk orders.</BulkOrderText>
           <InterestButton onClick={handleInterestClick}>
             Yes, I'm Interested
           </InterestButton>
