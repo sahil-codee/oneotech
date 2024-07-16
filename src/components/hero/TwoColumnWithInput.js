@@ -21,7 +21,7 @@ const CarouselWrapper = styled.div`
     ${tw`w-full`}
   }
   .react-multi-carousel-item {
-    ${tw`w-full`}
+    ${tw`w-full transition-transform duration-700`}// Added transition for smoothness
   }
 `;
 
@@ -51,7 +51,8 @@ const FeaturedProducts = () => (
           responsive={responsive}
           infinite
           autoPlay
-          autoPlaySpeed={3000}
+          autoPlaySpeed={10000} // 10 seconds per slide
+          transitionDuration={2000} // 2 seconds transition duration
           arrows
         >
           <div>
