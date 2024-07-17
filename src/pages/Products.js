@@ -14,6 +14,11 @@ import mounts from "../images/mounts.jpg";
 import dinRail from "../images/dinrails.png";
 import tea from "../images/teaBag.jpeg";
 import laserMarking from "../images/laser.webp";
+import cinnamonImage from "../images/cinamon.svg";
+import cuminImage from "../images/cumin.svg";
+import turmericImage from "../images/turmuric.svg";
+import blackPepperImage from "../images/pepper.svg";
+import cardamomImage from "../images/cardamom.svg";
 
 const HeadingRow = tw.div`flex justify-center`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -68,7 +73,9 @@ export default () => {
   const filteredPosts =
     selectedCategory === "All"
       ? getPlaceholderPosts()
-      : getPlaceholderPosts().filter((post) => post.category === selectedCategory);
+      : getPlaceholderPosts().filter(
+          (post) => post.category === selectedCategory
+        );
 
   return (
     <AnimationRevealPage>
@@ -97,6 +104,12 @@ export default () => {
               onClick={() => onSelectCategory("Consumer")}
             >
               Consumer Products
+            </FilterButton>
+            <FilterButton
+              isSelected={selectedCategory === "Spices"}
+              onClick={() => onSelectCategory("Spices")}
+            >
+              Spices
             </FilterButton>
           </FilterContainer>
 
@@ -180,6 +193,51 @@ const getPlaceholderPosts = () => [
     category: "Consumer",
     title: "Platinum CTC Tea",
     description: "Premium quality tea leaves for a refreshing experience.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: cuminImage,
+    category: "Spices",
+    title: "Cumin Seeds",
+    description:
+      "Being the third most consumed spice in the world, Cumin is known for its aromatic and spicy-sweet flavor. At Pisum, we are leading exporters of the best quality Cumin seeds.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: cardamomImage,
+    category: "Spices",
+    title: "Cardamom",
+    description:
+      "Known as the Queen of Spices, cardamom has a strong, unique taste with an intensely aromatic fragrance. It is used in both sweet and savory dishes.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: turmericImage,
+    category: "Spices",
+    title: "Turmeric",
+    description:
+      "Turmeric is a bright yellow spice that is used in cooking and traditional medicine. It is known for its anti-inflammatory and antioxidant properties.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: blackPepperImage,
+    category: "Spices",
+    title: "Black Pepper",
+    description:
+      "Black pepper is one of the most commonly used spices worldwide. It has a sharp, pungent flavor and is used in various dishes for seasoning.",
+    url: "https://example.com",
+    featured: false,
+  },
+  {
+    imageSrc: cinnamonImage,
+    category: "Spices",
+    title: "Cinnamon",
+    description:
+      "Cinnamon is a popular spice known for its sweet and warm flavor. It is used in both sweet and savory dishes and has various health benefits.",
     url: "https://example.com",
     featured: false,
   },

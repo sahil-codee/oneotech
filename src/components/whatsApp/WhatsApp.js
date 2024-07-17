@@ -21,7 +21,7 @@ const WhatsAppChat = ({ phoneNumber }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <WhatsAppIcon width="54" height="54" fill="white" />
+      <WhatsAppIcon width="44" height="44" fill="white" />
     </WhatsAppButton>
   );
 };

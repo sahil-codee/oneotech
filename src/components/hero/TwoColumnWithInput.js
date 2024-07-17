@@ -6,9 +6,9 @@ import "react-multi-carousel/lib/styles.css";
 
 import Header from "../headers/light.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-import cableTie from "../../images/cableCarousel.png";
-import spices from "../../images/spicesCarousel.png";
-import teaFarm from "../../images/teaCarousel.png";
+import cableTie from "../../images/cableCarousel.webp";
+import spices from "../../images/spicesCarousel.webp";
+import teaFarm from "../../images/teaCarousel.webp";
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 mt-8`; // Background color with margin
 const CarouselContainer = styled.div`
