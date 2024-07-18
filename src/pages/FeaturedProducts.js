@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styled from "styled-components";
 import tw from "twin.macro"; // Importing twin.macro
+// eslint-disable-next-line
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
