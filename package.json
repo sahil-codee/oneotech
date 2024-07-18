@@ -9,14 +9,10 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
     "@vercel/speed-insights": "^1.0.11",
-    "countries-list": "^3.1.0",
-    "depcheck": "^1.4.7",
     "emailjs-com": "^3.2.0",
     "feather-icons": "^4.29.0",
     "framer-motion": "^11.3.2",
-    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-chatbot-kit": "^2.2.2",
@@ -27,13 +23,11 @@
     "react-multi-carousel": "^2.8.5",
     "react-rnd": "^10.3.7",
     "react-router-dom": "^6.3.0",
-    "react-router-sitemap": "^1.2.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
-    "swiper": "^11.1.4",
     "tailwindcss": "^3.0.0",
     "twin.macro": "^3.0.0-rc.4"
   },
@@ -73,12 +67,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.7",
-    "@babel/node": "^7.24.7",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/preset-react": "^7.24.7",
-    "serve": "^14.2.3",
     "vercel": "^34.2.3"
   }
 }
