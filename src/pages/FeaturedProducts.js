@@ -3,15 +3,15 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styled from "styled-components";
 import tw from "twin.macro"; // Importing twin.macro
-import cableTie from "../images/cableties.jpg";
-import mounts from "../images/mounts.jpg";
-import dinRail from "../images/dinrails.png";
-import tea from "../images/tea.png";
-import turmuric from "../images/turmuric.png";
-import pepper from "../images/pepper.png";
-import cumin from "../images/cumin.png";
-import coffee from "../images/coffee.png";
-import cinamon from "../images/cinamon.png";
+import cableTie from "../images/cableTies.svg";
+import mounts from "../images/mounts.svg";
+import dinRail from "../images/dinRail.svg";
+import tea from "../images/tea.svg";
+import turmuric from "../images/turmuric.svg";
+import pepper from "../images/pepper.svg";
+import cumin from "../images/cumin.svg";
+import coffee from "../images/coffee.svg";
+import cinamon from "../images/cinamon.svg";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Subheading } from "components/misc/Headings";
 
