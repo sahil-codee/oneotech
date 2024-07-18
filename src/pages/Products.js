@@ -9,10 +9,10 @@ import Footer from "components/footers/MiniCenteredFooter.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
 
-import cableTie from "../images/cableties.jpg";
-import mounts from "../images/mounts.jpg";
-import dinRail from "../images/dinrails.png";
-import tea from "../images/teaBag.jpeg";
+import cableTie from "../images/cableTies.svg";
+import mounts from "../images/mounts.svg";
+import dinRail from "../images/dinRail.svg";
+import tea from "../images/teaBag.svg";
 import laserMarking from "../images/laser.webp";
 import cinnamonImage from "../images/cinamon.svg";
 import cuminImage from "../images/cumin.svg";
@@ -125,7 +125,7 @@ export default () => {
                     rel="noopener noreferrer"
                   >
                     <ImageContainer>
-                      <Image imageSrc={post.imageSrc} />
+                      <Image imageSrc={post.imageSrc} alt={post.title} />
                     </ImageContainer>
                     <Info>
                       <Category>{post.category}</Category>

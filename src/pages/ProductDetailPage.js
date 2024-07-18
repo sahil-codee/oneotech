@@ -2,12 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { countries } from "countries-list"; // You can use any country list package or API
-import cableTie1 from "../images/cableties.jpg";
-import mounts1 from "../images/mounts.jpg";
-import dinRail1 from "../images/dinrails.png";
+import cableTie1 from "../images/cableTies.svg";
+import mounts1 from "../images/mounts.svg";
+import dinRail1 from "../images/dinRail.svg";
 import laserMarking1 from "../images/laser.webp";
-import tea1 from "../images/teaBag.jpeg";
+import tea1 from "../images/teaBag.svg";
 import cinnamonImage from "../images/cinamon.svg";
 import cuminImage from "../images/cumin.svg";
 import cardamomImage from "../images/cardamom.svg";
@@ -17,13 +16,6 @@ import indianSpices from "../images/indianSpices.svg";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6%;
-`;
 
 const Banner = styled.div`
   position: relative;
