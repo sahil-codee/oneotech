@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import tw from "twin.macro";
 import cableTie1 from "../images/cableTies.svg";
 import mounts1 from "../images/mounts.svg";
 import dinRail1 from "../images/dinRail.svg";
