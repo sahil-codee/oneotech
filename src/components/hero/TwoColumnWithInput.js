@@ -76,6 +76,7 @@ const FeaturedProducts = () => {
             <div>
               <img
                 src={teaFarm}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Tea Farm"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
@@ -95,6 +96,7 @@ const FeaturedProducts = () => {
             <div>
               <img
                 src={spices}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Spices"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
@@ -114,6 +116,7 @@ const FeaturedProducts = () => {
             <div>
               <img
                 src={cableTie}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Cable Ties"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
