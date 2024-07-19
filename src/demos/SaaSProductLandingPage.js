@@ -1,23 +1,36 @@
-import React, { Suspense, lazy } from "react";
+import React, { useState, useEffect } from "react";
 import tw from "twin.macro";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
-
-const Hero = lazy(() => import("components/hero/TwoColumnWithInput.js"));
-const Features = lazy(() =>
-  import("components/features/ThreeColWithSideImage.js")
-);
-const FAQ = lazy(() => import("components/faqs/SingleCol.js"));
-const FeaturedProducts = lazy(() => import("pages/FeaturedProducts"));
+import Hero from "components/hero/TwoColumnWithInput.js";
 
 const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
 const HighlightedText = tw.span`text-primary-500`;
 
-export default () => {
+// Lazy load other components
+const Features = React.lazy(() =>
+  import("components/features/ThreeColWithSideImage.js")
+);
+const FAQ = React.lazy(() => import("components/faqs/SingleCol.js"));
+const FeaturedProducts = React.lazy(() => import("pages/FeaturedProducts"));
+
+const HomePage = () => {
+  const [featuresLoaded, setFeaturesLoaded] = useState(false);
+  const [faqLoaded, setFaqLoaded] = useState(false);
+  const [productsLoaded, setProductsLoaded] = useState(false);
+
+  useEffect(() => {
+    import("components/features/ThreeColWithSideImage.js").then(() =>
+      setFeaturesLoaded(true)
+    );
+    import("components/faqs/SingleCol.js").then(() => setFaqLoaded(true));
+    import("pages/FeaturedProducts").then(() => setProductsLoaded(true));
+  }, []);
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <AnimationRevealPage>
-        <Hero roundedHeaderButton={true} />
+    <AnimationRevealPage>
+      <Hero roundedHeaderButton={true} />
+      {featuresLoaded && (
         <Features
           subheading={<Subheading>About Us</Subheading>}
           heading={
@@ -26,9 +39,13 @@ export default () => {
             </>
           }
         />
+      )}
+      {productsLoaded && (
         <FeaturedProducts
           subheading={<Subheading>Popular Products</Subheading>}
         />
+      )}
+      {faqLoaded && (
         <FAQ
           subheading={<Subheading>FAQS</Subheading>}
           heading={
@@ -70,8 +87,10 @@ export default () => {
             },
           ]}
         />
-        <Footer />
-      </AnimationRevealPage>
-    </Suspense>
+      )}
+      <Footer />
+    </AnimationRevealPage>
   );
 };
+
+export default HomePage;
