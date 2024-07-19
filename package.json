@@ -32,9 +32,9 @@
     "twin.macro": "^3.0.0-rc.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "deploy": "yarn build && netlify deploy --prod --dir=build",
     "vercel:login": "vercel login",
@@ -67,6 +67,8 @@
     ]
   },
   "devDependencies": {
-    "vercel": "^34.2.3"
+    "react-app-rewired": "^2.2.1",
+    "vercel": "^34.2.3",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
