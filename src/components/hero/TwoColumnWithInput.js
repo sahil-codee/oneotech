@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Carousel from "react-multi-carousel";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-multi-carousel/lib/styles.css";
 
 import Header from "../headers/light.js";
@@ -21,9 +22,9 @@ const addPreloadLink = (href, as, type) => {
   document.head.appendChild(link);
 };
 
-const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 mt-8`; // Background color with margin
+const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 mt-8`;
 const CarouselContainer = styled.div`
-  ${tw`relative w-full mt-8`}// Added margin-top
+  ${tw`relative w-full mt-8`}
 `;
 
 const CarouselWrapper = styled.div`
@@ -32,7 +33,7 @@ const CarouselWrapper = styled.div`
     ${tw`w-full`}
   }
   .react-multi-carousel-item {
-    ${tw`w-full transition-transform duration-700`}// Added transition for smoothness
+    ${tw`w-full transition-transform duration-700`}
   }
 `;
 
@@ -74,7 +75,7 @@ const FeaturedProducts = () => {
             arrows
           >
             <div>
-              <img
+              <LazyLoadImage
                 src={teaFarm}
                 sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Tea Farm"
@@ -94,7 +95,7 @@ const FeaturedProducts = () => {
               </Overlay>
             </div>
             <div>
-              <img
+              <LazyLoadImage
                 src={spices}
                 sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Spices"
@@ -114,7 +115,7 @@ const FeaturedProducts = () => {
               </Overlay>
             </div>
             <div>
-              <img
+              <LazyLoadImage
                 src={cableTie}
                 sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Cable Ties"
