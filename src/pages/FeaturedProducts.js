@@ -6,12 +6,6 @@ import tw from "twin.macro"; // Importing twin.macro
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
-import tea from "../images/tea.svg";
-import turmuric from "../images/turmuric.svg";
-import pepper from "../images/pepper.svg";
-import cumin from "../images/cumin.svg";
-import coffee from "../images/coffee.svg";
-import cinamon from "../images/cinamon.svg";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Subheading } from "components/misc/Headings";
 
@@ -19,16 +13,10 @@ const featuredProducts = [
   { imageSrc: cableTie, title: "Nylon Cable Ties" },
   { imageSrc: mounts, title: "Cable Tie Mounts" },
   { imageSrc: dinRail, title: "Din Rail (MCB Channel)" },
-  { imageSrc: tea, title: "Premium Tea" },
-  { imageSrc: cinamon, title: "Cinnamon" },
-  { imageSrc: pepper, title: "Pepper" },
-  { imageSrc: coffee, title: "Coffee" },
-  { imageSrc: cumin, title: "Cumin" },
-  { imageSrc: turmuric, title: "Turmeric" },
 ];
 
 const responsive = {
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4 },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
   tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }, // Ensures 1 item on mobile
 };
@@ -39,6 +27,7 @@ const Card = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%; // Ensures the card takes full width
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -68,8 +57,7 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 420px;
-  margin: 0 5px;
-  padding-top: 0px;
+  margin: 0 10px; // Adjusted margin for better spacing
   cursor: pointer;
 `;
 
@@ -100,9 +88,8 @@ const FeaturedProducts = ({
     {subheading && <Subheading>{subheading}</Subheading>}
     <Description>
       Explore Oneotech's popular products including nylon cable ties, cable tie
-      mounts, din rails (MCB channels), premium tea, spices like cinnamon,
-      pepper, turmeric, and essential commodities such as coffee and cumin.
-      Discover top-quality offerings for your needs.
+      mounts, and din rails (MCB channels). Discover top-quality offerings for
+      your needs.
     </Description>
     <Carousel
       additionalTransfrom={0}

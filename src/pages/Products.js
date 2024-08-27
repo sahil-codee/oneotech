@@ -12,21 +12,9 @@ import { PrimaryButton } from "components/misc/Buttons";
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
-import tea from "../images/teaBag.svg";
-import laserMarking from "../images/laser.webp";
-import cinnamonImage from "../images/cinamon.svg";
-import cuminImage from "../images/cumin.svg";
-import turmericImage from "../images/turmuric.svg";
-import blackPepperImage from "../images/pepper.svg";
-import cardamomImage from "../images/cardamom.svg";
 
 const HeadingRow = tw.div`flex justify-center`;
 const Heading = tw(SectionHeading)`text-gray-900`;
-const FilterContainer = tw.div`flex justify-center mt-4`;
-const FilterButton = styled.button`
-  ${tw`p-2 border rounded-md mx-2`}
-  ${({ isSelected }) => isSelected && tw`bg-primary-500 text-white`}
-`;
 
 const Posts = tw.div`mt-6 flex flex-wrap justify-center`;
 
@@ -55,27 +43,17 @@ const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-wi
 const Title = tw.div`text-lg font-semibold text-gray-900`;
 const Description = tw.div`text-sm text-gray-600 mt-2`;
 
-const LoadMoreButtonContainer = tw.div`flex justify-center`;
-const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
-
 export default () => {
   const [visible, setVisible] = useState(6);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const onSelectCategory = (category) => {
-    setSelectedCategory(category);
-  };
 
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6);
   };
 
-  const filteredPosts =
-    selectedCategory === "All"
-      ? getPlaceholderPosts()
-      : getPlaceholderPosts().filter(
-          (post) => post.category === selectedCategory
-        );
+  // Filtered Posts to show only "Industrial" category
+  const filteredPosts = getPlaceholderPosts().filter(
+    (post) => post.category === "Industrial"
+  );
 
   return (
     <AnimationRevealPage>
@@ -83,35 +61,8 @@ export default () => {
       <Container>
         <ContentWithPaddingXl>
           <HeadingRow>
-            <Heading>Our Products</Heading>
+            <Heading>Industrial Products</Heading>
           </HeadingRow>
-
-          <FilterContainer>
-            <FilterButton
-              isSelected={selectedCategory === "All"}
-              onClick={() => onSelectCategory("All")}
-            >
-              All
-            </FilterButton>
-            <FilterButton
-              isSelected={selectedCategory === "Industrial"}
-              onClick={() => onSelectCategory("Industrial")}
-            >
-              Industrial Products
-            </FilterButton>
-            <FilterButton
-              isSelected={selectedCategory === "Consumer"}
-              onClick={() => onSelectCategory("Consumer")}
-            >
-              Consumer Products
-            </FilterButton>
-            <FilterButton
-              isSelected={selectedCategory === "Spices"}
-              onClick={() => onSelectCategory("Spices")}
-            >
-              Spices
-            </FilterButton>
-          </FilterContainer>
 
           <Posts>
             {filteredPosts.slice(0, visible).map((post, index) => (
@@ -141,11 +92,9 @@ export default () => {
           </Posts>
 
           {visible < filteredPosts.length && (
-            <LoadMoreButtonContainer>
-              <LoadMoreButton onClick={onLoadMoreClick}>
-                Load More
-              </LoadMoreButton>
-            </LoadMoreButtonContainer>
+            <div tw="flex justify-center">
+              <PrimaryButton onClick={onLoadMoreClick}>Load More</PrimaryButton>
+            </div>
           )}
         </ContentWithPaddingXl>
       </Container>
@@ -154,91 +103,24 @@ export default () => {
   );
 };
 
+// Function to get Placeholder Posts
 const getPlaceholderPosts = () => [
   {
     imageSrc: cableTie,
     category: "Industrial",
     title: "Nylon Cable Ties",
     description: "High-quality cable ties for industrial applications.",
-    url: "https://example.com",
-    featured: false,
   },
   {
     imageSrc: mounts,
     category: "Industrial",
     title: "Cable Tie Mounts",
     description: "Durable mounts for industrial equipment.",
-    url: "https://example.com",
-    featured: false,
   },
   {
     imageSrc: dinRail,
     category: "Industrial",
     title: "Din Rail (MCB Channel)",
     description: "Durable Din Rails for various industrial equipment.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: laserMarking,
-    category: "Industrial",
-    title: "Laser Marking Machine",
-    description:
-      "High-quality laser marking machine suitable for all plastics and glass.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: tea,
-    category: "Consumer",
-    title: "Platinum CTC Tea",
-    description: "Premium quality tea leaves for a refreshing experience.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: cuminImage,
-    category: "Spices",
-    title: "Cumin Seeds",
-    description:
-      "Being the third most consumed spice in the world, Cumin is known for its aromatic and spicy-sweet flavor. At Pisum, we are leading exporters of the best quality Cumin seeds.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: cardamomImage,
-    category: "Spices",
-    title: "Cardamom",
-    description:
-      "Known as the Queen of Spices, cardamom has a strong, unique taste with an intensely aromatic fragrance. It is used in both sweet and savory dishes.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: turmericImage,
-    category: "Spices",
-    title: "Turmeric",
-    description:
-      "Turmeric is a bright yellow spice that is used in cooking and traditional medicine. It is known for its anti-inflammatory and antioxidant properties.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: blackPepperImage,
-    category: "Spices",
-    title: "Black Pepper",
-    description:
-      "Black pepper is one of the most commonly used spices worldwide. It has a sharp, pungent flavor and is used in various dishes for seasoning.",
-    url: "https://example.com",
-    featured: false,
-  },
-  {
-    imageSrc: cinnamonImage,
-    category: "Spices",
-    title: "Cinnamon",
-    description:
-      "Cinnamon is a popular spice known for its sweet and warm flavor. It is used in both sweet and savory dishes and has various health benefits.",
-    url: "https://example.com",
-    featured: false,
   },
 ];

@@ -10,6 +10,9 @@ import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-
 import cableTie from "../../images/cableCarousel.webp";
 import spices from "../../images/spicesCarousel.webp";
 import teaFarm from "../../images/teaCarousel.webp";
+import nylonCableTies from "../../images/cableTies.svg";
+import cableTieMounts from "../../images/mounts.svg";
+import dinRail from "../../images/dinRail.svg";
 
 const addPreloadLink = (href, as, type) => {
   const link = document.createElement("link");
@@ -60,6 +63,9 @@ const FeaturedProducts = () => {
     addPreloadLink(cableTie, "image", "image/webp");
     addPreloadLink(spices, "image", "image/webp");
     addPreloadLink(teaFarm, "image", "image/webp");
+    addPreloadLink(nylonCableTies, "image", "image/webp");
+    addPreloadLink(cableTieMounts, "image", "image/webp");
+    addPreloadLink(dinRail, "image", "image/webp");
   }, []);
 
   return (
@@ -74,7 +80,7 @@ const FeaturedProducts = () => {
             transitionDuration={2000} // 2 seconds transition duration
             arrows
           >
-            <div>
+            {/* <div>
               <LazyLoadImage
                 src={teaFarm}
                 sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
@@ -113,7 +119,7 @@ const FeaturedProducts = () => {
                   quality spices globally.
                 </Paragraph>
               </Overlay>
-            </div>
+            </div> */}
             <div>
               <LazyLoadImage
                 src={cableTie}
@@ -131,6 +137,65 @@ const FeaturedProducts = () => {
                 <Paragraph>
                   Our products include cable tie mounts and DIN rails, making us
                   a trusted din rail exporter in India.
+                </Paragraph>
+              </Overlay>
+            </div>
+            <div>
+              <LazyLoadImage
+                src={nylonCableTies}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                alt="Nylon Cable Ties"
+                style={{ width: "100%", height: "600px", objectFit: "cover" }}
+              />
+              <Overlay>
+                <Heading>Nylon Cable Ties</Heading>
+                <Paragraph>
+                  Our nylon cable ties are durable and reliable, perfect for a
+                  variety of industrial applications.
+                </Paragraph>
+                <Paragraph>
+                  As a leading exporter of nylon cable ties in India, we ensure
+                  our products meet the highest standards of quality and
+                  performance.
+                </Paragraph>
+              </Overlay>
+            </div>
+            <div>
+              <LazyLoadImage
+                src={cableTieMounts}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                alt="Cable Tie Mounts"
+                style={{ width: "100%", height: "600px", objectFit: "cover" }}
+              />
+              <Overlay>
+                <Heading>Cable Tie Mounts</Heading>
+                <Paragraph>
+                  Our cable tie mounts provide secure and efficient solutions
+                  for cable management in various settings.
+                </Paragraph>
+                <Paragraph>
+                  We offer high-quality cable tie mounts that are trusted by
+                  industries worldwide for their reliability and performance.
+                </Paragraph>
+              </Overlay>
+            </div>
+            <div>
+              <LazyLoadImage
+                src={dinRail}
+                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                alt="DIN Rail"
+                style={{ width: "100%", height: "600px", objectFit: "cover" }}
+              />
+              <Overlay>
+                <Heading>DIN Rail</Heading>
+                <Paragraph>
+                  Our DIN rails are designed to provide strong support for
+                  mounting electrical equipment in various industrial
+                  applications.
+                </Paragraph>
+                <Paragraph>
+                  As a leading exporter of DIN rails, we ensure that our
+                  products offer excellent durability and reliability.
                 </Paragraph>
               </Overlay>
             </div>
