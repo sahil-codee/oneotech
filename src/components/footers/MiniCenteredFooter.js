@@ -52,7 +52,7 @@ export default () => {
               <Link href="/services">Services</Link>
             </LinksContainer>
             <SocialLinksContainer>
-              <SocialLink href="https://facebook.com">
+              <SocialLink href="https://www.facebook.com/oneotechenterprises">
                 <FacebookIcon />
               </SocialLink>
               <SocialLink href="https://twitter.com">

@@ -80,46 +80,6 @@ const FeaturedProducts = () => {
             transitionDuration={2000} // 2 seconds transition duration
             arrows
           >
-            {/* <div>
-              <LazyLoadImage
-                src={teaFarm}
-                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
-                alt="Tea Farm"
-                style={{ width: "100%", height: "600px", objectFit: "cover" }}
-              />
-              <Overlay>
-                <Heading>High-Quality Assam & Darjeeling Tea</Heading>
-                <Paragraph>
-                  Exporting Premium Assam & Darjeeling Tea Globally
-                </Paragraph>
-                <Paragraph>
-                  We specialize in exporting high-quality Assam and Darjeeling
-                  tea, ensuring the best quality and taste. As a leading tea
-                  exporter in India, our teas are known for their unique flavor
-                  and aroma.
-                </Paragraph>
-              </Overlay>
-            </div>
-            <div>
-              <LazyLoadImage
-                src={spices}
-                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
-                alt="Spices"
-                style={{ width: "100%", height: "600px", objectFit: "cover" }}
-              />
-              <Overlay>
-                <Heading>Explore Our Range of Spices</Heading>
-                <Paragraph>
-                  From turmeric to cumin, we offer the finest spices from India.
-                  As a top bulk spice exporter in India, we provide both whole
-                  and powdered spices.
-                </Paragraph>
-                <Paragraph>
-                  We are a renowned spice exporter in Delhi, delivering premium
-                  quality spices globally.
-                </Paragraph>
-              </Overlay>
-            </div> */}
             <div>
               <LazyLoadImage
                 src={cableTie}
@@ -128,15 +88,16 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>Industrial Products</Heading>
+                <Heading>Industrial Products by Oneotech Enterprises</Heading>
                 <Paragraph>
-                  Nylon cable ties, cable tie mounts, and din rails. We are
-                  among the leading nylon cable tie exporters in India and best
-                  nylon cable tie exporters in Delhi.
+                  Nylon cable ties, cable tie mounts, and DIN rails. Oneotech
+                  Enterprises is among the leading nylon cable tie exporters in
+                  India and the best nylon cable tie exporter in Delhi.
                 </Paragraph>
                 <Paragraph>
-                  Our products include cable tie mounts and DIN rails, making us
-                  a trusted din rail exporter in India.
+                  Our product range includes cable tie mounts and DIN rails,
+                  making Oneotech Enterprises a trusted DIN rail exporter in
+                  India.
                 </Paragraph>
               </Overlay>
             </div>
@@ -148,15 +109,15 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>Nylon Cable Ties</Heading>
+                <Heading>Nylon Cable Ties by Oneotech Enterprises</Heading>
                 <Paragraph>
                   Our nylon cable ties are durable and reliable, perfect for a
                   variety of industrial applications.
                 </Paragraph>
                 <Paragraph>
-                  As a leading exporter of nylon cable ties in India, we ensure
-                  our products meet the highest standards of quality and
-                  performance.
+                  As a leading exporter of nylon cable ties in India, Oneotech
+                  Enterprises ensures our products meet the highest standards of
+                  quality and performance.
                 </Paragraph>
               </Overlay>
             </div>
@@ -168,14 +129,15 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>Cable Tie Mounts</Heading>
+                <Heading>Cable Tie Mounts by Oneotech Enterprises</Heading>
                 <Paragraph>
                   Our cable tie mounts provide secure and efficient solutions
                   for cable management in various settings.
                 </Paragraph>
                 <Paragraph>
-                  We offer high-quality cable tie mounts that are trusted by
-                  industries worldwide for their reliability and performance.
+                  Oneotech Enterprises offers high-quality cable tie mounts that
+                  are trusted by industries worldwide for their reliability and
+                  performance.
                 </Paragraph>
               </Overlay>
             </div>
@@ -187,15 +149,16 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>DIN Rail</Heading>
+                <Heading>DIN Rail by Oneotech Enterprises</Heading>
                 <Paragraph>
                   Our DIN rails are designed to provide strong support for
                   mounting electrical equipment in various industrial
                   applications.
                 </Paragraph>
                 <Paragraph>
-                  As a leading exporter of DIN rails, we ensure that our
-                  products offer excellent durability and reliability.
+                  As a leading exporter of DIN rails, Oneotech Enterprises
+                  ensures that our products offer excellent durability and
+                  reliability.
                 </Paragraph>
               </Overlay>
             </div>

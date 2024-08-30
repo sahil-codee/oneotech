@@ -41,7 +41,7 @@ export default ({
   buttonRounded = true,
   heading = "Amazing Features",
   subheading = "Features",
-  description = "Oneotech Enterprises, a premier exporter in India, specializes in high-quality industrial products. Based in Delhi, we offer top-grade nylon cable ties, cable tie mounts, and DIN rails. Recognized as a trusted supplier of premium industrial goods, Oneotech caters to diverse international markets with a commitment to superior quality and excellence.",
+  description = "Oneotech Enterprises, a premier exporter in India, specializes in high-quality industrial products. Based in Delhi, we offer top-grade nylon cable ties, cable tie mounts, and DIN rails. Recognized as a trusted supplier of premium industrial Products, Oneotech Enterprises caters to diverse international markets with a commitment to superior quality and excellence.",
 }) => {
   return (
     <Container>

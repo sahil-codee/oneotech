@@ -87,7 +87,7 @@ const FeaturedProducts = ({
   <SectionContainer>
     {subheading && <Subheading>{subheading}</Subheading>}
     <Description>
-      Explore Oneotech's popular products including nylon cable ties, cable tie
+      Explore Oneotech Enterprises products nylon cable ties, cable tie
       mounts, and din rails (MCB channels). Discover top-quality offerings for
       your needs.
     </Description>
