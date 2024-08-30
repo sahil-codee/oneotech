@@ -37,10 +37,10 @@ export const PrimaryLink = tw(ContactUsLink)`
 `;
 
 export const LogoLink = styled(RouterNavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`w-12 mr-3`}
   }
 
   .logo-text {
@@ -108,7 +108,7 @@ export default ({
     <LogoLink to="/">
       <img src={logo} alt="oneotech enterprises logo" />
       <div className="logo-text">
-        ONEOTECH
+        Oneotech Enterprises
         <span className="slogan">Expand Horizons Grow Trade</span>
       </div>
     </LogoLink>
