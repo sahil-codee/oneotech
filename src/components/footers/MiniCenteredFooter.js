@@ -13,13 +13,13 @@ const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoImg = tw.img`w-8 h-auto`; // Added height auto to maintain aspect ratio
+const LogoImg = tw.img`w-8 h-auto`;
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
-const SocialLinksContainer = tw.div`mt-10 flex justify-center`; // Added flex to align icons horizontally
+const SocialLinksContainer = tw.div`mt-10 flex justify-center`;
 const SocialLink = styled.a`
   ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
   svg {
@@ -29,7 +29,6 @@ const SocialLink = styled.a`
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 
-// Adding a footer-specific CSS class to ensure consistent height
 const FooterWrapper = styled.div`
   ${tw`min-h-[100px]`}/* Set a minimum height to avoid layout shifts */
 `;
@@ -62,6 +61,20 @@ export default () => {
                 <YoutubeIcon />
               </SocialLink>
             </SocialLinksContainer>
+            <a
+              href="https://www.exportbureau.com/company_report.html?code=192304&name=oneotech_enterprises"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginTop: "20px" }}
+            >
+              <img
+                src="https://www.exportbureau.com/images/link/icon135x30approved.gif"
+                width="135"
+                height="30"
+                alt="Export Bureau Approved"
+                style={{ border: "0" }}
+              />
+            </a>
             <CopyrightText>
               &copy; Copyright 2024, Oneotech Enterprises All Rights Reserved.
             </CopyrightText>
