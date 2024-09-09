@@ -88,20 +88,26 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>Industrial Products by Oneotech Enterprises</Heading>
+                <Heading>
+                  Nylon Cable Tie Exporter in India - Oneotech Enterprises
+                </Heading>
                 <Paragraph>
-                  Nylon cable ties, cable tie mounts, and DIN rails. Oneotech
-                  Enterprises is among the leading nylon cable tie exporters in
-                  India and the best nylon cable tie exporter in Delhi.
+                  Oneotech Enterprises is a leading nylon cable tie exporter in
+                  India, offering high-quality and durable nylon cable ties for
+                  various industrial applications. Our expertise as a trusted
+                  nylon cable tie exporter ensures that our products meet the
+                  highest standards of performance and reliability.
                 </Paragraph>
                 <Paragraph>
-                  Our product range includes cable tie mounts and DIN rails,
-                  making Oneotech Enterprises a trusted DIN rail exporter in
-                  India.
+                  As a premier nylon cable tie exporter in India, Oneotech
+                  Enterprises is committed to delivering top-notch products to
+                  meet the needs of our global clients. Our nylon cable ties are
+                  designed for efficiency and durability, making us a trusted
+                  choice in the industry.
                 </Paragraph>
               </Overlay>
             </div>
-            <div>
+            {/* <div>
               <LazyLoadImage
                 src={nylonCableTies}
                 sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
@@ -120,7 +126,7 @@ const FeaturedProducts = () => {
                   quality and performance.
                 </Paragraph>
               </Overlay>
-            </div>
+            </div> */}
             <div>
               <LazyLoadImage
                 src={cableTieMounts}
@@ -129,7 +135,10 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>Cable Tie Mounts by Oneotech Enterprises</Heading>
+                <Heading>
+                  Leading Cable Tie Mounts Exporter in india - Oneotech
+                  Enterprises
+                </Heading>
                 <Paragraph>
                   Our cable tie mounts provide secure and efficient solutions
                   for cable management in various settings.
@@ -149,7 +158,7 @@ const FeaturedProducts = () => {
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
               <Overlay>
-                <Heading>DIN Rail by Oneotech Enterprises</Heading>
+                <Heading>DIN Rail (MCB Channel) - Oneotech Enterprises</Heading>
                 <Paragraph>
                   Our DIN rails are designed to provide strong support for
                   mounting electrical equipment in various industrial
