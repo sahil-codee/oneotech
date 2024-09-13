@@ -2,7 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styled from "styled-components";
-import tw from "twin.macro"; // Importing twin.macro
+import tw from "twin.macro";
+import { Link } from "react-router-dom"; // Import Link component
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
@@ -10,10 +11,31 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Subheading } from "components/misc/Headings";
 
 const featuredProducts = [
-  { imageSrc: cableTie, title: "Nylon Cable Ties" },
-  { imageSrc: mounts, title: "Cable Tie Mounts" },
-  { imageSrc: dinRail, title: "Din Rail (MCB Channel)" },
+  {
+    imageSrc: cableTie,
+    title: "Nylon Cable Ties",
+    altText: "leading nylon cable tie exporters in india",
+  },
+  {
+    imageSrc: mounts,
+    title: "Cable Tie Mounts",
+    altText: "leading cable tie mounts exporters in india",
+  },
+  {
+    imageSrc: dinRail,
+    title: "Din Rail (MCB Channel)",
+    altText: "leading din rail exporters in india",
+  },
 ];
+
+const generateSeoUrl = (title) => {
+  const seoUrls = {
+    "Nylon Cable Ties": "leading-nylon-cable-tie-exporters-in-india",
+    "Cable Tie Mounts": "leading-cable-tie-mounts-exporters-in-india",
+    "Din Rail (MCB Channel)": "leading-din-rail-exporters-in-india",
+  };
+  return seoUrls[title] || title.toLowerCase().replace(/\s+/g, "-");
+};
 
 const responsive = {
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -87,9 +109,9 @@ const FeaturedProducts = ({
   <SectionContainer>
     {subheading && <Subheading>{subheading}</Subheading>}
     <Description>
-      Explore Oneotech Enterprises products nylon cable ties, cable tie
-      mounts, and din rails (MCB channels). Discover top-quality offerings for
-      your needs.
+      Explore Oneotech Enterprises products nylon cable ties, cable tie mounts,
+      and din rails (MCB channels). Discover top-quality offerings for your
+      needs.
     </Description>
     <Carousel
       additionalTransfrom={0}
@@ -111,12 +133,18 @@ const FeaturedProducts = ({
       itemClass="carousel-item-margin"
     >
       {featuredProducts.map((product, index) => (
-        <CardContainer key={index}>
-          <Card>
-            <CardImage src={product.imageSrc} alt={product.title} />
-            <CardTitle>{product.title}</CardTitle>
-          </Card>
-        </CardContainer>
+        <Link
+          to={`/products/${generateSeoUrl(product.title)}`}
+          key={index}
+          style={{ textDecoration: "none" }}
+        >
+          <CardContainer>
+            <Card>
+              <CardImage src={product.imageSrc} alt={product.altText} />
+              <CardTitle>{product.title}</CardTitle>
+            </Card>
+          </CardContainer>
+        </Link>
       ))}
     </Carousel>
     <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>

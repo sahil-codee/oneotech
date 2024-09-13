@@ -14,7 +14,7 @@ import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
 
 const HeadingRow = tw.div`flex justify-center`;
-const Heading = tw(SectionHeading)`text-gray-900`;
+const Heading = tw(SectionHeading)`text-primary-900`;
 
 const Posts = tw.div`mt-6 flex flex-wrap justify-center`;
 
@@ -55,6 +55,16 @@ export default () => {
     (post) => post.category === "Industrial"
   );
 
+  // Function to create SEO-friendly URLs
+  const generateSeoUrl = (title) => {
+    const seoUrls = {
+      "Nylon Cable Ties": "leading-nylon-cable-tie-exporters-in-india",
+      "Cable Tie Mounts": "leading-cable-tie-mounts-exporters-in-india",
+      "Din Rail (MCB Channel)": "leading-din-rail-exporters-in-india",
+    };
+    return seoUrls[title] || title.toLowerCase().replace(/\s+/g, "-");
+  };
+
   return (
     <AnimationRevealPage>
       <Header />
@@ -69,9 +79,7 @@ export default () => {
               <PostContainer key={index}>
                 <Post className="group">
                   <a
-                    href={`/products/${encodeURIComponent(
-                      post.category
-                    )}/${encodeURIComponent(post.title)}`}
+                    href={`/products/${generateSeoUrl(post.altText)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -108,19 +116,22 @@ const getPlaceholderPosts = () => [
   {
     imageSrc: cableTie,
     category: "Industrial",
-    title: "Nylon Cable Ties",
+    title: "Nylon Cable Tie",
     description: "High-quality cable ties for industrial applications.",
+    altText: "leading nylon cable tie exporters in india",
   },
   {
     imageSrc: mounts,
     category: "Industrial",
     title: "Cable Tie Mounts",
     description: "Durable mounts for industrial equipment.",
+    altText: "leading cable tie mounts exporters in india",
   },
   {
     imageSrc: dinRail,
     category: "Industrial",
     title: "Din Rail (MCB Channel)",
     description: "Durable Din Rails for various industrial equipment.",
+    altText: "leading din rail exporters in india",
   },
 ];
