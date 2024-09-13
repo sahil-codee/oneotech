@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Document, Page, pdfjs } from "react-pdf";
 import tw from "twin.macro";
 import styled from "styled-components";
-import pdf from "../Assets/oneotechCatalog.pdf";
 
 // Set the workerSrc to the correct version using cdnjs
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-// Catalog URL
-const catalogURL =
-  "https://raw.githubusercontent.com/sahil-codee/oneotech/master/src/Assets/oneotechCatalog.pdf";
 
 // Styles using twin.macro
 const Container = styled.div`
@@ -30,28 +26,48 @@ const PdfViewer = styled.div`
 
 const CatalogPage = () => {
   const [width, setWidth] = useState(1200);
+  const [catalogURL, setCatalogURL] = useState("");
 
   useEffect(() => {
-    // Update the width based on window size for responsive scaling
+    const fetchCatalog = async () => {
+      const token = process.env.REACT_APP_GITHUB_TOKEN; // Load the token from environment variable
+      try {
+        const response = await axios.get(
+          `https://api.github.com/repos/sahil-codee/oneotech/contents/src/Assets/oneotechCatalog.pdf`,
+          {
+            headers: {
+              Authorization: `token ${token}`,
+            },
+          }
+        );
+        setCatalogURL(response.data.download_url); // Set the download URL
+      } catch (error) {
+        console.error("Failed to fetch catalog:", error);
+      }
+    };
+
+    fetchCatalog();
     setWidth(window.innerWidth);
   }, []);
 
   return (
     <Container>
       {/* Download Button */}
-      <Button href={pdf} target="_blank" download>
+      <Button href={catalogURL} target="_blank" download>
         <Icon>⬇</Icon>Download Catalog
       </Button>
 
       {/* PDF Viewer */}
       <PdfViewer>
-        <Document file={catalogURL} className="d-flex justify-content-center">
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-        </Document>
+        {catalogURL && (
+          <Document file={catalogURL} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </Document>
+        )}
       </PdfViewer>
 
       {/* Another Download Button */}
-      <Button href={pdf} target="_blank" download>
+      <Button href={catalogURL} target="_blank" download>
         <Icon>⬇</Icon>Download Catalog
       </Button>
     </Container>

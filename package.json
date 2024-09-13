@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^13.4.0",
     "@vercel/speed-insights": "^1.0.11",
+    "axios": "^1.7.7",
     "emailjs-com": "^3.2.0",
     "feather-icons": "^4.29.0",
     "framer-motion": "^11.3.2",
