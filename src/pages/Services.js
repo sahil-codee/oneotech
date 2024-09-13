@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import tw from "twin.macro";
 import styled from "styled-components";
+import pdf from "../Assets/oneotechCatalog.pdf";
 
 // Set the workerSrc to the correct version using cdnjs
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -38,7 +39,7 @@ const CatalogPage = () => {
   return (
     <Container>
       {/* Download Button */}
-      <Button href={catalogURL} target="_blank" download>
+      <Button href={pdf} target="_blank" download>
         <Icon>⬇</Icon>Download Catalog
       </Button>
 
@@ -50,7 +51,7 @@ const CatalogPage = () => {
       </PdfViewer>
 
       {/* Another Download Button */}
-      <Button href={catalogURL} target="_blank" download>
+      <Button href={pdf} target="_blank" download>
         <Icon>⬇</Icon>Download Catalog
       </Button>
     </Container>
