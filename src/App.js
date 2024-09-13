@@ -8,6 +8,7 @@ import Products from "./pages/Products.js";
 import ContactUs from "./pages/ContactUs";
 import Services from "./pages/Services.js";
 import ProductDetailsPage from "pages/ProductDetailPage.js";
+import Tea from "../src/pages/Tea.js";
 import WhatsAppChat from "components/whatsApp/WhatsApp.js";
 
 export default function App() {
@@ -32,8 +33,9 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/bulk-tea" element={<Tea />} />
           <Route path="/products/:seoUrl" element={<ProductDetailsPage />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/product-catalog" element={<Services />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </Router>

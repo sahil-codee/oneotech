@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Document, Page, pdfjs } from "react-pdf";
 import tw from "twin.macro";
 import styled from "styled-components";
+import pdf from "../Assets/oneotechCatalog.pdf";
+import AnimationRevealPage from "helpers/AnimationRevealPage";
+import Header from "components/headers/light.js";
 
-// Set the workerSrc to the correct version using cdnjs
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// Set the workerSrc to the correct version using an alternative CDN
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-// Styles using twin.macro
 const Container = styled.div`
-  ${tw`flex flex-col items-center mt-8`}
+  ${tw`flex flex-col items-center mt-8 px-4`}
 `;
 
 const Button = styled.a`
@@ -24,53 +25,77 @@ const PdfViewer = styled.div`
   ${tw`flex justify-center mt-4`}
 `;
 
-const CatalogPage = () => {
-  const [width, setWidth] = useState(1200);
-  const [catalogURL, setCatalogURL] = useState("");
+const catalogLink =
+  "https://raw.githubusercontent.com/sahil-codee/oneotech/master/src/Assets/oneotechCatalog.pdf";
 
+const CatalogPage = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [numPages, setNumPages] = useState(null);
+  const [pdfError, setPdfError] = useState(null);
+
+  // Handle window resize for responsive design
   useEffect(() => {
-    const fetchCatalog = async () => {
-      const token = process.env.REACT_APP_GITHUB_TOKEN; // Load the token from environment variable
-      try {
-        const response = await axios.get(
-          `https://api.github.com/repos/sahil-codee/oneotech/contents/src/Assets/oneotechCatalog.pdf`,
-          {
-            headers: {
-              Authorization: `token ${token}`,
-            },
-          }
-        );
-        setCatalogURL(response.data.download_url); // Set the download URL
-      } catch (error) {
-        console.error("Failed to fetch catalog:", error);
-      }
+    const handleResize = () => {
+      setWidth(window.innerWidth);
     };
 
-    fetchCatalog();
-    setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+    console.log(`PDF loaded successfully, total pages: ${numPages}`);
+  };
+
+  // Dynamically calculate scale based on the screen width
+  const calculateScale = () => {
+    if (width > 1200) return 1.7;
+    if (width > 992) return 1.4;
+    if (width > 768) return 1.1;
+    return 0.6; // Mobile screens
+  };
+
   return (
-    <Container>
-      {/* Download Button */}
-      <Button href={catalogURL} target="_blank" download>
-        <Icon>⬇</Icon>Download Catalog
-      </Button>
+    <AnimationRevealPage>
+      <Header />
+      <Container>
+        <Button href={catalogLink} target="_blank" download>
+          <Icon>⬇</Icon>Download Catalog
+        </Button>
 
-      {/* PDF Viewer */}
-      <PdfViewer>
-        {catalogURL && (
-          <Document file={catalogURL} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+        <PdfViewer>
+          <Document
+            file={pdf}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadError={(error) => {
+              console.error("Failed to load PDF:", error);
+              setPdfError(
+                "Error loading PDF. Please check the console for details."
+              );
+            }}
+            className="d-flex justify-content-center"
+          >
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                scale={calculateScale()}
+              />
+            ))}
           </Document>
-        )}
-      </PdfViewer>
+          {pdfError && <p>{pdfError}</p>}
+        </PdfViewer>
 
-      {/* Another Download Button */}
-      <Button href={catalogURL} target="_blank" download>
-        <Icon>⬇</Icon>Download Catalog
-      </Button>
-    </Container>
+        <Button href={catalogLink} target="_blank" download>
+          <Icon>⬇</Icon>Download Catalog
+        </Button>
+      </Container>
+    </AnimationRevealPage>
   );
 };
 
