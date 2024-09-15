@@ -5,11 +5,12 @@ import teaImage1 from "../images/tea.svg"; // Placeholder image for Tea
 import teaImage2 from "../images/tea.svg"; // Add other tea images as needed
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "components/headers/light.js";
+import tea from "../images/teaBag.jpg";
 
 // Tea product details
 const teaProducts = [
   {
-    imageSrc: [teaImage1, teaImage2, teaImage2],
+    imageSrc: [tea, teaImage2, teaImage2],
     title: "Platinum CTC Tea",
     price: "₹520/kg",
     brand: "FNG",
@@ -247,16 +248,16 @@ const ProductImageGallery = styled.div`
 
 const ThumbnailGallery = styled.div`
   ${tw`flex flex-col justify-center items-start mt-0`};
-  width: 30%; position-fixed;  max-height: 90vh; overflow-hidden;/* Adjust width as needed */
+  width: 30%; position-fixed;  max-height: 70vh; overflow-hidden;/* Adjust width as needed */
 `;
 
 const Thumbnail = styled.img`
-  ${tw`w-48 h-32 object-cover rounded-lg cursor-pointer mb-2 border border-gray-300`};
+  ${tw`w-20 h-24 object-cover rounded-lg cursor-pointer mb-2 border border-gray-300`};
   ${({ isSelected }) => isSelected && tw`border-blue-500`};
 `;
 
 const MainImage = styled.img`
-  ${tw`w-full h-72 object-cover rounded-lg ml-4`}; /* Adjust margin as needed */
+  ${tw`w-96 h-96 object-cover rounded-lg ml-4`}; /* Adjust margin as needed */
   flex-grow: 1; /* Allow main image to grow and fill space */
 `;
 
@@ -273,19 +274,19 @@ const ProductPrice = styled.p`
 `;
 
 const ProductBrand = styled.p`
-  ${tw`text-sm text-gray-600 mb-2`};
+  ${tw`text-sm text-gray-800 mb-2`};
 `;
 
 const ProductOrigin = styled.p`
-  ${tw`text-sm text-gray-600 mb-2`};
+  ${tw`text-sm text-gray-800 mb-2`};
 `;
 
 const ProductType = styled.p`
-  ${tw`text-sm text-gray-600 mb-2`};
+  ${tw`text-sm text-gray-800 mb-2`};
 `;
 
 const ProductShelfLife = styled.p`
-  ${tw`text-sm text-gray-600 mb-2`};
+  ${tw`text-sm text-gray-800 mb-2`};
 `;
 
 const ProductDescription = styled.p`
@@ -294,7 +295,7 @@ const ProductDescription = styled.p`
 
 // Styled Components
 const AdditionalDetails = styled.div`
-  ${tw`text-sm text-gray-600 mt-2`};
+  ${tw`text-sm text-gray-800 mt-2`};
   p {
     ${tw`mb-2`};
   }
@@ -338,33 +339,33 @@ const TeaProductsList = () => {
         <ProductType>
           <strong>Type:</strong> {product.type}
         </ProductType>
+        <p>
+          <strong>Packaging Size:</strong> {product.packagingSize}
+        </p>
+        <p>
+          <strong>Form:</strong> {product.form}
+        </p>
+        <p>
+          <strong>Flavor:</strong> {product.flavor}
+        </p>
+        <p>
+          <strong>Packaging Type:</strong> {product.packagingType}
+        </p>
+        <p>
+          <strong>Color:</strong> {product.color}
+        </p>
+        <p>
+          <strong>Processing Type:</strong> {product.processingType}
+        </p>
+        <p>
+          <strong>Usage/Application:</strong> {product.usageApplication}
+        </p>
+        <p>
+          <strong>Best Before:</strong> {product.bestBefore}
+        </p>
         {isExpanded ? (
           <>
             <AdditionalDetails>
-              <p>
-                <strong>Packaging Size:</strong> {product.packagingSize}
-              </p>
-              <p>
-                <strong>Form:</strong> {product.form}
-              </p>
-              <p>
-                <strong>Flavor:</strong> {product.flavor}
-              </p>
-              <p>
-                <strong>Packaging Type:</strong> {product.packagingType}
-              </p>
-              <p>
-                <strong>Color:</strong> {product.color}
-              </p>
-              <p>
-                <strong>Processing Type:</strong> {product.processingType}
-              </p>
-              <p>
-                <strong>Usage/Application:</strong> {product.usageApplication}
-              </p>
-              <p>
-                <strong>Best Before:</strong> {product.bestBefore}
-              </p>
               <p>
                 <strong>Box Packaging:</strong> {product.boxPackaging}
               </p>

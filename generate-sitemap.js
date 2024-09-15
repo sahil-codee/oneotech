@@ -10,6 +10,11 @@ const urls = [
   { url: "/contactus", changefreq: "monthly", priority: 0.8 },
   { url: "/products", changefreq: "monthly", priority: 0.8 },
   { url: "/services", changefreq: "monthly", priority: 0.8 },
+  {
+    url: "/products/leading-nylon-cable-tie-exporters-in-india",
+    changefreq: "weekly",
+    priority: 0.8,
+  },
   // Add additional pages here
 ];
 
