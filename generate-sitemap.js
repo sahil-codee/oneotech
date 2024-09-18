@@ -6,12 +6,41 @@ const hostname = "https://www.oneotechenterprises.com";
 
 const urls = [
   { url: "/", changefreq: "daily", priority: 1 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/contactus", changefreq: "monthly", priority: 0.8 },
+  { url: "/about-us", changefreq: "monthly", priority: 0.8 },
+  { url: "/contact-us", changefreq: "monthly", priority: 0.8 },
   { url: "/products", changefreq: "monthly", priority: 0.8 },
-  { url: "/services", changefreq: "monthly", priority: 0.8 },
+  {
+    url: "/bulk-black-tea-exporters-in-india",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
   {
     url: "/products/leading-nylon-cable-tie-exporters-in-india",
+    changefreq: "weekly",
+    priority: 0.8,
+  },
+  {
+    url: "/bulk-black-tea-exporters-in-india",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: "/products/leading-cable-tie-mounts-exporters-in-india",
+    changefreq: "weekly",
+    priority: 0.8,
+  },
+  {
+    url: "/bulk-black-tea-exporters-in-india",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: "/products/leading-din-rail-supplier-in-india",
+    changefreq: "weekly",
+    priority: 0.8,
+  },
+  {
+    url: "/product-catalog",
     changefreq: "weekly",
     priority: 0.8,
   },
