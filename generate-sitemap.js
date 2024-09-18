@@ -20,18 +20,8 @@ const urls = [
     priority: 0.8,
   },
   {
-    url: "/bulk-black-tea-exporters-in-india",
-    changefreq: "monthly",
-    priority: 0.8,
-  },
-  {
     url: "/products/leading-cable-tie-mounts-exporters-in-india",
     changefreq: "weekly",
-    priority: 0.8,
-  },
-  {
-    url: "/bulk-black-tea-exporters-in-india",
-    changefreq: "monthly",
     priority: 0.8,
   },
   {
@@ -39,12 +29,7 @@ const urls = [
     changefreq: "weekly",
     priority: 0.8,
   },
-  {
-    url: "/product-catalog",
-    changefreq: "weekly",
-    priority: 0.8,
-  },
-  // Add additional pages here
+  { url: "/product-catalog", changefreq: "weekly", priority: 0.8 },
 ];
 
 (async () => {

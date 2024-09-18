@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
@@ -5,10 +7,7 @@ import tw from "twin.macro";
 import Carousel from "react-multi-carousel";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-multi-carousel/lib/styles.css";
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "components/misc/Headings.js";
+import { Subheading as SubheadingBase } from "components/misc/Headings.js";
 
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "components/headers/light.js";
