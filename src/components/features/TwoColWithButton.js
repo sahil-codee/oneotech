@@ -9,6 +9,7 @@ import {
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+import { Helmet } from "react-helmet";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -37,7 +38,8 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+// Changed Description from <p> to <div>
+const Description = tw.div`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const PrimaryButton = styled(PrimaryButtonBase)((props) => [
   tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
@@ -67,33 +69,68 @@ export default ({
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
   return (
-    <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image
-            css={imageCss}
-            src={imageSrc}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-            <PrimaryButton
-              buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
-            >
-              {primaryButtonText}
-            </PrimaryButton>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
-    </Container>
+    <>
+      <Helmet>
+        <title>About Us | Oneotech Enterprises</title>
+        <meta
+          name="description"
+          content="Learn more about Oneotech Enterprises, a leading exporter of high-quality industrial products including nylon cable ties, cable tie mounts, and DIN rails. Discover our mission, vision, and meet our founder."
+        />
+        <meta
+          name="keywords"
+          content="Oneotech Enterprises, About Us, Industrial Products, Nylon Cable Ties, Cable Tie Mounts, DIN Rails, Exporter"
+        />
+        <meta property="og:title" content="About Us | Oneotech Enterprises" />
+        <meta
+          property="og:description"
+          content="Learn more about Oneotech Enterprises, a leading exporter of high-quality industrial products including nylon cable ties, cable tie mounts, and DIN rails. Discover our mission, vision, and meet our founder."
+        />
+        <meta
+          property="og:image"
+          content="URL to an image representing the page"
+        />
+        <meta property="og:url" content="URL to the about us page" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Oneotech Enterprises" />
+        <meta
+          name="twitter:description"
+          content="Learn more about Oneotech Enterprises, a leading exporter of high-quality industrial products including nylon cable ties, cable tie mounts, and DIN rails. Discover our mission, vision, and meet our founder."
+        />
+        <meta
+          name="twitter:image"
+          content="URL to an image representing the page"
+        />
+      </Helmet>
+      <Container>
+        <TwoColumn>
+          <ImageColumn>
+            <Image
+              css={imageCss}
+              src={imageSrc}
+              imageBorder={imageBorder}
+              imageShadow={imageShadow}
+              imageRounded={imageRounded}
+            />
+            {imageDecoratorBlob && (
+              <DecoratorBlob css={imageDecoratorBlobCss} />
+            )}
+          </ImageColumn>
+          <TextColumn textOnLeft={textOnLeft}>
+            <TextContent>
+              <Subheading>{subheading}</Subheading>
+              <Heading>{heading}</Heading>
+              <Description>{description}</Description>
+              <PrimaryButton
+                buttonRounded={buttonRounded}
+                as="a"
+                href={primaryButtonUrl}
+              >
+                {primaryButtonText}
+              </PrimaryButton>
+            </TextContent>
+          </TextColumn>
+        </TwoColumn>
+      </Container>
+    </>
   );
 };

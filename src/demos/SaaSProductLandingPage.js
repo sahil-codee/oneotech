@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet"; // Import react-helmet
 import tw from "twin.macro";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
@@ -29,6 +30,51 @@ const HomePage = () => {
 
   return (
     <AnimationRevealPage>
+      {/* Helmet for setting SEO meta tags */}
+      <Helmet>
+        <title>
+          Oneotech Enterprises | Leading Exporter of Nylon Cable Ties, Cable Tie
+          Mounts, and DIN Rails
+        </title>
+        <meta
+          name="description"
+          content="Oneotech Enterprises specializes in exporting high-quality nylon cable ties, cable tie mounts, and DIN rails. As a trusted exporter in India, we serve global markets including the USA, Europe, UAE, and Canada."
+        />
+        <link rel="canonical" href="https://www.oneotechenterprises.com" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:site_name" content="Oneotech Enterprises" />
+        <meta
+          property="og:title"
+          content="Oneotech Enterprises - Trusted Exporter of Industrial Products"
+        />
+        <meta
+          property="og:description"
+          content="Oneotech Enterprises offers top-quality nylon cable ties, cable tie mounts, and DIN rails. We are dedicated to meeting your industrial needs with reliable products and exceptional service."
+        />
+        <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.oneotechenterprises.com" />
+
+        {/* Structured Data for SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Oneotech Enterprises",
+              "url": "https://www.oneotechenterprises.com/",
+              "logo": "https://oneotechenterprises.com/logo192.png",
+              "sameAs": [
+                "https://www.facebook.com/oneotechenterprises",
+                "https://www.twitter.com/yourprofile",
+                "https://www.instagram.com/yourprofile"
+              ],
+              "description": "Oneotech Enterprises is a leading exporter of industrial products such as nylon cable ties, cable tie mounts, and DIN rails. Serving markets worldwide, including the USA, Europe, and UAE."
+            }
+          `}
+        </script>
+      </Helmet>
       <Hero roundedHeaderButton={true} />
       {featuresLoaded && (
         <Features
@@ -48,7 +94,7 @@ const HomePage = () => {
           subheading={<Subheading>FAQS</Subheading>}
           heading={
             <>
-              You have <HighlightedText>Questions ?</HighlightedText>
+              You have <HighlightedText>Questions?</HighlightedText>
             </>
           }
           faqs={[

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import cableTie1 from "../images/cableTies.svg";
 import mounts1 from "../images/mounts.svg";
@@ -149,6 +150,7 @@ const ProductDetailsPage = () => {
     "leading-nylon-cable-tie-exporters-in-india": {
       images: [cableTie1],
       altText: "leading nylon cable tie exporters in india",
+      businessType: "Exporters",
       details: {
         Name: "Nylon Cable Tie",
         Brand: "Oneotech Enterprises",
@@ -187,6 +189,7 @@ const ProductDetailsPage = () => {
     "leading-cable-tie-mounts-exporters-in-india": {
       images: [mounts1],
       altText: "leading cable tie mounts exporters in india",
+      businessType: "Exporters",
       details: {
         Name: "Cable Tie Mounts",
         Brand: "Oneotech Enterprises",
@@ -222,25 +225,27 @@ const ProductDetailsPage = () => {
         },
       },
     },
-    "leading-din-rail-exporters-in-india": {
+    "leading-din-rail-supplier-in-india": {
       images: [dinRail1],
-      altText: "leading din rail exporters in india",
+      altText: "leading din rail supplier in india",
+      businessType: "Supplier",
       details: {
-        Name: "Din Rails",
+        Name: "Din Rail",
         Brand: "Oneotech Enterprises",
         Length: "1m / 2m / 3m",
         Material: "Steel",
         Plating: "Zinc",
+        color: "Silver",
         Description:
-          "We specialize in manufacturing durable Din Rails for various industrial equipment. Our Din Rails are designed to withstand heavy loads and provide reliable support for your equipment.",
+          "We specialize in manufacturing durable Din Rail for various industrial equipment. Our Din Rail are designed to withstand heavy loads and provide reliable support for your equipment.",
         AdditionalDescription: {
-          para1: `As leading din rail exporters in India, we specialize in providing high-quality din rails that are essential for effective equipment mounting and organization. Our din rails are designed to handle substantial loads and offer reliable support, ensuring the stability and safety of your electrical installations. Available in various sizes and thicknesses, our din rails meet diverse application requirements with precision.\n\n`,
-          para2: `Oneotech Enterprises is dedicated to delivering superior din rails that adhere to stringent quality standards. Our commitment to excellence as top din rail exporters in India is reflected in the durability and performance of our products. Whether you need din rails for industrial or commercial use, we offer solutions that guarantee optimal functionality and dependability.\n\n`,
-          heading1: `Silent Features of Oneotech Enterprises Din Rails:\n\n`,
+          para1: `As leading din rail supplier in india, we specialize in providing high-quality din rails that are essential for effective equipment mounting and organization. Our din rails are designed to handle substantial loads and offer reliable support, ensuring the stability and safety of your electrical installations. Available in various sizes and thicknesses, our din rails meet diverse application requirements with precision.\n\n`,
+          para2: `Oneotech Enterprises is dedicated to delivering superior din rails that adhere to stringent quality standards. Our commitment to excellence as top din rail supplier in india is reflected in the durability and performance of our products. Whether you need din rails for industrial or commercial use, we offer solutions that guarantee optimal functionality and dependability.\n\n`,
+          heading1: `Silent Features of Oneotech Enterprises Din Rail:\n\n`,
           points1: `- High-quality steel construction.\n - Zinc plating for corrosion resistance.\n - Designed for heavy-duty equipment mounting.\n`,
           heading2: `Additional Information:\n\n`,
           points2: `- Production Capacity: 5,000,000.\n - Delivery Time: 7 - 10 Days.\n\n
-          Our expertise and dedication to quality ensure that you receive the best products for your mounting needs. As leading din rail exporters in India, we are focused on providing products that enhance your operational efficiency and contribute to the success of your projects.`,
+          Our expertise and dedication to quality ensure that you receive the best products for your mounting needs. As leading din rail supplier in india, we are focused on providing products that enhance your operational efficiency and contribute to the success of your projects.`,
         },
       },
     },
@@ -284,11 +289,138 @@ const ProductDetailsPage = () => {
 
   return (
     <AnimationRevealPage>
-      <Header />
+      <Helmet>
+        <title>
+          Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises
+        </title>
+        <meta
+          name="description"
+          content="Oneotech Enterprises is one of the leading nylon cable tie exporters in India. We offer a premium range of high-quality nylon cable ties, plastic cable ties, and more for industrial applications."
+        />
+        <link
+          rel="canonical"
+          href="https://www.oneotechenterprises.com/products/leading-nylon-cable-tie-exporters-in-india"
+        />
+        <meta
+          property="og:title"
+          content="Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises"
+        />
+        <meta
+          property="og:description"
+          content="Explore our top-quality nylon cable ties at Oneotech Enterprises. As a leading nylon cable tie exporter in India, we specialize in delivering superior strength and durability for all your bundling needs."
+        />
+        <meta
+          property="og:image"
+          content="https://www.oneotechenterprises.com/nylon-cable-tie-image.jpg"
+        />
+      </Helmet>
+      <Helmet>
+        <title>
+          Leading Cable Tie Mount Exporters in India | Oneotech Enterprises
+        </title>
+        <meta
+          name="description"
+          content="Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications."
+        />
+        <link
+          rel="canonical"
+          href="https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india"
+        />
 
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Leading Cable Tie Mount Exporters in India | Oneotech Enterprises"
+        />
+        <meta
+          property="og:description"
+          content="Explore high-quality cable tie mounts and nylon cable ties from Oneotech Enterprises. As one of the leading cable tie mount exporters in India, we provide durable and reliable products for industrial needs."
+        />
+        <meta
+          property="og:image"
+          content="https://www.oneotechenterprises.com/cable-tie-mount-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india"
+        />
+
+        {/* Structured Data for SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Oneotech Enterprises",
+              "url": "https://www.oneotechenterprises.com/",
+              "logo": "https://www.oneotechenterprises.com/logo192.png",
+              "sameAs": [
+                "https://www.facebook.com/oneotechenterprises",
+                "https://www.twitter.com/oneotechenterprises",
+                "https://www.instagram.com/oneotechenterprises"
+              ],
+              "description": "Oneotech Enterprises is a leading exporter of cable tie mounts and industrial products such as nylon cable ties. Serving markets worldwide, including the USA, Europe, and UAE."
+            }
+          `}
+        </script>
+      </Helmet>
+      <Helmet>
+        <title>Leading Din Rail Supplier in India | Oneotech Enterprises</title>
+        <meta
+          name="description"
+          content="Oneotech Enterprises is a leading Din Rail supplier in India, providing high-quality Din Rails designed for heavy-duty industrial equipment mounting with zinc plating for corrosion resistance."
+        />
+        <link
+          rel="canonical"
+          href="https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india"
+        />
+
+        {/* Open Graph Meta Tags for Social Sharing */}
+        <meta
+          property="og:title"
+          content="Leading Din Rail Supplier in India | Oneotech Enterprises"
+        />
+        <meta
+          property="og:description"
+          content="Explore durable and high-performance Din Rails from Oneotech Enterprises. As a top Din Rail supplier in India, we offer solutions for heavy-duty equipment mounting and support."
+        />
+        <meta
+          property="og:image"
+          content="https://www.oneotechenterprises.com/din-rail-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india"
+        />
+
+        {/* Structured Data for SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Oneotech Enterprises",
+              "url": "https://www.oneotechenterprises.com/",
+              "logo": "https://www.oneotechenterprises.com/logo192.png",
+              "sameAs": [
+                "https://www.facebook.com/oneotechenterprises",
+                "https://www.twitter.com/oneotechenterprises",
+                "https://www.instagram.com/oneotechenterprises"
+              ],
+              "description": "Oneotech Enterprises is a leading Din Rail supplier in India. We specialize in providing high-quality steel Din Rails with zinc plating for corrosion resistance, designed for heavy-duty industrial applications."
+            }
+          `}
+        </script>
+      </Helmet>
+      <Header />
       <ContentContainer>
         <HeadingRow>
-          <Heading> {`Leading ${details.Name} Exporters in India`}</Heading>
+          <Heading>
+            {" "}
+            {`Leading ${details.Name} ${product.businessType} in India`}
+          </Heading>
         </HeadingRow>
         <MainSection>
           <ImageContainer>
@@ -333,7 +465,7 @@ const ProductDetailsPage = () => {
         </MainSection>
         <AdditionalDescriptionSection>
           <SectionTitle>
-            {`Leading ${details.Name} Exporters in India`}
+            {`Leading ${details.Name} ${product.businessType} in India`}
           </SectionTitle>
           <p>{details.AdditionalDescription.para1}</p>
           <br />

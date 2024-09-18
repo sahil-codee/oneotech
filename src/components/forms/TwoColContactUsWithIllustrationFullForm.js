@@ -1,11 +1,15 @@
 import React, { useState, useRef } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
 import emailjs from "emailjs-com";
 import Popup from "./Popup";
+import { Helmet } from "react-helmet";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -68,7 +72,7 @@ export default ({
       console.error("Error sending email:", error);
     }
   };
-  
+
   const sendEmail = async (formData, formElement) => {
     try {
       const result = await emailjs.sendForm(
@@ -93,6 +97,13 @@ export default ({
 
   return (
     <Container>
+      <Helmet>
+        <title>Contact Us - Oneotech Enterprises</title>
+        <meta
+          name="description"
+          content="Get in touch with Oneotech Enterprises for inquiries, support, or feedback. We are here to help you."
+        />
+      </Helmet>
       <TwoColumn>
         <ImageColumn>
           <Image imageSrc={EmailIllustrationSrc} />
@@ -123,7 +134,16 @@ export default ({
               />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
-            {showPopup && <Popup message={formStatus === "SUCCESS" ? "Thank you! Your message has been sent. We appreciate your message. Our team will contact you soon." : "Oops! Something went wrong. Please try again."} onClose={handleClosePopup} />}
+            {showPopup && (
+              <Popup
+                message={
+                  formStatus === "SUCCESS"
+                    ? "Thank you! Your message has been sent. We appreciate your message. Our team will contact you soon."
+                    : "Oops! Something went wrong. Please try again."
+                }
+                onClose={handleClosePopup}
+              />
+            )}
           </TextContent>
         </TextColumn>
       </TwoColumn>

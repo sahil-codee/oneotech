@@ -31,12 +31,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<SaaSProductLandingPage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/bulk-tea" element={<Tea />} />
+          <Route path="/bulk-black-tea-exporters-in-india" element={<Tea />} />
           <Route path="/products/:seoUrl" element={<ProductDetailsPage />} />
           <Route path="/product-catalog" element={<Services />} />
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </Router>
       {showWhatsApp && <WhatsAppChat phoneNumber={phoneNumber} />}

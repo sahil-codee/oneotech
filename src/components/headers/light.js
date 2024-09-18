@@ -93,11 +93,11 @@ export default ({
 
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/about">About Us</NavLink>
+      <NavLink href="/about-us">About Us</NavLink>
       <NavLink href="/products">Products</NavLink>
-      {/* <NavLink href="/bulk-tea">Tea</NavLink>
-      <NavLink href="/product-catalog">Catalog</NavLink> */}
-      <PrimaryLink href="/contactus">Contact Us</PrimaryLink>
+      <NavLink href="/bulk-black-tea-exporters-in-india">Assam Tea</NavLink>
+      <NavLink href="/product-catalog">Catalog</NavLink>
+      <PrimaryLink href="/contact-us">Contact Us</PrimaryLink>
     </NavLinks>,
   ];
 

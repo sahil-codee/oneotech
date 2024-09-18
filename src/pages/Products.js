@@ -8,6 +8,7 @@ import Header from "components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
+import { Helmet } from "react-helmet"; // Import Helmet
 
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
@@ -60,18 +61,30 @@ export default () => {
     const seoUrls = {
       "Nylon Cable Ties": "leading-nylon-cable-tie-exporters-in-india",
       "Cable Tie Mounts": "leading-cable-tie-mounts-exporters-in-india",
-      "Din Rail (MCB Channel)": "leading-din-rail-exporters-in-india",
+      "Din Rail (MCB Channel)": "leading-din-rail-supplier-in-india",
     };
     return seoUrls[title] || title.toLowerCase().replace(/\s+/g, "-");
   };
 
   return (
     <AnimationRevealPage>
+      <Helmet>
+        <title>
+          Reliable Cable Management: Nylon Ties, Mounts, and DIN Rails -
+          Oneotech Enterprises
+        </title>
+        <meta
+          name="description"
+          content="Explore our range of high-quality industrial products including nylon cable ties, cable tie mounts, and DIN rails. Perfect for various applications."
+        />
+      </Helmet>
       <Header />
       <Container>
         <ContentWithPaddingXl>
           <HeadingRow>
-            <Heading>Industrial Products</Heading>
+            <Heading>
+              Reliable Cable Management: Nylon Ties, Mounts, and DIN Rails
+            </Heading>
           </HeadingRow>
 
           <Posts>
@@ -132,6 +145,6 @@ const getPlaceholderPosts = () => [
     category: "Industrial",
     title: "Din Rail (MCB Channel)",
     description: "Durable Din Rails for various industrial equipment.",
-    altText: "leading din rail exporters in india",
+    altText: "leading din rail supplier in india",
   },
 ];
