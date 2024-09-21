@@ -149,7 +149,7 @@ const ProductDetailsPage = () => {
   const products = {
     "leading-nylon-cable-tie-exporters-in-india": {
       images: [cableTie1],
-      altText: "leading nylon cable tie exporters in india",
+      altText: "nylon cable tie exporters in india",
       businessType: "Exporters",
       details: {
         Name: "Nylon Cable Tie",
