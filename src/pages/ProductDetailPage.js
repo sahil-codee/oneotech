@@ -151,6 +151,14 @@ const ProductDetailsPage = () => {
       images: [cableTie1],
       altText: "nylon cable tie exporters in india",
       businessType: "Exporters",
+      MetaTitle:
+        "Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises",
+      MetaDescription:
+        "Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications.",
+      MetaImage:
+        "https://www.oneotechenterprises.com/nylon-cable-tie-image.jpg",
+      CanonicalLink:
+        "https://www.oneotechenterprises.com/products/leading-nylon-cable-tie-exporters-in-india",
       details: {
         Name: "Nylon Cable Tie",
         Brand: "Oneotech Enterprises",
@@ -159,12 +167,12 @@ const ProductDetailsPage = () => {
         "Packaging Size": "100 pcs",
         Width: "2.5 mm / 3.6 mm / 4.8 mm",
         Material: "Nylon",
-        Color: "Natural / White / Black",
+        Color: "Natural / Black",
         Description:
           "We are amongst the leading nylon cable tie exporters in india, specializing in supplying a premium quality range of Cable Tie, Nylon Cable Tie, Plastic Cable Ties. With proven efficiency and value, we ensure to fulfill the exact specifications of clients in the best possible manner.",
         AdditionalDescription: {
           para1: `As leading nylon cable tie exporters in India, we pride ourselves on delivering products that meet the highest standards of quality and durability. Our nylon cable ties, as a top nylon cable tie exporters in India, are meticulously crafted to ensure superior strength and reliability, making them perfect for various applications, including cable fitting and bundling. With multiple sizes and colors available, our nylon cable ties cater to diverse industrial and commercial needs. As the leading exporter of nylon cable ties in India, we ensure that every product meets the highest standards.\n\n`,
-          para2: `At Oneotech Enterprises, we understand the importance of dependable nylon cable ties in maintaining organized and secure wiring systems. Our commitment as leading nylon cable tie exporters in India is to offer optimal performance even in challenging environments, ensuring long-lasting use. By choosing us, you benefit from our expertise as the top nylon cable tie exporters in India, dedicated to providing exceptional products tailored to your specifications. Our experience and dedication as a leading nylon cable tie exporters in India set us apart from the competition.\n\n
+          para2: `At Oneotech Enterprises, we understand the importance of dependable nylon cable ties in maintaining organized and secure wiring systems. Our commitment as top nylon cable tie exporters in India is to offer optimal performance even in challenging environments, ensuring long-lasting use. By choosing us, you benefit from our expertise as the top nylon cable tie exporters in India, dedicated to providing exceptional products tailored to your specifications. Our experience and dedication as a leading nylon cable tie exporters in India set us apart from the competition.\n\n
       Our commitment to excellence and customer satisfaction has established us as a trusted name in the industry. Whether you require nylon cable ties for small-scale or large-scale projects, as leading nylon cable tie exporters in India, we deliver solutions that exceed expectations.`,
           para3: `Oneotech Enterprises Nylon Cable Ties are manufactured from high-quality Nylon 6.6 & used for bundling, tightening of wire & cables. Our range includes UV Black Stabilised (For Outdoor Application, Weather Resistant) and Heat Stabilized Material of Fire Retardant (FR) grade. As a leading nylon cable tie exporters in India, we guarantee the best quality and performance in our products.\n\n`,
           para4: `The specially formulated Nylon 6.6 used offers higher tensile strength and flexibility, as well as a wide temperature range. Even at higher than recommended temperatures or exposure to flame, the cable ties do not emit toxic or irritating by-products. This commitment to high-quality standards is what makes us one of the leading nylon cable tie exporters in India.`,
@@ -181,7 +189,7 @@ const ProductDetailsPage = () => {
       - Flammability Class: UL 94V2`,
           heading2: `Additional Information:`,
           points2: `- Production Capacity: 10,000,000\n
-      - Delivery Time: 7 - 10 Days\n\n`,
+      - Lead Time: 2 weeks\n\n`,
         },
       },
     },
@@ -190,6 +198,14 @@ const ProductDetailsPage = () => {
       images: [mounts1],
       altText: "leading cable tie mounts exporters in india",
       businessType: "Exporters",
+      MetaTitle:
+        "Leading Cable Tie Mount Exporters in India | Oneotech Enterprises",
+      MetaDescription:
+        "Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications.",
+      MetaImage:
+        "https://www.oneotechenterprises.com/cable-tie-mount-image.jpg",
+      CanonicalLink:
+        "https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india",
       details: {
         Name: "Cable Tie Mounts",
         Brand: "Oneotech Enterprises",
@@ -221,7 +237,7 @@ const ProductDetailsPage = () => {
         - Flammability Class: UL 94V2.\n\n`,
           heading3: `Additional Information:\n\n`,
           points3: `- Production Capacity: 1,000,000.\n
-        - Delivery Time: 7 - 10 Days.\n\n`,
+        - Lead Time: 2 weeks.\n\n`,
         },
       },
     },
@@ -229,6 +245,12 @@ const ProductDetailsPage = () => {
       images: [dinRail1],
       altText: "leading din rail supplier in india",
       businessType: "Supplier",
+      MetaTitle: "Leading Din Rail Supplier in India | Oneotech Enterprises",
+      MetaDescription:
+        "Oneotech Enterprises is a leading Din Rail supplier in India, providing high-quality Din Rails designed for heavy-duty industrial equipment mounting with zinc plating for corrosion resistance.",
+      MetaImage: "https://www.oneotechenterprises.com/din-rail-image.jpg",
+      CanonicalLink:
+        "https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india",
       details: {
         Name: "Din Rail",
         Brand: "Oneotech Enterprises",
@@ -244,7 +266,7 @@ const ProductDetailsPage = () => {
           heading1: `Silent Features of Oneotech Enterprises Din Rail:\n\n`,
           points1: `- High-quality steel construction.\n - Zinc plating for corrosion resistance.\n - Designed for heavy-duty equipment mounting.\n`,
           heading2: `Additional Information:\n\n`,
-          points2: `- Production Capacity: 5,000,000.\n - Delivery Time: 7 - 10 Days.\n\n
+          points2: `- Production Capacity: 5,000,000.\n - Lead Time: 2 weeks.\n\n
           Our expertise and dedication to quality ensure that you receive the best products for your mounting needs. As leading din rail supplier in india, we are focused on providing products that enhance your operational efficiency and contribute to the success of your projects.`,
         },
       },
@@ -268,7 +290,7 @@ const ProductDetailsPage = () => {
           heading1: `The Silent Features of Oneotech Enterprises Laser Marking Machine:\n\n`,
           points1: ` - Precision marking on a variety of materials.\n - High-quality construction for durability.\n - Suitable for industrial and commercial use.\n`,
           heading2: `Additional Information:\n\n`,
-          points2: `- Production Capacity: 500,000.\n - Delivery Time: 7 - 10 Days.\n\n`,
+          points2: `- Production Capacity: 500,000.\n - Lead Time: 2 weeks.\n\n`,
         },
       },
     },
@@ -289,130 +311,18 @@ const ProductDetailsPage = () => {
 
   return (
     <AnimationRevealPage>
+      {/* Dynamic Helmet Meta Data */}
       <Helmet>
-        <title>
-          Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises
-        </title>
-        <meta
-          name="description"
-          content="Oneotech Enterprises is one of the leading nylon cable tie exporters in India. We offer a premium range of high-quality nylon cable ties, plastic cable ties, and more for industrial applications."
-        />
-        <link
-          rel="canonical"
-          href="https://www.oneotechenterprises.com/products/leading-nylon-cable-tie-exporters-in-india"
-        />
-        <meta
-          property="og:title"
-          content="Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises"
-        />
-        <meta
-          property="og:description"
-          content="Explore our top-quality nylon cable ties at Oneotech Enterprises. As a leading nylon cable tie exporters in India, we specialize in delivering superior strength and durability for all your bundling needs."
-        />
-        <meta
-          property="og:image"
-          content="https://www.oneotechenterprises.com/nylon-cable-tie-image.jpg"
-        />
-      </Helmet>
-      <Helmet>
-        <title>
-          Leading Cable Tie Mount Exporters in India | Oneotech Enterprises
-        </title>
-        <meta
-          name="description"
-          content="Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications."
-        />
-        <link
-          rel="canonical"
-          href="https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india"
-        />
+        <title>{product.MetaTitle}</title>
+        <meta name="description" content={product.MetaDescription} />
+        <link rel="canonical" href={product.CanonicalLink} />
 
         {/* Open Graph Meta Tags */}
-        <meta
-          property="og:title"
-          content="Leading Cable Tie Mount Exporters in India | Oneotech Enterprises"
-        />
-        <meta
-          property="og:description"
-          content="Explore high-quality cable tie mounts and nylon cable ties from Oneotech Enterprises. As one of the leading cable tie mount exporters in India, we provide durable and reliable products for industrial needs."
-        />
-        <meta
-          property="og:image"
-          content="https://www.oneotechenterprises.com/cable-tie-mount-image.jpg"
-        />
+        <meta property="og:title" content={product.MetaTitle} />
+        <meta property="og:description" content={product.MetaDescription} />
+        <meta property="og:image" content={product.MetaImage} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india"
-        />
-
-        {/* Structured Data for SEO */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Oneotech Enterprises",
-              "url": "https://www.oneotechenterprises.com/",
-              "logo": "https://www.oneotechenterprises.com/logo192.png",
-              "sameAs": [
-                "https://www.facebook.com/oneotechenterprises",
-                "https://www.twitter.com/oneotechenterprises",
-                "https://www.instagram.com/oneotechenterprises"
-              ],
-              "description": "Oneotech Enterprises is a leading exporter of cable tie mounts and industrial products such as nylon cable ties. Serving markets worldwide, including the USA, Europe, and UAE."
-            }
-          `}
-        </script>
-      </Helmet>
-      <Helmet>
-        <title>Leading Din Rail Supplier in India | Oneotech Enterprises</title>
-        <meta
-          name="description"
-          content="Oneotech Enterprises is a leading Din Rail supplier in India, providing high-quality Din Rails designed for heavy-duty industrial equipment mounting with zinc plating for corrosion resistance."
-        />
-        <link
-          rel="canonical"
-          href="https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india"
-        />
-
-        {/* Open Graph Meta Tags for Social Sharing */}
-        <meta
-          property="og:title"
-          content="Leading Din Rail Supplier in India | Oneotech Enterprises"
-        />
-        <meta
-          property="og:description"
-          content="Explore durable and high-performance Din Rails from Oneotech Enterprises. As a top Din Rail supplier in India, we offer solutions for heavy-duty equipment mounting and support."
-        />
-        <meta
-          property="og:image"
-          content="https://www.oneotechenterprises.com/din-rail-image.jpg"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india"
-        />
-
-        {/* Structured Data for SEO */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Oneotech Enterprises",
-              "url": "https://www.oneotechenterprises.com/",
-              "logo": "https://www.oneotechenterprises.com/logo192.png",
-              "sameAs": [
-                "https://www.facebook.com/oneotechenterprises",
-                "https://www.twitter.com/oneotechenterprises",
-                "https://www.instagram.com/oneotechenterprises"
-              ],
-              "description": "Oneotech Enterprises is a leading Din Rail supplier in India. We specialize in providing high-quality steel Din Rails with zinc plating for corrosion resistance, designed for heavy-duty industrial applications."
-            }
-          `}
-        </script>
+        <meta property="og:url" content={product.CanonicalLink} />
       </Helmet>
       <Header />
       <ContentContainer>
