@@ -5,7 +5,6 @@ import styled from "styled-components";
 import cableTie1 from "../images/cableTies.svg";
 import mounts1 from "../images/mounts.svg";
 import dinRail1 from "../images/dinRail.svg";
-import laserMarking1 from "../images/laser.webp";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
@@ -151,14 +150,8 @@ const ProductDetailsPage = () => {
       images: [cableTie1],
       altText: "nylon cable tie exporters in india",
       businessType: "Exporters",
-      MetaTitle:
-        "Leading Nylon Cable Tie Exporters in India | Oneotech Enterprises",
-      MetaDescription:
-        "Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications.",
-      MetaImage:
-        "https://www.oneotechenterprises.com/nylon-cable-tie-image.jpg",
-      CanonicalLink:
-        "https://www.oneotechenterprises.com/products/leading-nylon-cable-tie-exporters-in-india",
+      heading_1:
+        "Top Nylon Cable Tie Exporters in India - Quality Nylon Cable Solutions",
       details: {
         Name: "Nylon Cable Tie",
         Brand: "Oneotech Enterprises",
@@ -169,43 +162,50 @@ const ProductDetailsPage = () => {
         Material: "Nylon",
         Color: "Natural / Black",
         Description:
-          "We are amongst the leading nylon cable tie exporters in india, specializing in supplying a premium quality range of Cable Tie, Nylon Cable Tie, Plastic Cable Ties. With proven efficiency and value, we ensure to fulfill the exact specifications of clients in the best possible manner.",
+          "As one of the best nylon cable tie exporters in India, Oneotech Enterprises specializes in delivering a premium range of nylon cable ties, including plastic and high-quality nylon cable ties designed to meet the exact specifications of clients.",
         AdditionalDescription: {
-          para1: `As leading nylon cable tie exporters in India, we pride ourselves on delivering products that meet the highest standards of quality and durability. Our nylon cable ties, as a top nylon cable tie exporters in India, are meticulously crafted to ensure superior strength and reliability, making them perfect for various applications, including cable fitting and bundling. With multiple sizes and colors available, our nylon cable ties cater to diverse industrial and commercial needs. As the leading exporter of nylon cable ties in India, we ensure that every product meets the highest standards.\n\n`,
-          para2: `At Oneotech Enterprises, we understand the importance of dependable nylon cable ties in maintaining organized and secure wiring systems. Our commitment as top nylon cable tie exporters in India is to offer optimal performance even in challenging environments, ensuring long-lasting use. By choosing us, you benefit from our expertise as the top nylon cable tie exporters in India, dedicated to providing exceptional products tailored to your specifications. Our experience and dedication as a leading nylon cable tie exporters in India set us apart from the competition.\n\n
-      Our commitment to excellence and customer satisfaction has established us as a trusted name in the industry. Whether you require nylon cable ties for small-scale or large-scale projects, as leading nylon cable tie exporters in India, we deliver solutions that exceed expectations.`,
-          para3: `Oneotech Enterprises Nylon Cable Ties are manufactured from high-quality Nylon 6.6 & used for bundling, tightening of wire & cables. Our range includes UV Black Stabilised (For Outdoor Application, Weather Resistant) and Heat Stabilized Material of Fire Retardant (FR) grade. As a leading nylon cable tie exporters in India, we guarantee the best quality and performance in our products.\n\n`,
-          para4: `The specially formulated Nylon 6.6 used offers higher tensile strength and flexibility, as well as a wide temperature range. Even at higher than recommended temperatures or exposure to flame, the cable ties do not emit toxic or irritating by-products. This commitment to high-quality standards is what makes us one of the leading nylon cable tie exporters in India.`,
-          heading1: `The Silent Features of Oneotech Enterprises Nylon Cable Tie are:\n\n`,
-          points1: ` - High quality Polyamide 6.6 Cable ties\n
-      - Design: According to IEC 62275\n
-      - Halogen Free Material: Polyamide 6.6\n
-      - UL Recognised Material\n
-      - Continuous Operating Temperature: -40°C to 85°C\n
-      - Colours: Natural / White\n
-      - Good Resistance to Oils and Solvents\n
-      - Greater Flexibility\n
-      - RoHS Compliance\n
-      - Flammability Class: UL 94V2`,
-          heading2: `Additional Information:`,
-          points2: `- Production Capacity: 10,000,000\n
-      - Lead Time: 2 weeks\n\n`,
+          h2_1: "Why Choose Oneotech Enterprises: Leading Suppliers and Exporters of Nylon Cable Ties in India",
+          para_1:
+            "As leading nylon cable tie exporters in India, we pride ourselves on delivering products that meet the highest standards of quality and durability. Our nylon cable ties are meticulously crafted to ensure superior strength and reliability, making them perfect for various applications, including cable fitting and bundling. With multiple sizes and colors available, our nylon cable ties cater to diverse industrial and commercial needs. As the leading exporter of nylon cable ties in India, we ensure that every product meets the highest standards.",
+          h2_2: "High-Quality Nylon Cable Ties from Leading Exporters in India",
+          para_2:
+            "At Oneotech Enterprises, we understand the importance of dependable nylon cable ties in maintaining organized and secure wiring systems. Our commitment as top nylon cable tie exporters in India is to offer optimal performance even in challenging environments, ensuring long-lasting use. By choosing us, you benefit from our expertise, dedicated to providing exceptional products tailored to your specifications.",
+          para_3:
+            "Oneotech Enterprises Nylon Cable Ties are manufactured from high-quality Nylon 6.6 & used for bundling, tightening of wire & cables. Our range includes UV Black Stabilised (For Outdoor Application, Weather Resistant) and Heat Stabilized Material of Fire Retardant (FR) grade. We guarantee the best quality and performance in our products.",
+          h2_3: "Features of Oneotech Enterprises Nylon Cable Ties",
+          para_4:
+            "The specially formulated Nylon 6.6 used offers higher tensile strength and flexibility, as well as a wide temperature range. Even at higher than recommended temperatures or exposure to flame, the cable ties do not emit toxic or irritating by-products. This commitment to high-quality standards is what makes us one of the leading nylon cable tie exporters in India.",
+          heading_2:
+            "The Silent Features of Oneotech Enterprises Nylon Cable Tie are:",
+          points_1:
+            " - High-quality Polyamide 6.6 Cable ties\n - Design: According to IEC 62275\n - Halogen-Free Material: Polyamide 6.6\n - UL Recognized Material\n - Continuous Operating Temperature: -40°C to 85°C\n - Colours: Natural / White\n - Good Resistance to Oils and Solvents\n - Greater Flexibility\n - RoHS Compliant\n - Flammability Class: UL 94V2",
+          h2_4: "Efficient Export Process by Nylon Cable Tie Exporters in India",
+          para_5:
+            "As one of the leading bulk nylon cable tie exporters in India, Oneotech Enterprises provides a seamless and efficient export process to clients worldwide. Our strong relationships with logistics partners ensure timely deliveries of bulk orders, making us one of the most reliable exporters of nylon cable ties from India.",
+          h3_1: "Frequently Asked Questions (FAQ)",
+          faq1_question:
+            "How do leading nylon cable tie exporters from India ensure top product quality?",
+          faq1_answer:
+            "At Oneotech Enterprises, we implement strict quality control measures to ensure that every product meets international standards for strength, flexibility, and durability.",
+          faq2_question:
+            "What types of nylon cable ties are available for export from India?",
+          faq2_answer:
+            "As one of the top nylon cable tie exporters in India, we offer a wide range of nylon cable ties, including UV Black Stabilized, Heat Stabilized, and fire-retardant (FR) grade materials.",
+          faq3_question:
+            "What is the production capacity of Oneotech Enterprises for nylon cable ties?",
+          faq3_answer:
+            "Our production capacity exceeds 10,000,000 nylon cable ties, allowing us to meet the needs of both large and small-scale clients as one of the leading bulk nylon cable tie exporters in India.",
+          heading_3: "Additional Information",
+          points_2: "- Production Capacity: 10,000,000\n - Lead Time: 2 weeks",
         },
       },
     },
-
     "leading-cable-tie-mounts-exporters-in-india": {
       images: [mounts1],
       altText: "leading cable tie mounts exporters in india",
       businessType: "Exporters",
-      MetaTitle:
-        "Leading Cable Tie Mount Exporters in India | Oneotech Enterprises",
-      MetaDescription:
-        "Oneotech Enterprises is one of the leading cable tie mount exporters in India, offering a premium range of high-quality cable tie mounts and nylon cable ties for various industrial and commercial applications.",
-      MetaImage:
-        "https://www.oneotechenterprises.com/cable-tie-mount-image.jpg",
-      CanonicalLink:
-        "https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india",
+      heading_1:
+        "Top Cable Tie Mounts Exporters in India | High-Performance Mounting Solutions",
       details: {
         Name: "Cable Tie Mounts",
         Brand: "Oneotech Enterprises",
@@ -217,27 +217,42 @@ const ProductDetailsPage = () => {
         Description:
           "We specialize in manufacturing durable mounts for various industrial equipment. Our mounts are designed to withstand heavy loads and provide reliable support for your equipment.",
         AdditionalDescription: {
-          para1: `Oneotech Enterprises offers 4-way cable tie mounts, manufactured from high-quality polyamide for secure anchoring of cable ties to wire bundles.\n\n
-          Our cable tie mounts can be installed using acrylic-based self-adhesive for lightweight mounting applications or alternatively M3 screws for heavy-duty installations. These mounts ensure strong and secure installations for cable bundles.\n\n`,
-          para2: `As leading cable tie mounts exporters in India, we offer a range of durable and high-performance mounts designed for robust equipment mounting applications. Our cable tie mounts are engineered to support heavy loads and ensure stability, making them ideal for various industrial and commercial settings.`,
-          heading1: `The Silent Features of 4-way Cable Tie Mounts are:\n\n`,
-          points1: ` - 3M acrylic-based adhesive with PE foam carrier provides a strong and reliable bond for medium applications.\n
-        - Central fixing hole for heavy-duty applications.\n
-        - Allows four-sided insertion with a wide range of cable ties.\n
-        - Max cable tie width for a 19x19 mm base is 4.2 mm.\n
-        - Indoor use only.\n\n`,
-          heading2: `Benefits of Using Oneotech Enterprises Cable Tie Mounts:\n\n`,
-          points2: ` - High Abrasion Resistance.\n
-        - Higher static load stability for cable bundles.\n
-        - Halogen-free material - Polyamide 6.6.\n
-        - UL Recognized Material.\n
-        - Continuous Operating Temp: -40°C to +85°C.\n
-        - Colour: White 3M Tape.\n
-        - RoHS Compliance.\n
-        - Flammability Class: UL 94V2.\n\n`,
-          heading3: `Additional Information:\n\n`,
-          points3: `- Production Capacity: 1,000,000.\n
-        - Lead Time: 2 weeks.\n\n`,
+          h1: "Top Cable Tie Mount Exporters in India | High-Performance Mounting Solutions",
+          para_1:
+            "As one of the leading cable tie mounts exporters in India, Oneotech Enterprises specializes in producing high-quality, durable mounts designed for industrial equipment and heavy-load applications. Our cable tie mounts provide secure anchoring for cable bundles in various settings, making them ideal for industrial and commercial use. We also offer bulk export solutions, ensuring our products meet the needs of large-scale projects globally.",
+          h2_1: "Why Choose Oneotech Enterprises: Trusted Cable Tie Mount Exporters in India",
+          para_2:
+            "As one of the top cable tie mount suppliers and exporters in India, Oneotech Enterprises offers a range of durable and high-performance mounts designed for robust equipment mounting applications. Our cable tie mounts are meticulously engineered to support heavy loads and ensure stability, making them ideal for various industrial and commercial settings. Our products are made from premium polyamide, providing superior strength, durability, and resistance to harsh environmental conditions.",
+          h2_2: "Key Features of Our High-Quality Cable Tie Mounts for Industrial Applications",
+          para_3:
+            "Oneotech Enterprises' 4-way cable tie mounts are made from high-quality polyamide and designed for secure anchoring of cable ties to wire bundles. These mounts can be installed using acrylic-based self-adhesive for lightweight mounting applications or M3 screws for heavy-duty installations. As one of the leading cable tie mount exporters in India, we ensure that our products meet the stringent demands of industrial settings.",
+          points_1: [
+            "3M acrylic-based adhesive with PE foam carrier provides a strong and reliable bond for medium-duty applications.",
+            "Central fixing hole for heavy-duty installations.",
+            "Four-sided insertion allows flexibility with a wide range of cable ties.",
+            "Max cable tie width for a 19x19 mm base is 4.2 mm.",
+            "UL Recognized Material for indoor use.",
+          ],
+          h2_3: "Advantages of Oneotech Enterprises - Leading Cable Tie Mount Exporters in India",
+          para_4:
+            "As a trusted cable tie mount exporter in India, Oneotech Enterprises offers numerous advantages with our products:",
+          points_2: [
+            "High Abrasion Resistance: Ensures long-lasting durability in demanding applications.",
+            "Higher Static Load Stability: Ideal for supporting heavy cable bundles.",
+            "Halogen-Free Material: Made from Polyamide 6.6, compliant with environmental safety standards.",
+          ],
+          h3_1: "Frequently Asked Questions (FAQ)",
+          faq1_question:
+            "What are the main uses of cable tie mounts exported from India?",
+          faq1_answer:
+            "Oneotech Enterprises is a leading exporter in India known for its high-quality cable tie mounts, designed to withstand tough industrial conditions and provide reliable performance.",
+          faq2_question:
+            "What sizes of cable tie mounts are available for export?",
+          faq2_answer:
+            "We offer cable tie mounts in sizes ranging from 19x19mm to 28x28mm, suitable for both light and heavy-duty applications.",
+          faq3_question: "How do you ensure timely delivery for bulk orders?",
+          faq3_answer:
+            "We work closely with our logistics partners to ensure fast and reliable delivery of bulk orders worldwide.",
         },
       },
     },
@@ -245,52 +260,38 @@ const ProductDetailsPage = () => {
       images: [dinRail1],
       altText: "leading din rail supplier in india",
       businessType: "Supplier",
-      MetaTitle: "Leading Din Rail Supplier in India | Oneotech Enterprises",
-      MetaDescription:
-        "Oneotech Enterprises is a leading Din Rail supplier in India, providing high-quality Din Rails designed for heavy-duty industrial equipment mounting with zinc plating for corrosion resistance.",
-      MetaImage: "https://www.oneotechenterprises.com/din-rail-image.jpg",
-      CanonicalLink:
-        "https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india",
+      heading_1: "Why Choose Oneotech Enterprises for Your DIN Rail Needs?",
       details: {
-        Name: "Din Rail",
+        Name: "DIN Rail",
         Brand: "Oneotech Enterprises",
         Length: "1m / 2m / 3m",
         Material: "Steel",
         Plating: "Zinc",
-        color: "Silver",
+        Color: "Silver",
         Description:
-          "We specialize in manufacturing durable Din Rail for various industrial equipment. Our Din Rail are designed to withstand heavy loads and provide reliable support for your equipment.",
+          "We specialize in manufacturing durable DIN Rails for various industrial and commercial applications. Our DIN Rails are designed to withstand heavy loads and provide reliable support for electrical equipment.",
         AdditionalDescription: {
-          para1: `As leading din rail supplier in india, we specialize in providing high-quality din rails that are essential for effective equipment mounting and organization. Our din rails are designed to handle substantial loads and offer reliable support, ensuring the stability and safety of your electrical installations. Available in various sizes and thicknesses, our din rails meet diverse application requirements with precision.\n\n`,
-          para2: `Oneotech Enterprises is dedicated to delivering superior din rails that adhere to stringent quality standards. Our commitment to excellence as top din rail supplier in india is reflected in the durability and performance of our products. Whether you need din rails for industrial or commercial use, we offer solutions that guarantee optimal functionality and dependability.\n\n`,
-          heading1: `Silent Features of Oneotech Enterprises Din Rail:\n\n`,
-          points1: `- High-quality steel construction.\n - Zinc plating for corrosion resistance.\n - Designed for heavy-duty equipment mounting.\n`,
-          heading2: `Additional Information:\n\n`,
-          points2: `- Production Capacity: 5,000,000.\n - Lead Time: 2 weeks.\n\n
-          Our expertise and dedication to quality ensure that you receive the best products for your mounting needs. As leading din rail supplier in india, we are focused on providing products that enhance your operational efficiency and contribute to the success of your projects.`,
-        },
-      },
-    },
-    "laser-marking-machine": {
-      images: [laserMarking1],
-      details: {
-        Name: "Laser Marking Machine",
-        Brand: "Oneotech Enterprises",
-        "Minimum Order Quantity": "1 Piece",
-        "Usage/Application": "All plastics, Glass etc",
-        "Offering Laser": "Cables",
-        Power: "3W",
-        Voltage: "220V",
-        "Country of Origin": "Made in India",
-        Description:
-          "High-quality laser marking machine suitable for all plastics and glass.",
-        AdditionalDescription: {
-          para1: `As leading laser marking machine exporters in India, we offer cutting-edge solutions designed for precise and high-quality marking on various materials, including plastics and glass. Our laser marking machines are engineered to provide accurate and permanent markings, making them ideal for a range of applications from industrial labeling to intricate designs.\n\n`,
-          para2: `At Oneotech Enterprises, we are committed to providing advanced laser marking technology that meets the highest standards of performance and reliability. Our machines are designed to handle diverse marking needs with efficiency and precision, reflecting our expertise as top laser marking machine exporters in India. With a focus on innovation and quality, we ensure that our products deliver exceptional results.\n\n`,
-          heading1: `The Silent Features of Oneotech Enterprises Laser Marking Machine:\n\n`,
-          points1: ` - Precision marking on a variety of materials.\n - High-quality construction for durability.\n - Suitable for industrial and commercial use.\n`,
-          heading2: `Additional Information:\n\n`,
-          points2: `- Production Capacity: 500,000.\n - Lead Time: 2 weeks.\n\n`,
+          para_1:
+            "At Oneotech Enterprises, we take pride in being the leading DIN rail supplier in India, delivering premium, corrosion-resistant DIN rails for both industrial and commercial applications. Our DIN rails are engineered to meet the toughest demands, ensuring reliable and long-lasting performance for mounting and organizing electrical equipment.",
+          para_2:
+            "As a top DIN rail manufacturer in India, we understand the critical importance of DIN rails in electrical systems. Our DIN rails, made from high-grade steel with zinc plating for added durability, offer the reliability and strength you need. Here’s why Oneotech Enterprises stands out:",
+          points_1:
+            "- High-Quality Standards: Our DIN rails are designed to endure heavy loads while maintaining performance in industrial environments.\n- Customization Options: Available in various lengths (1m, 2m, 3m) and thicknesses to meet diverse application requirements.\n- Corrosion Resistance: Zinc-plated rails ensure long-lasting protection, even in harsh environments.\n- Fast Production and Delivery: With a production capacity of 5,000,000 units and a lead time of just 2 weeks, we guarantee timely delivery for your projects.",
+          heading_2: "High-Quality DIN Rails for Industrial Applications",
+          points_2:
+            "- Heavy-Duty Equipment Support: Designed to handle substantial loads, providing secure and reliable mounting for electrical components.\n- Corrosion Resistance: Zinc plating protects against rust and environmental damage, ensuring long-lasting performance both indoors and outdoors.\n- Versatile Applications: Suitable for various industrial and commercial settings, including automation systems, control panels, and distribution boards.",
+          heading_3: "Product Descriptions",
+          points_3:
+            "- Brand: Oneotech Enterprises\n- Length: Available in 1m, 2m, 3m\n- Material: High-quality Steel\n- Plating: Zinc-plated for corrosion resistance\n- Color: Silver",
+          heading_4: "Silent Features of Oneotech Enterprises DIN Rails",
+          points_4:
+            "- High-Quality Steel Construction: Built for durability and strength, perfect for mounting electrical components.\n- Zinc Plating: Provides superior resistance to rust and corrosion, extending the lifespan of the DIN rails.\n- Designed for Heavy-Duty Mounting: Ideal for supporting substantial loads in industrial environments.",
+          heading_5: "DIN Rail Applications",
+          points_5:
+            "- DIN Rails for Electrical Installations: Our DIN rails provide secure, organized mounting for electrical components in control panels, distribution boards, and automation systems.\n- How DIN Rails Improve Industrial Equipment Efficiency: By offering reliable, easy-to-install mounting solutions, our DIN rails streamline the organization of electrical wiring and equipment. This leads to reduced maintenance time, increased operational efficiency, and minimized downtime for industrial systems.",
+          heading_6: "Additional Information",
+          points_6:
+            "- Production Capacity: 5,000,000 units\n- Lead Time: 2 weeks",
         },
       },
     },
@@ -312,26 +313,83 @@ const ProductDetailsPage = () => {
   return (
     <AnimationRevealPage>
       {/* Dynamic Helmet Meta Data */}
-      <Helmet>
-        <title>{product.MetaTitle}</title>
-        <meta name="description" content={product.MetaDescription} />
-        <link rel="canonical" href={product.CanonicalLink} />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={product.MetaTitle} />
-        <meta property="og:description" content={product.MetaDescription} />
-        <meta property="og:image" content={product.MetaImage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={product.CanonicalLink} />
-      </Helmet>
+      {/* Helmet for "leading-nylon-cable-tie-exporters-in-india" */}
+      {seoUrl === "leading-nylon-cable-tie-exporters-in-india" && (
+        <Helmet>
+          <title>
+            Top Nylon Cable Tie Exporters in India - Oneotech Enterprises |
+            High-Quality Cable Ties
+          </title>
+          <meta
+            name="description"
+            content="Leading nylon cable tie exporters in India offering premium nylon cable ties for industrial and commercial use. Bulk orders and custom solutions available."
+          />
+          <link
+            rel="canonical"
+            href="https://www.oneotechenterprises.com/products/leading-nylon-cable-tie-exporters-in-india"
+          />
+        </Helmet>
+      )}
+      {/* Helmet for "leading-cable-tie-mounts-exporters-in-india" */}
+      {seoUrl === "leading-cable-tie-mounts-exporters-in-india" && (
+        <Helmet>
+          <title>
+            Top Cable Tie Mount Exporters in India | High-Performance Mounting
+            Solutions by Oneotech Enterprises
+          </title>
+          <meta
+            name="description"
+            content="Oneotech Enterprises is a leading exporter of cable tie mounts in India, offering high-quality, durable mounting solutions for industrial and commercial applications. Contact us for bulk orders."
+          />
+          <link
+            rel="canonical"
+            href="https://www.oneotechenterprises.com/products/leading-cable-tie-mount-exporters-in-india"
+          />
+        </Helmet>
+      )}
+      {/* Helmet for "leading-din-rail-supplier-in-india" */}
+      {seoUrl === "leading-din-rail-supplier-in-india" && (
+        <Helmet>
+          <title>
+            Leading Din Rail Supplier in India | Oneotech Enterprises
+          </title>
+          <meta
+            name="description"
+            content="Oneotech Enterprises is a leading Din Rail supplier in India."
+          />
+          <link
+            rel="canonical"
+            href="https://www.oneotechenterprises.com/products/leading-din-rail-supplier-in-india"
+          />
+        </Helmet>
+      )}
+      {/* Helmet for "laser-marking-machine" */}
+      {seoUrl === "laser-marking-machine" && (
+        <Helmet>
+          <title>Laser Marking Machine | Oneotech Enterprises</title>
+          <meta
+            name="description"
+            content="Oneotech Enterprises offers high-quality laser marking machines suitable for plastics and glass."
+          />
+          <link
+            rel="canonical"
+            href="https://www.oneotechenterprises.com/products/laser-marking-machine"
+          />
+        </Helmet>
+      )}
       <Header />
       <ContentContainer>
         <HeadingRow>
           <Heading>
-            {" "}
-            {`Leading ${details.Name} ${product.businessType} in India`}
+            {product?.heading_1 // Check if heading_1 exists directly in the product object
+              ? product.heading_1
+              : details?.AdditionalDescription?.heading_1 // Fallback to details.AdditionalDescription.heading_1
+              ? details.AdditionalDescription.heading_1
+              : `${details.Name} - ${product.businessType}`}{" "}
+            {/* Fallback to the default */}
           </Heading>
         </HeadingRow>
+
         <MainSection>
           <ImageContainer>
             <ProductImage src={images[0]} alt={product.altText} />
@@ -342,10 +400,9 @@ const ProductDetailsPage = () => {
               <p>{details.Description}</p>
             </Section>
             <Section>
-              <SectionTitle>Product Description</SectionTitle>
+              <SectionTitle>Product Specifications</SectionTitle>
               <Table>
                 <tbody>
-                  {/* Move "Brand" to the top */}
                   {details.Brand && (
                     <TableRow>
                       <TableCell>Brand</TableCell>
@@ -373,55 +430,251 @@ const ProductDetailsPage = () => {
             </Section>
           </DetailsContainer>
         </MainSection>
+
         <AdditionalDescriptionSection>
-          <SectionTitle>
-            {`Leading ${details.Name} ${product.businessType} in India`}
-          </SectionTitle>
-          <p>{details.AdditionalDescription.para1}</p>
-          <br />
-          <p>{details.AdditionalDescription.para2}</p>
-          <br />
-          <p>{details.AdditionalDescription.para3}</p>
-          <br />
-          <p>{details.AdditionalDescription.para4}</p>
-          <br />
-          <SectionHead>{details.AdditionalDescription.heading1}</SectionHead>
-          <br />
-          <ul>
-            {details.AdditionalDescription.points1
-              .split("\n")
-              .map((point, index) => (
-                <li key={index}>{point.trim()}</li>
-              ))}
-          </ul>
-          <br />
-          <SectionHead>{details.AdditionalDescription.heading2}</SectionHead>
-          <br />
-          <ul>
-            {details.AdditionalDescription.points2
-              .split("\n")
-              .map((point, index) => (
-                <li key={index}>{point.trim()}</li>
-              ))}
-          </ul>
-          <br />
-          {details.AdditionalDescription.heading3 && (
+          {/* Check for and render h2_1 */}
+          {details?.AdditionalDescription?.h2_1 && (
+            <>
+              <SectionHead>{details.AdditionalDescription.h2_1}</SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render para_1 */}
+          {details?.AdditionalDescription?.para_1 && (
+            <>
+              <p>{details.AdditionalDescription.para_1}</p>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render h2_2 */}
+          {details?.AdditionalDescription?.h2_2 && (
+            <>
+              <SectionHead>{details.AdditionalDescription.h2_2}</SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render para_2 */}
+          {details?.AdditionalDescription?.para_2 && (
+            <>
+              <p>{details.AdditionalDescription.para_2}</p>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render h2_3 */}
+          {details?.AdditionalDescription?.h2_3 && (
+            <>
+              <SectionHead>{details.AdditionalDescription.h2_3}</SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render para_3 */}
+          {details?.AdditionalDescription?.para_3 && (
+            <>
+              <p>{details.AdditionalDescription.para_3}</p>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render h2_4 */}
+          {details?.AdditionalDescription?.h2_4 && (
+            <>
+              <SectionHead>{details.AdditionalDescription.h2_4}</SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render para_4 */}
+          {details?.AdditionalDescription?.para_4 && (
+            <>
+              <p>{details.AdditionalDescription.para_4}</p>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render para_5 */}
+          {details?.AdditionalDescription?.para_5 && (
+            <>
+              <p>{details.AdditionalDescription.para_5}</p>
+              <br />
+            </>
+          )}
+
+          {/* Check for and render heading_2 */}
+          {details?.AdditionalDescription?.heading_2 && (
             <>
               <SectionHead>
-                {details.AdditionalDescription.heading3}
+                {details.AdditionalDescription.heading_2}
               </SectionHead>
               <br />
-              <ul>
-                {details.AdditionalDescription.points3
-                  .split("\n")
-                  .map((point, index) => (
-                    <li key={index}>{point.trim()}</li>
-                  ))}
-              </ul>
+            </>
+          )}
+
+          {/* Handle points_1 - Check if it's an array or string */}
+          {details?.AdditionalDescription?.points_1 && (
+            <>
+              {Array.isArray(details.AdditionalDescription.points_1) ? (
+                <ul>
+                  {details.AdditionalDescription.points_1.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
+                </ul>
+              ) : typeof details.AdditionalDescription.points_1 === "string" ? (
+                <ul>
+                  {details.AdditionalDescription.points_1
+                    .split("\n")
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}</li>
+                    ))}
+                </ul>
+              ) : null}
+              <br />
+            </>
+          )}
+
+          {/* Check for and render heading_3 */}
+          {details?.AdditionalDescription?.heading_3 && (
+            <>
+              <SectionHead>
+                {details.AdditionalDescription.heading_3}
+              </SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Handle points_2 - Check if it's an array or string */}
+          {details?.AdditionalDescription?.points_2 && (
+            <>
+              {Array.isArray(details.AdditionalDescription.points_2) ? (
+                <ul>
+                  {details.AdditionalDescription.points_2.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
+                </ul>
+              ) : typeof details.AdditionalDescription.points_2 === "string" ? (
+                <ul>
+                  {details.AdditionalDescription.points_2
+                    .split("\n")
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}</li>
+                    ))}
+                </ul>
+              ) : null}
+              <br />
+            </>
+          )}
+
+          {/* Check for and render heading_4 */}
+          {details?.AdditionalDescription?.heading_4 && (
+            <>
+              <SectionHead>
+                {details.AdditionalDescription.heading_4}
+              </SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Handle points_4 - Check if it's an array or string */}
+          {details?.AdditionalDescription?.points_4 && (
+            <>
+              {Array.isArray(details.AdditionalDescription.points_4) ? (
+                <ul>
+                  {details.AdditionalDescription.points_4.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
+                </ul>
+              ) : typeof details.AdditionalDescription.points_4 === "string" ? (
+                <ul>
+                  {details.AdditionalDescription.points_4
+                    .split("\n")
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}</li>
+                    ))}
+                </ul>
+              ) : null}
+              <br />
+            </>
+          )}
+
+          {/* Check for and render heading_5 */}
+          {details?.AdditionalDescription?.heading_5 && (
+            <>
+              <SectionHead>
+                {details.AdditionalDescription.heading_5}
+              </SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Handle points_5 - Check if it's an array or string */}
+          {details?.AdditionalDescription?.points_5 && (
+            <>
+              {Array.isArray(details.AdditionalDescription.points_5) ? (
+                <ul>
+                  {details.AdditionalDescription.points_5.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
+                </ul>
+              ) : typeof details.AdditionalDescription.points_5 === "string" ? (
+                <ul>
+                  {details.AdditionalDescription.points_5
+                    .split("\n")
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}</li>
+                    ))}
+                </ul>
+              ) : null}
+              <br />
+            </>
+          )}
+
+          {/* Check for and render heading_6 */}
+          {details?.AdditionalDescription?.heading_6 && (
+            <>
+              <SectionHead>
+                {details.AdditionalDescription.heading_6}
+              </SectionHead>
+              <br />
+            </>
+          )}
+
+          {/* Handle points_6 - Check if it's an array or string */}
+          {details?.AdditionalDescription?.points_6 && (
+            <>
+              {Array.isArray(details.AdditionalDescription.points_6) ? (
+                <ul>
+                  {details.AdditionalDescription.points_6.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
+                </ul>
+              ) : typeof details.AdditionalDescription.points_6 === "string" ? (
+                <ul>
+                  {details.AdditionalDescription.points_6
+                    .split("\n")
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}</li>
+                    ))}
+                </ul>
+              ) : null}
               <br />
             </>
           )}
         </AdditionalDescriptionSection>
+
         <BulkOrderText>Reach out to us for bulk orders.</BulkOrderText>
         <InterestButton onClick={handleInterestClick}>
           Yes, I'm Interested
