@@ -10,7 +10,7 @@ const urls = [
   { url: "/contact-us", changefreq: "monthly", priority: 0.8 },
   { url: "/products", changefreq: "monthly", priority: 0.8 },
   {
-    url: "/bulk-black-tea-exporters-in-india",
+    url: "/black-tea-exporters-in-india",
     changefreq: "monthly",
     priority: 0.8,
   },
