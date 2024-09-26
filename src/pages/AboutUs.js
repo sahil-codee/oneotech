@@ -55,7 +55,6 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Header />
-
       <MainFeature1
         subheading={<Subheading>About Oneotech Enterprises</Subheading>}
         heading="Welcome to Oneotech Enterprises"
