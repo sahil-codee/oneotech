@@ -317,12 +317,11 @@ const ProductDetailsPage = () => {
       {seoUrl === "leading-nylon-cable-tie-exporters-in-india" && (
         <Helmet>
           <title>
-            Top Nylon Cable Tie Exporters in India - Oneotech Enterprises |
-            High-Quality Cable Ties
+            Top Nylon Cable Tie Exporters in India | Oneotech Enterprises
           </title>
           <meta
             name="description"
-            content="Leading nylon cable tie exporters in India offering premium nylon cable ties for industrial and commercial use. Bulk orders and custom solutions available."
+            content="Leading nylon cable tie exporters in India, offering premium solutions for industrial use. Contact us for bulk orders!"
           />
           <link
             rel="canonical"
@@ -334,12 +333,11 @@ const ProductDetailsPage = () => {
       {seoUrl === "leading-cable-tie-mounts-exporters-in-india" && (
         <Helmet>
           <title>
-            Top Cable Tie Mount Exporters in India | High-Performance Mounting
-            Solutions by Oneotech Enterprises
+            Top Cable Tie Mount Exporters in India | Oneotech Enterprises
           </title>
           <meta
             name="description"
-            content="Oneotech Enterprises is a leading exporter of cable tie mounts in India, offering high-quality, durable mounting solutions for industrial and commercial applications. Contact us for bulk orders."
+            content="Oneotech Enterprises, a leading cable tie mount exporter in India, provides durable solutions for industrial applications. Contact us for bulk!"
           />
           <link
             rel="canonical"
@@ -350,12 +348,10 @@ const ProductDetailsPage = () => {
       {/* Helmet for "leading-din-rail-supplier-in-india" */}
       {seoUrl === "leading-din-rail-supplier-in-india" && (
         <Helmet>
-          <title>
-            Leading Din Rail Supplier in India | Oneotech Enterprises
-          </title>
+          <title>Top DIN Rail Supplier in India | Oneotech Enterprises</title>
           <meta
             name="description"
-            content="Oneotech Enterprises is a leading Din Rail supplier in India."
+            content="Oneotech Enterprises is a premier DIN rail supplier in India, offering high-quality solutions for various industrial applications."
           />
           <link
             rel="canonical"
@@ -363,20 +359,7 @@ const ProductDetailsPage = () => {
           />
         </Helmet>
       )}
-      {/* Helmet for "laser-marking-machine" */}
-      {seoUrl === "laser-marking-machine" && (
-        <Helmet>
-          <title>Laser Marking Machine | Oneotech Enterprises</title>
-          <meta
-            name="description"
-            content="Oneotech Enterprises offers high-quality laser marking machines suitable for plastics and glass."
-          />
-          <link
-            rel="canonical"
-            href="https://www.oneotechenterprises.com/products/laser-marking-machine"
-          />
-        </Helmet>
-      )}
+
       <Header />
       <ContentContainer>
         <HeadingRow>
