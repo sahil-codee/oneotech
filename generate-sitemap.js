@@ -8,10 +8,10 @@ const urls = [
   { url: "/", changefreq: "daily", priority: 1 },
   { url: "/about-us", changefreq: "monthly", priority: 0.8 },
   { url: "/contact-us", changefreq: "monthly", priority: 0.8 },
-  { url: "/products", changefreq: "monthly", priority: 0.8 },
+  { url: "/products", changefreq: "weekly", priority: 0.8 },
   {
     url: "/black-tea-exporters-in-india",
-    changefreq: "monthly",
+    changefreq: "weekly",
     priority: 0.8,
   },
   {
@@ -29,7 +29,7 @@ const urls = [
     changefreq: "weekly",
     priority: 0.8,
   },
-  { url: "/product-catalog", changefreq: "weekly", priority: 0.8 },
+  { url: "/product-catalog", changefreq: "monthly", priority: 0.8 },
 ];
 
 (async () => {
