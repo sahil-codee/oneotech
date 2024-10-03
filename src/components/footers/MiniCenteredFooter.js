@@ -40,18 +40,22 @@ export default () => {
         <FooterWrapper>
           <Row>
             <LogoContainer>
-              <LogoImg src={logo} alt="Oneotech Enterprises logo" />
+              <Link href="/">
+                {" "}
+                <LogoImg src={logo} alt="Oneotech Enterprises logo" />
+              </Link>
               <LogoText>Oneotech Enterprises</LogoText>
             </LogoContainer>
             <LinksContainer>
               <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/about-us">About</Link>
               <Link href="/products">Products</Link>
-              <Link href="/services">Services</Link>
+              <Link href="/tea-exporters-in-india">Our Teas</Link>
+              <Link href="/product-catalog">Catalog</Link>
+              <Link href="/contact">Contact Us</Link>
             </LinksContainer>
             <SocialLinksContainer>
-              <SocialLink href="https://www.facebook.com/oneotechenterprises">
+              <SocialLink href="https://www.facebook.com/oneotechenterprises" target="_blank">
                 <FacebookIcon />
               </SocialLink>
               <SocialLink href="https://twitter.com">

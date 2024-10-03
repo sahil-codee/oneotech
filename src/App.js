@@ -10,6 +10,7 @@ import Services from "./pages/Services.js";
 import ProductDetailsPage from "pages/ProductDetailPage.js";
 import Tea from "../src/pages/Tea.js";
 import WhatsAppChat from "components/whatsApp/WhatsApp.js";
+import BackToTop from "components/scrollTop/BackToTop.js";
 
 export default function App() {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
@@ -33,13 +34,14 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/black-tea-exporters-in-india" element={<Tea />} />
+          <Route path="/tea-exporters-in-india" element={<Tea />} />
           <Route path="/products/:seoUrl" element={<ProductDetailsPage />} />
           <Route path="/product-catalog" element={<Services />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
-      </Router>
+      </Router><BackToTop />
       {showWhatsApp && <WhatsAppChat phoneNumber={phoneNumber} />}
+      
     </>
   );
 }

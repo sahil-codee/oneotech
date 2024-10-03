@@ -100,7 +100,7 @@ export default () => {
           <FounderSubheading>Mr. Rakesh Bakshi</FounderSubheading>
           {/* Updated content */}
           <FounderDescription>
-            Our Founder and Managing Director, Mr. Rakesh Bakshi, has a rich
+            Our Founder, Mr. Rakesh Bakshi, has a rich
             experience of over two decades in the industrial products sector.
             His extensive expertise and visionary leadership have been pivotal
             in establishing Oneotech Enterprises as a trusted name in the

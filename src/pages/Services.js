@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+// eslint-disable-next-line
+
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import tw from "twin.macro";
 import styled from "styled-components";
+import Footer from "components/footers/MiniCenteredFooter.js";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
@@ -123,7 +126,8 @@ const CatalogPage = () => {
   const handleCountryChange = (selected) =>
     setFormData({ ...formData, country: selected.label });
 
-  const validateForm = () => {
+  // Use useCallback to memoize validateForm
+  const validateForm = useCallback(() => {
     const errors = {};
     if (!formData.name) errors.name = "Name is required.";
     if (!formData.mobile) errors.mobile = "Mobile number is required.";
@@ -132,7 +136,12 @@ const CatalogPage = () => {
     if (!formData.country) errors.country = "Country is required.";
     setFormErrors(errors);
     setIsFormValid(Object.keys(errors).length === 0);
-  };
+  }, [formData]);
+
+  // Include validateForm in the dependency array
+  useEffect(() => {
+    validateForm();
+  }, [formData, validateForm]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -167,6 +176,7 @@ const CatalogPage = () => {
     }
   };
 
+  // eslint-disable-next-line
   useEffect(() => validateForm(), [formData]);
 
   const calculateScale = () =>
@@ -299,6 +309,7 @@ const CatalogPage = () => {
           </ModalOverlay>
         )}
       </Container>
+      <Footer />
     </AnimationRevealPage>
   );
 };
