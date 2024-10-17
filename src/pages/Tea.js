@@ -129,7 +129,7 @@ const TeaLandingPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.oneotechenterprises.com/tea-exporters-in-india"
+          href="https://www.oneotechenterprises.com/bulk-tea-exporters-in-india"
         />
         <meta
           property="og:title"
