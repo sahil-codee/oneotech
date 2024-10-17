@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/tea-exporters-in-india" element={<Tea />} />
+          <Route path="/bulk-tea-exporters-in-india" element={<Tea />} />
           <Route path="/products/:seoUrl" element={<ProductDetailsPage />} />
           <Route path="/product-catalog" element={<Services />} />
           <Route path="/contact-us" element={<ContactUs />} />

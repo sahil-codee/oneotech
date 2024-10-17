@@ -83,7 +83,7 @@ const TeaLandingPage = () => {
     {
       question: "What types of teas does Oneotech Enterprises export?",
       answer:
-        "At Oneotech Enterprises, we export a wide range of high-quality teas, including CTC black tea, orthodox tea, green tea, blue tea, white tea, and herbal teas. Sourced from the best tea-growing regions like Assam and Darjeeling, our teas are perfect for buyers seeking premium export-quality tea from India.",
+        "At Oneotech Enterprises, we export a diverse range of teas, including bulk black tea, CTC black tea, orthodox tea, green tea, and herbal teas. Our teas, sourced from Assam and Darjeeling, are known for their rich flavors and high quality, making us one of the leading bulk tea exporters in India.",
     },
     {
       question:
@@ -100,7 +100,7 @@ const TeaLandingPage = () => {
       question:
         "How does Oneotech Enterprises ensure the quality of its export teas?",
       answer:
-        "We follow a rigorous quality control process, including professional tea tasting for each batch. Our tea tasters evaluate the flavor, aroma, and overall quality to ensure only the finest export-quality teas are shipped. As leading Indian tea exporters, we prioritize freshness and secure packaging for optimal quality in transit.",
+        "Answer: We follow a stringent quality control process for every batch of tea we export. As one of the top bulk black tea exporters in India, we ensure that our CTC and orthodox black teas undergo professional tasting and thorough testing to guarantee the highest export standards.",
     },
     {
       question: "Where does Oneotech Enterprises source its teas from?",
@@ -121,23 +121,23 @@ const TeaLandingPage = () => {
     <AnimationRevealPage>
       <Helmet>
         <title>
-          Leading Bulk Tea Exporters in India | Organic & Premium Indian Tea
+          Top Bulk Tea Exporters in India | Bulk Black Tea Exporters & Suppliers
         </title>
         <meta
           name="description"
-          content="Oneotech Enterprises: Trusted bulk tea exporters in India. Exporting high-quality Assam & Darjeeling teas including CTC black tea, orthodox, green, and herbal tea. Contact us for bulk tea orders."
+          content="Leading bulk tea exporters in India, specializing in black tea, green tea, and more. As top bulk black tea exporters, we offer premium tea exports from Assam and Darjeeling. Contact us at info@oneotechenterprises.com for bulk tea supplies."
         />
         <link
           rel="canonical"
-          href="https://www.oneotechenterprises.com/bulk-tea-exporters-in-india"
+          href="https://www.oneotechenterprises.com/tea-exporters-in-india"
         />
         <meta
           property="og:title"
-          content="Leading Bulk Tea Exporters in India | Organic & Premium Indian Tea"
+          content="Bulk Tea Exporters in India | Leading Tea Suppliers"
         />
         <meta
           property="og:description"
-          content="Oneotech Enterprises: Leading bulk tea exporters in India, specializing in high-quality Assam and Darjeeling teas. Contact us for bulk tea exports and premium Indian tea supply."
+          content="Leading bulk tea exporters in India, specializing in high-quality Assam and Darjeeling teas. Contact for bulk tea supply and premium Indian tea exports."
         />
         <meta
           property="og:image"
@@ -145,9 +145,43 @@ const TeaLandingPage = () => {
         />
         <meta
           property="og:url"
-          content="https://www.oneotechenterprises.com/bulk-tea-exporters-in-india"
+          content="https://www.oneotechenterprises.com/tea-exporters-in-india"
         />
         <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Structured Data for FAQs */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What types of teas does Oneotech Enterprises export?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "At Oneotech Enterprises, we export a wide range of high-quality teas, including CTC black tea, orthodox tea, green tea, blue tea, white tea, and herbal teas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the teas exported by Oneotech Enterprises GMO-free and bleach-free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, all our teas are 100% GMO-free and bleach-free. We are committed to exporting pure, naturally processed teas, ensuring you receive chemical-free, healthy tea."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I place a bulk tea order with Oneotech Enterprises?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Placing a bulk tea order with Oneotech Enterprises is simple. Contact us via phone or email and we will provide you with tailored solutions."
+                }
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
 
       <Header />
@@ -165,12 +199,12 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage1}
-                  alt="black tea exporters in india"
+                  alt="bulk black tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
                   <Heading>
-                    Leading Bulk Tea Exporters in India – Assam & Darjeeling
+                    Bulk Tea Exporters in India - Premium Assam & Darjeeling
                     Teas
                   </Heading>
                   <Paragraph>
@@ -186,17 +220,17 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage2}
-                  alt="tea exporters in india"
+                  alt="bulk tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
-                  <Heading>Trusted Black Tea Exporters in India</Heading>
+                  <Heading>Trusted Bulk Black Tea Exporters from India</Heading>
                   <Paragraph>
-                    Oneotech Enterprises, a trusted name among bulk tea
-                    exporters in India, offers high-quality black teas including
-                    CTC and orthodox varieties. Our Assam and Darjeeling black
-                    teas are known for their rich flavor and bold taste, ideal
-                    for bulk exports worldwide.
+                    Our bulk black tea exports include premium Assam and
+                    Darjeeling varieties. As a trusted supplier among bulk black
+                    tea exporters in India, we ensure our CTC and orthodox black
+                    teas deliver bold flavors, perfect for international
+                    markets.
                   </Paragraph>
                   <Button href="/contact-us">Contact Us</Button>
                 </Overlay>
@@ -204,7 +238,7 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage3}
-                  alt="bulk black tea exporters in india"
+                  alt="bulk tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
@@ -225,18 +259,17 @@ const TeaLandingPage = () => {
 
         {/* Updated Sections */}
         <Subheading>
-          Oneotech Enterprises - Leading Bulk Tea Exporters from India
+          Oneotech Enterprises - Leading Tea Exporters from India
         </Subheading>
         <SectionContainer>
           <Text>
-            Welcome to Oneotech Enterprises, your trusted partner among the top
-            tea exporters in India. We specialize in providing a wide range of
-            high-quality teas to clients worldwide. As one of the leading bulk
-            tea exporters in India, we source our teas from the finest
-            tea-growing regions, such as Assam and Darjeeling, offering premium
-            CTC black tea, orthodox tea, green tea, blue tea, white tea, and
-            herbal tea. Each variety is carefully selected to ensure you receive
-            the best export quality tea from India.
+            Welcome to Oneotech Enterprises, a premier name among bulk tea
+            exporters in India, specializing in the export of high-quality teas.
+            We provide bulk black tea, green tea, orthodox tea, and herbal tea
+            sourced from Assam and Darjeeling, two of India's finest tea-growing
+            regions. As one of the leading bulk black tea exporters in India, we
+            pride ourselves on offering premium teas for global buyers seeking
+            top-notch Indian tea supplies.
           </Text>
         </SectionContainer>
         <Subheading>
@@ -244,13 +277,13 @@ const TeaLandingPage = () => {
         </Subheading>
         <SectionContainer>
           <Text>
-            At Oneotech Enterprises, we stand out as reputable Indian tea
-            exporters. Our tea is organically grown, processed with care, and
-            tested by professional tea tasters to ensure only the finest batches
-            reach our customers. Whether you're looking to buy Indian tea for
-            retail, wholesale, or personal use, we offer unmatched quality and
-            consistency in our services. As dedicated tea suppliers from India,
-            our range includes:
+            At Oneotech Enterprises, we are known for our excellence as bulk tea
+            exporters in India, providing a vast array of teas for international
+            markets. Our portfolio includes bulk black tea, green tea, and
+            herbal varieties, catering to diverse global tastes. As one of the
+            top bulk black tea exporters in India, we guarantee the highest
+            standards in sourcing, quality control, and packaging to ensure your
+            bulk tea shipments arrive fresh and ready to impress your customers.
           </Text>
           <StyledList>
             <li>
@@ -275,13 +308,11 @@ const TeaLandingPage = () => {
         <Subheading>Expert Tea Tasting for Superior Quality</Subheading>
         <SectionContainer>
           <Text>
-            Every batch of tea we export is rigorously tested by our
-            professional tea tasters to ensure that only the finest leaves are
-            selected for export. This stringent quality control helps us
-            maintain our reputation as one of the top bulk tea suppliers in
-            India. Our tea tasters meticulously assess the aroma, flavor, and
-            appearance of the tea to guarantee it meets the high standards that
-            global buyers expect from Indian tea exporters.
+            We understand that our clients rely on us for top-quality bulk black
+            tea exports from India. Every batch of black tea we export undergoes
+            rigorous tasting and quality checks. This ensures that as one of the
+            leading bulk black tea exporters in India, we consistently deliver
+            premium, flavorful teas that meet international quality standards.
           </Text>
         </SectionContainer>
         <Subheading>Our Mission as Leading Tea Exporters</Subheading>
@@ -322,6 +353,21 @@ const TeaLandingPage = () => {
                 businesses to large enterprises.
               </li>
             </StyledList>
+          </Text>
+        </SectionContainer>
+        <Subheading>Leading Bulk Black Tea Exporters in India</Subheading>
+        <SectionContainer>
+          <Text>
+            Oneotech Enterprises stands out as one of the top bulk black tea
+            exporters in India, offering high-grade CTC and orthodox black teas
+            for export. Black tea is among the most popular beverages globally,
+            and we supply it in bulk to cater to international demand. Whether
+            you require strong Assam black tea or aromatic Darjeeling black tea,
+            our bulk black tea offerings provide rich flavors and bold aromas.
+            Our bulk black tea is carefully selected, processed, and packaged to
+            ensure maximum freshness. We are dedicated to maintaining long-term
+            relationships with global clients by providing the finest bulk black
+            tea exports from India.
           </Text>
         </SectionContainer>
 

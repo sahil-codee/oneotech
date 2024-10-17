@@ -95,7 +95,7 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/about-us">About Us</NavLink>
       <NavLink href="/products">Products</NavLink>
-      <NavLink href="/tea-exporters-in-india">Our Teas</NavLink>
+      <NavLink href="/bulk-tea-exporters-in-india">Assam Tea</NavLink>
       <NavLink href="/product-catalog">Catalog</NavLink>
       <PrimaryLink href="/contact-us">Contact Us</PrimaryLink>
     </NavLinks>,
