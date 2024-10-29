@@ -9,9 +9,10 @@ import logo from "../../images/ONEOTECH.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
-const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto
+const Header = styled.header`
+  ${tw`flex justify-between items-center w-full`} // Full width for larger screens
+  max-width: 100%; // Ensures it takes full viewport width
+  margin: 0; // Remove any default margin
 `;
 export const NavLinks = tw.div`inline-block`;
 
@@ -66,7 +67,6 @@ export const MobileNavLinks = motion(styled.div`
 export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
-
 export default ({
   roundedHeaderButton = false,
   logoLink,

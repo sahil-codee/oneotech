@@ -26,14 +26,19 @@ const addPreloadLink = (href, as, type) => {
 };
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 mt-8`;
+
 const CarouselContainer = styled.div`
-  ${tw`relative w-full mt-8`}
+  ${tw`relative w-full mt-8`};
+  overflow: hidden;
+  width: 100vw; // Ensures full viewport width
+  max-height: 600px; // Limit the height to avoid overflow from the bottom
+  margin-left: calc(100vw - 100%) / 5); // Centers the full-width container
 `;
 
 const CarouselWrapper = styled.div`
-  ${tw`max-w-screen-xl mx-auto w-full relative`}
+  ${tw`w-full relative`}
   .react-multi-carousel-list {
-    ${tw`w-full`}
+    ${tw`w-full overflow-hidden`}
   }
   .react-multi-carousel-item {
     ${tw`w-full transition-transform duration-700`}
@@ -42,9 +47,9 @@ const CarouselWrapper = styled.div`
 
 const Overlay = styled.div`
   ${tw`absolute inset-0 flex flex-col items-center justify-center text-white text-center`}
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 `;
-
 const Heading = tw.h1`font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl`;
 const Paragraph = tw.p`my-2 lg:my-4 text-base xl:text-lg`;
 
@@ -83,7 +88,7 @@ const FeaturedProducts = () => {
             <div>
               <LazyLoadImage
                 src={cableTie}
-                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                // sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Cable Ties"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
@@ -130,7 +135,7 @@ const FeaturedProducts = () => {
             <div>
               <LazyLoadImage
                 src={cableTieMounts}
-                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                // sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="Cable Tie Mounts"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />
@@ -153,7 +158,7 @@ const FeaturedProducts = () => {
             <div>
               <LazyLoadImage
                 src={dinRail}
-                sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
+                // sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px"
                 alt="DIN Rail"
                 style={{ width: "100%", height: "600px", objectFit: "cover" }}
               />

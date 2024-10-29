@@ -316,9 +316,7 @@ const ProductDetailsPage = () => {
       {/* Helmet for "leading-nylon-cable-tie-exporters-in-india" */}
       {seoUrl === "leading-nylon-cable-tie-exporters-in-india" && (
         <Helmet>
-          <title>
-            Top Nylon Cable Tie Exporters in India | Oneotech Enterprises
-          </title>
+          <title>Top Nylon Cable Tie Exporters in India</title>
           <meta
             name="description"
             content="Leading nylon cable tie exporters in India, offering premium solutions for industrial use. Contact us for bulk orders!"
@@ -348,10 +346,10 @@ const ProductDetailsPage = () => {
       {/* Helmet for "leading-din-rail-supplier-in-india" */}
       {seoUrl === "leading-din-rail-supplier-in-india" && (
         <Helmet>
-          <title>Top DIN Rail Supplier in India | Oneotech Enterprises</title>
+          <title>Top DIN Rail Supplier in India</title>
           <meta
             name="description"
-            content="Oneotech Enterprises is a premier DIN rail supplier in India, offering high-quality solutions for various industrial applications."
+            content="Discover Oneotech Enterprises, a leading DIN rail supplier in India. We provide premium-quality DIN rails designed for diverse industrial applications. Partner with us for reliable solutions that enhance your operational efficiency. Contact us for bulk orders today!"
           />
           <link
             rel="canonical"

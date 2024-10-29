@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import Carousel from "react-multi-carousel";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-multi-carousel/lib/styles.css";
-import { Subheading as SubheadingBase } from "components/misc/Headings.js";
+// import { Subheading as SubheadingBase } from "components/misc/Headings.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "components/headers/light.js";
@@ -15,39 +15,63 @@ import teaImage3 from "../images/teaHead.png";
 import { motion } from "framer-motion";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 
+const MainHeading = tw.h1`text-5xl sm:text-6xl text-primary-500 font-bold tracking-wide text-center mt-8`;
+const SectionHeading = tw.h2`text-4xl sm:text-5xl font-semibold text-center mt-6`;
+// const Subheading = tw.h2`text-2xl sm:text-3xl font-bold text-primary-500 text-center mt-4`;
+
 const Container = tw.div`relative text-gray-100 -mx-8 -mb-8 mt-8 mb-2`;
 const CarouselContainer = styled.div`
   ${tw`relative w-full mt-8`}
+  overflow: hidden;
+  width: 100vw; // Ensures full viewport width
+  max-height: 600px; // Limit the height to avoid overflow from the bottom
+  margin-left: calc(100vw - 100%) / 5); // Centers the full-width container
 `;
-// const Subheading = tw(SubheadingBase)`mb-4 text-center`;
+
 const CarouselWrapper = styled.div`
-  ${tw`max-w-screen-xl mx-auto w-full relative`}
+  ${tw`w-full relative`} // Maintains full width for the wrapper
+  max-width: none; // Removes any max-width restrictions
+  overflow: hidden; // Prevents any overflow issues
 `;
 const Overlay = styled.div`
-  ${tw`absolute inset-0 flex flex-col items-center justify-center text-white text-center`} background: rgba(0, 0, 0, 0.5);
+  ${tw`absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center text-white text-center`}
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden; // Prevents background from extending outside bounds
+  padding: 0 16px; // Adds left and right padding
 `;
-const Heading = tw.h1`font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl`;
+
+// const SectionHeading = tw.h1`font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl`;
 const Paragraph = tw.p`my-2 lg:my-4 text-base xl:text-lg`;
 const Button = tw.a`bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4`;
 
 const SectionContainer = styled.div`
-  ${tw`flex flex-col items-start p-8 w-full`}
+  ${tw`flex flex-col items-start px-8 py-8 w-full md:px-20`}
 `;
-
-const Subheading = tw(SubheadingBase)`mt-4 mb-0 text-center w-full`; // New definition for centered Subheading
 
 const Text = styled.p`
-  ${tw`text-lg text-gray-700 mb-6 w-full text-left`}
+  ${tw`text-xl text-gray-700 mb-6 px-4 text-left md:text-left md:px-6`}
+
+  // Center the text for smaller screens
+  @media (max-width: 768px) {
+    ${tw`text-center`}
+  }
 `;
+
+const Subheading = tw.h2`text-3xl sm:text-4xl font-bold text-primary-500 text-center mt-4`; // New definition for centered Subheading
 
 // Style for list and bullets
 const StyledList = styled.ul`
   ${tw`pl-6 mb-6 w-full text-left text-lg text-gray-700`}
   list-style-type: square;
 `;
-const FAQSContainer = tw.dl`mt-0 w-full relative`;
-const FAQ = tw.div`cursor-pointer select-none mt-5 px-8 sm:px-10 py-5 sm:py-4 rounded-lg text-gray-800 hover:text-gray-900 bg-gray-200 hover:bg-gray-300 transition duration-300 w-full`;
-const Question = tw.dt`flex justify-between items-center`;
+const FAQSContainer = styled.dl`
+  ${tw`mt-0 mx-auto relative`} // Center the container with auto margins
+  max-width: 800px; // Set a max-width for the FAQ section
+  width: 100%; // Ensure it takes full width up to the max-width
+`;
+
+const FAQ = tw.div`cursor-pointer select-none mt-3 px-4 py-3 rounded-lg text-gray-800 hover:text-gray-900 bg-gray-200 hover:bg-gray-300 transition duration-300`;
+const Question = tw.dt`flex justify-between items-center mb-2`;
 const QuestionText = tw.span`text-lg lg:text-xl font-semibold`;
 const QuestionToggleIcon = motion(
   styled.span`
@@ -57,7 +81,7 @@ const QuestionToggleIcon = motion(
   `
 );
 const Answer = motion(
-  tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`
+  tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed mb-4` // Add margin-bottom for spacing
 );
 
 const responsive = {
@@ -83,29 +107,29 @@ const TeaLandingPage = () => {
     {
       question: "What types of teas does Oneotech Enterprises export?",
       answer:
-        "At Oneotech Enterprises, we export a diverse range of teas, including bulk black tea, CTC black tea, orthodox tea, green tea, and herbal teas. Our teas, sourced from Assam and Darjeeling, are known for their rich flavors and high quality, making us one of the leading bulk tea exporters in India.",
+        "At Oneotech Enterprises, we export a diverse range of teas, including black tea, CTC black tea, orthodox tea, green tea, and herbal teas. Our teas, sourced from Assam and Darjeeling, are known for their rich flavors and high quality, making us one of the leading tea exporters in India.",
     },
     {
       question:
         "Are the teas exported by Oneotech Enterprises GMO-free and bleach-free?",
       answer:
-        "Yes, all our teas are 100% GMO-free and bleach-free. We are committed to exporting pure, naturally processed teas, ensuring you receive chemical-free, healthy tea from one of the top bulk tea exporters in India.",
+        "Yes, all our teas are 100% GMO-free and bleach-free. We are committed to exporting pure, naturally processed teas, ensuring you receive chemical-free, healthy tea from one of the top tea exporters in India.",
     },
     {
-      question: "How can I place a bulk tea order with Oneotech Enterprises?",
+      question: "How can I place a tea order with Oneotech Enterprises?",
       answer:
-        "Placing a bulk tea order with Oneotech Enterprises is simple. Contact us via phone at +91-9810294854 or email us at info@oneotechenterprises.com. As one of the leading bulk tea suppliers in India, we offer tailored solutions to meet your specific tea sourcing needs.",
+        "Placing a tea order with Oneotech Enterprises is simple. Contact us via phone at +91-9810294854 or email us at info@oneotechenterprises.com. As one of the leading tea suppliers in India, we offer tailored solutions to meet your specific tea sourcing needs.",
     },
     {
       question:
         "How does Oneotech Enterprises ensure the quality of its export teas?",
       answer:
-        "Answer: We follow a stringent quality control process for every batch of tea we export. As one of the top bulk black tea exporters in India, we ensure that our CTC and orthodox black teas undergo professional tasting and thorough testing to guarantee the highest export standards.",
+        "We follow a stringent quality control process for every batch of tea we export. As one of the top black tea exporters in India, we ensure that our CTC and orthodox black teas undergo professional tasting and thorough testing to guarantee the highest export standards.",
     },
     {
       question: "Where does Oneotech Enterprises source its teas from?",
       answer:
-        "We source our teas exclusively from India’s most renowned tea-growing regions: Assam and Darjeeling. Each region is known for its distinct flavor profiles, and we ensure that our bulk tea exports reflect the finest qualities of these areas.",
+        "We source our teas exclusively from India’s most renowned tea-growing regions: Assam and Darjeeling. Each region is known for its distinct flavor profiles, and we ensure that our tea exports reflect the finest qualities of these areas.",
     },
   ];
 
@@ -120,68 +144,32 @@ const TeaLandingPage = () => {
   return (
     <AnimationRevealPage>
       <Helmet>
-        <title>
-          Top Bulk Tea Exporters in India | Bulk Black Tea Exporters & Suppliers
-        </title>
+        <title>Tea Exporter from India | CTC Tea and Green Tea Suppliers</title>
         <meta
           name="description"
-          content="Leading bulk tea exporters in India, specializing in black tea, green tea, and more. As top bulk black tea exporters, we offer premium tea exports from Assam and Darjeeling. Contact us at info@oneotechenterprises.com for bulk tea supplies."
+          content="Oneotech Enterprises: Leading tea exporter from India, offering premium CTC tea and green tea sourced from Assam and Darjeeling. Connect with us for high-quality tea supply."
         />
         <link
           rel="canonical"
-          href="https://www.oneotechenterprises.com/bulk-tea-exporters-in-india"
+          href="https://www.oneotechenterprises.com/tea-export-from-india"
         />
         <meta
           property="og:title"
-          content="Bulk Tea Exporters in India | Leading Tea Suppliers"
+          content="Tea Export from India | Trusted CTC and Green Tea Suppliers"
         />
         <meta
           property="og:description"
-          content="Leading bulk tea exporters in India, specializing in high-quality Assam and Darjeeling teas. Contact for bulk tea supply and premium Indian tea exports."
+          content="Oneotech Enterprises specializes in tea export from India, offering a wide range of high-quality teas like CTC tea and green tea from Assam and Darjeeling for global buyers."
         />
         <meta
           property="og:image"
-          content="https://www.oneotechenterprises.com/black-tea-image.jpg"
+          content="https://www.oneotechenterprises.com/green-tea-image.jpg"
         />
         <meta
           property="og:url"
-          content="https://www.oneotechenterprises.com/tea-exporters-in-india"
+          content="https://www.oneotechenterprises.com/tea-export-from-india"
         />
         <meta name="twitter:card" content="summary_large_image" />
-
-        {/* Structured Data for FAQs */}
-        <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What types of teas does Oneotech Enterprises export?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "At Oneotech Enterprises, we export a wide range of high-quality teas, including CTC black tea, orthodox tea, green tea, blue tea, white tea, and herbal teas."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Are the teas exported by Oneotech Enterprises GMO-free and bleach-free?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, all our teas are 100% GMO-free and bleach-free. We are committed to exporting pure, naturally processed teas, ensuring you receive chemical-free, healthy tea."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How can I place a bulk tea order with Oneotech Enterprises?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Placing a bulk tea order with Oneotech Enterprises is simple. Contact us via phone or email and we will provide you with tailored solutions."
-                }
-              }
-            ]
-          }`}
-        </script>
       </Helmet>
 
       <Header />
@@ -199,18 +187,18 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage1}
-                  alt="bulk black tea exporters in india"
+                  alt="black tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
-                  <Heading>
-                    Bulk Tea Exporters in India - Premium Assam & Darjeeling
+                  <SectionHeading>
+                    Leading Tea Exporters in India - Premium Assam & Darjeeling
                     Teas
-                  </Heading>
+                  </SectionHeading>
                   <Paragraph>
                     Explore a wide range of premium teas sourced directly from
                     the finest tea-growing regions of Assam and Darjeeling. As
-                    one of the leading bulk tea exporters in India, Oneotech
+                    one of the leading tea exporters in India, Oneotech
                     Enterprises specializes in CTC black tea, orthodox tea,
                     green tea, herbal blends, and more for global markets.
                   </Paragraph>
@@ -220,17 +208,18 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage2}
-                  alt="bulk tea exporters in india"
+                  alt="tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
-                  <Heading>Trusted Bulk Black Tea Exporters from India</Heading>
+                  <SectionHeading>
+                    Trusted Black Tea Exporters from India
+                  </SectionHeading>
                   <Paragraph>
-                    Our bulk black tea exports include premium Assam and
-                    Darjeeling varieties. As a trusted supplier among bulk black
-                    tea exporters in India, we ensure our CTC and orthodox black
-                    teas deliver bold flavors, perfect for international
-                    markets.
+                    Our black tea exports include premium Assam and Darjeeling
+                    varieties. As a trusted supplier among tea exporters in
+                    India, we ensure our CTC and orthodox black teas deliver
+                    bold flavors, perfect for international markets.
                   </Paragraph>
                   <Button href="/contact-us">Contact Us</Button>
                 </Overlay>
@@ -238,13 +227,15 @@ const TeaLandingPage = () => {
               <div>
                 <LazyLoadImage
                   src={teaImage3}
-                  alt="bulk tea exporters in india"
+                  alt="tea exporters in india"
                   style={{ width: "100%", height: "600px", objectFit: "cover" }}
                 />
                 <Overlay>
-                  <Heading>Orthodox and Green Tea Exporters from India</Heading>
+                  <SectionHeading>
+                    Orthodox and Green Tea Exporters from India
+                  </SectionHeading>
                   <Paragraph>
-                    As leading bulk tea exporters in India, we provide premium
+                    As leading tea exporters in India, we provide premium
                     orthodox and green teas that are sourced from Assam and
                     Darjeeling. Our teas are packed with antioxidants and health
                     benefits, making them popular choices for international
@@ -258,9 +249,7 @@ const TeaLandingPage = () => {
         </CarouselContainer>
 
         {/* Updated Sections */}
-        <Subheading>
-          Oneotech Enterprises - Leading Tea Exporters from India
-        </Subheading>
+        <MainHeading>Leading Tea Exporters from India</MainHeading>
         <SectionContainer>
           <Text>
             Welcome to Oneotech Enterprises, a premier name among bulk tea
@@ -355,7 +344,7 @@ const TeaLandingPage = () => {
             </StyledList>
           </Text>
         </SectionContainer>
-        <Subheading>Leading Bulk Black Tea Exporters in India</Subheading>
+        <Subheading>Leading Black Tea Exporters in India</Subheading>
         <SectionContainer>
           <Text>
             Oneotech Enterprises stands out as one of the top bulk black tea

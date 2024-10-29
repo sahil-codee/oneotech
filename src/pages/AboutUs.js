@@ -100,15 +100,7 @@ export default () => {
           <FounderSubheading>Mr. Rakesh Bakshi</FounderSubheading>
           {/* Updated content */}
           <FounderDescription>
-            Our Founder, Mr. Rakesh Bakshi, has a rich
-            experience of over two decades in the industrial products sector.
-            His extensive expertise and visionary leadership have been pivotal
-            in establishing Oneotech Enterprises as a trusted name in the
-            industry. Under his guidance, the company has grown to become a
-            leading exporter of high-quality nylon cable ties, cable tie mounts,
-            and DIN rails. Rakesh is committed to innovation and excellence,
-            ensuring that the company continues to meet and exceed the
-            expectations of its global clientele.
+          Our Founder, Mr. Rakesh Bakshi, has a rich experience of over three decades in the industrial product segment. His extensive expertise and visionary leadership have been pivotal in establishing Oneotech Enterprises as a trusted name in the industry. Under his guidance, the company has grown to become a leading supplier and exporter of high-quality nylon cable ties, cable tie mounts, and DIN rails. Rakesh is committed to innovation and excellence, ensuring that the company continues to meet and exceed the expectations of its global clientele.
           </FounderDescription>
         </FounderContent>
       </FounderSection>
