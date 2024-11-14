@@ -15,6 +15,8 @@ import teaImage3 from "../images/teaHead.png";
 import { motion } from "framer-motion";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 
+// Oneotech Enterprises: Leading tea exporter from India, offering premium CTC tea and green tea sourced from Assam and Darjeeling. Connect with us for high-quality tea supply.
+
 const MainHeading = tw.h1`text-5xl sm:text-6xl text-primary-500 font-bold tracking-wide text-center mt-8`;
 const SectionHeading = tw.h2`text-4xl sm:text-5xl font-semibold text-center mt-6`;
 // const Subheading = tw.h2`text-2xl sm:text-3xl font-bold text-primary-500 text-center mt-4`;

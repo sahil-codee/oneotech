@@ -6,7 +6,7 @@ import { Home } from "./pages/Home.js";
 import About from "./pages/AboutUs.js";
 import Products from "./pages/Products.js";
 import ContactUs from "./pages/ContactUs";
-import Services from "./pages/Services.js";
+// import Services from "./pages/Services.js";
 import ProductDetailsPage from "pages/ProductDetailPage.js";
 import Tea from "../src/pages/Tea.js";
 import WhatsAppChat from "components/whatsApp/WhatsApp.js";
@@ -36,7 +36,7 @@ export default function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/bulk-tea-exporters-in-india" element={<Tea />} />
           <Route path="/products/:seoUrl" element={<ProductDetailsPage />} />
-          <Route path="/product-catalog" element={<Services />} />
+          {/* <Route path="/product-catalog" element={<Services />} /> */}
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </Router><BackToTop />
