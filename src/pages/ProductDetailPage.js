@@ -5,6 +5,7 @@ import styled from "styled-components";
 import cableTie1 from "../images/cableTies.svg";
 import mounts1 from "../images/mounts.svg";
 import dinRail1 from "../images/dinRail.svg";
+import ssCableTie from "../images/SSCableTie.png";
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import Header from "../components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
@@ -159,7 +160,7 @@ const ProductDetailsPage = () => {
         "Usage/Application": "Cable Fitting / Bundling",
         "Packaging Size": "100 pcs",
         Width: "2.5 mm / 3.6 mm / 4.8 mm",
-        Material: "Nylon",
+        Material: "Polyamide; Halogenfree",
         Color: "Natural / Black",
         Description:
           "As one of the best nylon cable tie exporters in India, Oneotech Enterprises specializes in delivering a premium range of nylon cable ties, including plastic and high-quality nylon cable ties designed to meet the exact specifications of clients.",
@@ -295,6 +296,55 @@ const ProductDetailsPage = () => {
         },
       },
     },
+    "leading-stainless-steel-cable-tie-exporters-in-india": {
+      images: [ssCableTie],
+      altText: "stainless steel cable tie exporters in india",
+      businessType: "Exporters",
+      heading_1:
+        "Stainless Steel Cable Tie Suppliers in India – Buy High-Quality SS Cable Ties",
+      details: {
+        Name: "Stainless Steel Cable Tie",
+        Brand: "Oneotech Enterprises",
+        Length: "100mm - 1000mm",
+        "Usage/Application": "Cable Fitting / Bundling / Industrial Use",
+        "Packaging Size": "100 pcs",
+        Width: "2.5mm / 3.6mm / 4.8mm / 7.9mm",
+        Material: "Stainless Steel (SS304 / SS316)",
+        Color: "Grey / Metallic",
+        Description:
+          "Oneotech Enterprises is a trusted manufacturer and supplier of stainless steel cable ties in India, known for high-quality and cost-effective solutions. Our SS cable ties are designed for extreme temperature resistance, high tensile strength, and superior durability, making them ideal for multiple industrial applications.",
+        AdditionalDescription: {
+          h2_1: "Why Stainless Steel Cable Ties? Benefits Over Nylon Cable Ties",
+          para_1:
+            "Stainless steel cable ties offer higher tensile strength, corrosion resistance, and longevity compared to nylon ties. They can withstand extreme temperatures (-80°C to +500°C), making them ideal for industrial, marine, and high-heat applications.",
+          h2_2: "Applications of Stainless Steel Cable Ties in Various Industries",
+          para_2:
+            "Stainless steel cable ties are used across multiple industries such as electrical & power, marine & offshore, automotive & aerospace, construction & infrastructure, oil & gas, and food & beverage processing.",
+          h2_3: "Features of High-Quality Stainless Steel Cable Ties",
+          points_1:
+            " - Made from SS304 and SS316 grades for corrosion resistance\n - Self-locking mechanism for secure fastening\n - Available in various sizes and coatings\n - Suitable for extreme weather conditions\n - Fire and UV-resistant properties",
+          h2_4: "Leading Stainless Steel Cable Tie Suppliers in India – Oneotech Enterprises",
+          para_3:
+            "As a top stainless steel cable tie exporter in India, Oneotech Enterprises supplies high-quality, bulk stainless steel cable ties worldwide. Our products meet international standards, ensuring reliable performance in all industrial applications.",
+          h3_1: "Frequently Asked Questions (FAQ)",
+          faq1_question:
+            "What is the best material for stainless steel cable ties?",
+          faq1_answer:
+            "SS316 is recommended for marine and chemical environments due to its superior corrosion resistance.",
+          faq2_question:
+            "Can stainless steel cable ties be reused?",
+          faq2_answer:
+            "No, most stainless steel cable ties are self-locking and tamper-proof, designed for single-use applications.",
+          faq3_question:
+            "How can I order stainless steel cable ties from suppliers in India?",
+          faq3_answer:
+            "You can contact Oneotech Enterprises for bulk orders via email, phone, or their official website.",
+          heading_3: "Additional Information",
+          points_2: "- Production Capacity: 10,000,000 units per month\n - Lead Time: 2 weeks\n - Worldwide Shipping Available",
+        },
+      },
+    }
+
   };
 
   const product = products[seoUrl];
@@ -357,7 +407,19 @@ const ProductDetailsPage = () => {
           />
         </Helmet>
       )}
-
+      {seoUrl === "leading-stainless-steel-cable-tie-exporters-in-india" && (
+        <Helmet>
+          <title>Top Stainless Steel Cable Tie Exporters in India</title>
+          <meta
+            name="description"
+            content="Leading stainless-steel cable tie exporters in India, offering premium solutions for industrial use. Contact us for bulk orders!"
+          />
+          <link
+            rel="canonical"
+            href="https://www.oneotechenterprises.com/products/leading-stainless-steel-cable-tie-exporters-in-india"
+          />
+        </Helmet>
+      )}
       <Header />
       <ContentContainer>
         <HeadingRow>

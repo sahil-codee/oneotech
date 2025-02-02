@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet"; // Import Helmet
 import cableTie from "../images/cableTies.svg";
 import mounts from "../images/mounts.svg";
 import dinRail from "../images/dinRail.svg";
+import sscableTie from "../images/SSCableTie.png";
 
 const HeadingRow = tw.div`flex justify-center`;
 const Heading = tw(SectionHeading)`text-primary-900`;
@@ -132,6 +133,13 @@ const getPlaceholderPosts = () => [
     title: "Nylon Cable Tie",
     description: "High-quality cable ties for industrial applications.",
     altText: "leading nylon cable tie exporters in india",
+  },
+  {
+    imageSrc: sscableTie,
+    category: "Industrial",
+    title: "Stainless Steel Cable Tie",
+    description: "High-quality cable ties for industrial applications.",
+    altText: "leading stainless steel cable tie exporters in india",
   },
   {
     imageSrc: mounts,

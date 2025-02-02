@@ -51,11 +51,14 @@ export default () => {
               <Link href="/about-us">About</Link>
               <Link href="/products">Products</Link>
               <Link href="/tea-exporters-in-india">Our Teas</Link>
-              <Link href="/product-catalog">Catalog</Link>
+              {/* <Link href="/product-catalog">Catalog</Link> */}
               <Link href="/contact">Contact Us</Link>
             </LinksContainer>
             <SocialLinksContainer>
-              <SocialLink href="https://www.facebook.com/oneotechenterprises" target="_blank">
+              <SocialLink
+                href="https://www.facebook.com/oneotechenterprises"
+                target="_blank"
+              >
                 <FacebookIcon />
               </SocialLink>
               <SocialLink href="https://twitter.com">
